@@ -1,8 +1,8 @@
 namespace Pharmacy_Project
 {
-    public partial class loginForm : Form
+    public partial class Form1 : Form
     {
-        public loginForm()
+        public Form1()
         {
             InitializeComponent();
         }
