@@ -38,7 +38,6 @@ namespace Pharmacy_Project
         }
         private void LoadImages()
         {
-
             for (int i = 0; i < 24; i++)
             {
 
@@ -46,15 +45,12 @@ namespace Pharmacy_Project
                 images.Add(img);
             }
             images.Add(Image.FromFile(Application.StartupPath + @"\login_pics\debut.jpg"));
-
-
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }
-
         private void UsernameTextBox_TextChanged(object sender, EventArgs e)
         {
             if (UsernameTextBox.Text.Length > 0 && UsernameTextBox.Text.Length <= 15)
@@ -77,17 +73,7 @@ namespace Pharmacy_Project
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                LoginPic.Image = Image.FromFile(
-                    Application.StartupPath + @"\login_pics\textbox_password.png"
-                );
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+            LoginPic.Image = Image.FromFile(Application.StartupPath + @"\login_pics\textbox_password.png");
         }
 
         private void SignButton_Click(object sender, EventArgs e)
