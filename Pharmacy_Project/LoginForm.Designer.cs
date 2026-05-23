@@ -86,15 +86,16 @@
             // SignButton
             // 
             SignButton.CheckedState.ImageSize = new Size(64, 64);
-            SignButton.HoverState.ImageSize = new Size(64, 64);
+            SignButton.HoverState.ImageSize = new Size(235, 120);
             SignButton.Image = (Image)resources.GetObject("SignButton.Image");
             SignButton.ImageOffset = new Point(0, 0);
             SignButton.ImageRotate = 0F;
-            SignButton.Location = new Point(153, 564);
+            SignButton.ImageSize = new Size(225, 110);
+            SignButton.Location = new Point(181, 573);
             SignButton.Name = "SignButton";
             SignButton.PressedState.ImageSize = new Size(64, 64);
             SignButton.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            SignButton.Size = new Size(228, 66);
+            SignButton.Size = new Size(200, 50);
             SignButton.TabIndex = 3;
             SignButton.Click += SignButton_Click;
             // 
