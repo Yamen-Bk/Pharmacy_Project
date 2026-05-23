@@ -67,7 +67,7 @@
             // 
             labelErrorPass.AutoSize = true;
             labelErrorPass.ForeColor = Color.Red;
-            labelErrorPass.Location = new Point(153, 424);
+            labelErrorPass.Location = new Point(131, 424);
             labelErrorPass.Name = "labelErrorPass";
             labelErrorPass.Size = new Size(0, 25);
             labelErrorPass.TabIndex = 5;
@@ -77,7 +77,7 @@
             // 
             labelErrorUser.AutoSize = true;
             labelErrorUser.ForeColor = Color.Red;
-            labelErrorUser.Location = new Point(153, 316);
+            labelErrorUser.Location = new Point(131, 316);
             labelErrorUser.Name = "labelErrorUser";
             labelErrorUser.Size = new Size(0, 25);
             labelErrorUser.TabIndex = 4;
