@@ -36,32 +36,38 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            LoginPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             labelErrorPass = new Label();
             labelErrorUser = new Label();
             SignButton = new Guna.UI2.WinForms.Guna2ImageButton();
             PasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             UsernameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             LoginPic = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2ShadowPanel1.SuspendLayout();
+            LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LoginPic).BeginInit();
             SuspendLayout();
             // 
-            // guna2ShadowPanel1
+            // LoginPanel
             // 
-            guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(labelErrorPass);
-            guna2ShadowPanel1.Controls.Add(labelErrorUser);
-            guna2ShadowPanel1.Controls.Add(SignButton);
-            guna2ShadowPanel1.Controls.Add(PasswordTextBox);
-            guna2ShadowPanel1.Controls.Add(UsernameTextBox);
-            guna2ShadowPanel1.Controls.Add(LoginPic);
-            guna2ShadowPanel1.FillColor = Color.White;
-            guna2ShadowPanel1.Location = new Point(441, 119);
-            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            guna2ShadowPanel1.ShadowColor = Color.Black;
-            guna2ShadowPanel1.Size = new Size(553, 697);
-            guna2ShadowPanel1.TabIndex = 0;
+            LoginPanel.Anchor = AnchorStyles.None;
+            LoginPanel.BackColor = Color.Transparent;
+            LoginPanel.BackgroundImageLayout = ImageLayout.Stretch;
+            LoginPanel.Controls.Add(labelErrorPass);
+            LoginPanel.Controls.Add(labelErrorUser);
+            LoginPanel.Controls.Add(SignButton);
+            LoginPanel.Controls.Add(PasswordTextBox);
+            LoginPanel.Controls.Add(UsernameTextBox);
+            LoginPanel.Controls.Add(LoginPic);
+            LoginPanel.FillColor = SystemColors.ControlLightLight;
+            LoginPanel.ForeColor = SystemColors.ButtonHighlight;
+            LoginPanel.Location = new Point(475, 150);
+            LoginPanel.Name = "LoginPanel";
+            LoginPanel.ShadowColor = Color.Black;
+            LoginPanel.ShadowDepth = 200;
+            LoginPanel.ShadowShift = 7;
+            LoginPanel.Size = new Size(550, 700);
+            LoginPanel.TabIndex = 0;
+            LoginPanel.Paint += LoginPanel_Paint;
             // 
             // labelErrorPass
             // 
@@ -86,16 +92,16 @@
             // SignButton
             // 
             SignButton.CheckedState.ImageSize = new Size(64, 64);
-            SignButton.HoverState.ImageSize = new Size(235, 120);
+            SignButton.HoverState.ImageSize = new Size(205, 120);
             SignButton.Image = (Image)resources.GetObject("SignButton.Image");
             SignButton.ImageOffset = new Point(0, 0);
             SignButton.ImageRotate = 0F;
-            SignButton.ImageSize = new Size(225, 110);
-            SignButton.Location = new Point(181, 573);
+            SignButton.ImageSize = new Size(200, 115);
+            SignButton.Location = new Point(187, 573);
             SignButton.Name = "SignButton";
             SignButton.PressedState.ImageSize = new Size(64, 64);
             SignButton.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            SignButton.Size = new Size(200, 50);
+            SignButton.Size = new Size(175, 50);
             SignButton.TabIndex = 3;
             SignButton.Click += SignButton_Click;
             // 
@@ -146,10 +152,11 @@
             LoginPic.CustomizableEdges = customizableEdges6;
             LoginPic.Image = (Image)resources.GetObject("LoginPic.Image");
             LoginPic.ImageRotate = 0F;
-            LoginPic.Location = new Point(181, 72);
+            LoginPic.Location = new Point(183, 72);
             LoginPic.Name = "LoginPic";
             LoginPic.ShadowDecoration.CustomizableEdges = customizableEdges7;
             LoginPic.Size = new Size(186, 185);
+            LoginPic.SizeMode = PictureBoxSizeMode.Zoom;
             LoginPic.TabIndex = 0;
             LoginPic.TabStop = false;
             // 
@@ -157,20 +164,22 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1478, 944);
-            Controls.Add(guna2ShadowPanel1);
+            Controls.Add(LoginPanel);
             Name = "LoginForm";
             Text = "LoginForm";
             Load += LoginForm_Load;
-            guna2ShadowPanel1.ResumeLayout(false);
-            guna2ShadowPanel1.PerformLayout();
+            LoginPanel.ResumeLayout(false);
+            LoginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)LoginPic).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel LoginPanel;
         private Guna.UI2.WinForms.Guna2PictureBox LoginPic;
         private Guna.UI2.WinForms.Guna2ImageButton SignButton;
         private Guna.UI2.WinForms.Guna2TextBox PasswordTextBox;

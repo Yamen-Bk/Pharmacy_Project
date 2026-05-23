@@ -14,6 +14,9 @@ namespace Pharmacy_Project
         public LoginForm()
         {
             InitializeComponent();
+
+            this.DoubleBuffered = true;
+
             location[0] = Application.StartupPath + @"\login_pics\textbox_user_1.jpg";
             location[1] = Application.StartupPath + @"\login_pics\textbox_user_2.jpg";
             location[2] = Application.StartupPath + @"\login_pics\textbox_user_3.jpg";
@@ -89,7 +92,7 @@ namespace Pharmacy_Project
 
             bool hasError = false;
 
-            if (UsernameTextBox.Text.Trim() == "")  
+            if (UsernameTextBox.Text.Trim() == "")
             {
                 labelErrorUser.Text = "Please Enter Your Username";
                 labelErrorUser.Visible = true;
@@ -101,7 +104,7 @@ namespace Pharmacy_Project
                 labelErrorUser.Visible = true;
                 hasError = true;
             }
-        
+
             if (PasswordTextBox.Text == "")
             {
                 labelErrorPass.Text = "Please Enter Your Password";
@@ -138,6 +141,11 @@ namespace Pharmacy_Project
             }
             main.Opacity = 1;
             this.Hide();
+        }
+
+        private void LoginPanel_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
