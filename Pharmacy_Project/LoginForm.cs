@@ -133,11 +133,11 @@ namespace Pharmacy_Project
             main.Opacity = 0;
             main.Show();
 
-            for (double i = 0; i <= 1; i += 0.03)
+            for (double i = 0; i <= 1; i += 0.04)
             {
                 this.Opacity = 1 - i;
                 main.Opacity = i;
-                await Task.Delay(20);
+                await Task.Delay(12);
             }
             main.Opacity = 1;
             this.Hide();

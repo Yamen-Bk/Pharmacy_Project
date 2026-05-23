@@ -36,6 +36,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             LoginPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             labelErrorPass = new Label();
             labelErrorUser = new Label();
@@ -43,8 +45,10 @@
             PasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             UsernameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             LoginPic = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LoginPic).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
             // LoginPanel
@@ -62,9 +66,10 @@
             LoginPanel.ForeColor = SystemColors.ButtonHighlight;
             LoginPanel.Location = new Point(475, 150);
             LoginPanel.Name = "LoginPanel";
+            LoginPanel.Radius = 25;
             LoginPanel.ShadowColor = Color.Black;
-            LoginPanel.ShadowDepth = 200;
-            LoginPanel.ShadowShift = 7;
+            LoginPanel.ShadowDepth = 125;
+            LoginPanel.ShadowShift = 15;
             LoginPanel.Size = new Size(550, 700);
             LoginPanel.TabIndex = 0;
             LoginPanel.Paint += LoginPanel_Paint;
@@ -160,6 +165,21 @@
             LoginPic.TabIndex = 0;
             LoginPic.TabStop = false;
             // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.BackColor = Color.Transparent;
+            guna2PictureBox1.BackgroundImageLayout = ImageLayout.None;
+            guna2PictureBox1.CustomizableEdges = customizableEdges8;
+            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(30, 30);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            guna2PictureBox1.Size = new Size(250, 200);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            guna2PictureBox1.TabIndex = 1;
+            guna2PictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -167,6 +187,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1478, 944);
+            Controls.Add(guna2PictureBox1);
             Controls.Add(LoginPanel);
             Name = "LoginForm";
             Text = "LoginForm";
@@ -174,6 +195,7 @@
             LoginPanel.ResumeLayout(false);
             LoginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)LoginPic).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -186,5 +208,6 @@
         private Guna.UI2.WinForms.Guna2TextBox UsernameTextBox;
         private Label labelErrorPass;
         private Label labelErrorUser;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
