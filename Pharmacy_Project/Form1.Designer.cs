@@ -37,12 +37,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            labelErrorPass = new Label();
+            labelErrorUser = new Label();
             SignButton = new Guna.UI2.WinForms.Guna2ImageButton();
             PasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             UsernameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             LoginPic = new Guna.UI2.WinForms.Guna2PictureBox();
-            labelErrorUser = new Label();
-            labelErrorPass = new Label();
             guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LoginPic).BeginInit();
             SuspendLayout();
@@ -62,6 +62,26 @@
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.Size = new Size(553, 697);
             guna2ShadowPanel1.TabIndex = 0;
+            // 
+            // labelErrorPass
+            // 
+            labelErrorPass.AutoSize = true;
+            labelErrorPass.ForeColor = Color.Red;
+            labelErrorPass.Location = new Point(153, 424);
+            labelErrorPass.Name = "labelErrorPass";
+            labelErrorPass.Size = new Size(0, 25);
+            labelErrorPass.TabIndex = 5;
+            labelErrorPass.Visible = false;
+            // 
+            // labelErrorUser
+            // 
+            labelErrorUser.AutoSize = true;
+            labelErrorUser.ForeColor = Color.Red;
+            labelErrorUser.Location = new Point(153, 316);
+            labelErrorUser.Name = "labelErrorUser";
+            labelErrorUser.Size = new Size(0, 25);
+            labelErrorUser.TabIndex = 4;
+            labelErrorUser.Visible = false;
             // 
             // SignButton
             // 
@@ -131,26 +151,6 @@
             LoginPic.Size = new Size(186, 185);
             LoginPic.TabIndex = 0;
             LoginPic.TabStop = false;
-            // 
-            // labelErrorUser
-            // 
-            labelErrorUser.AutoSize = true;
-            labelErrorUser.ForeColor = Color.Red;
-            labelErrorUser.Location = new Point(290, 316);
-            labelErrorUser.Name = "labelErrorUser";
-            labelErrorUser.Size = new Size(0, 25);
-            labelErrorUser.TabIndex = 4;
-            labelErrorUser.Visible = false;
-            // 
-            // labelErrorPass
-            // 
-            labelErrorPass.AutoSize = true;
-            labelErrorPass.ForeColor = Color.Red;
-            labelErrorPass.Location = new Point(290, 424);
-            labelErrorPass.Name = "labelErrorPass";
-            labelErrorPass.Size = new Size(0, 25);
-            labelErrorPass.TabIndex = 5;
-            labelErrorPass.Visible = false;
             // 
             // LoginForm
             // 
