@@ -1,5 +1,9 @@
+using Pharmacy_Project.Classes;
+using Pharmacy_Project.Forms;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace Pharmacy_Project
 {
@@ -53,6 +57,7 @@ namespace Pharmacy_Project
         }
         private void UsernameTextBox_TextChanged(object sender, EventArgs e)
         {
+            labelErrorUser.Visible = false;
             if (UsernameTextBox.Text.Length > 0 && UsernameTextBox.Text.Length <= 15)
             {
                 LoginPic.Image = images[UsernameTextBox.Text.Length - 1];
@@ -73,12 +78,66 @@ namespace Pharmacy_Project
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
+            labelErrorPass.Visible = false;
             LoginPic.Image = Image.FromFile(Application.StartupPath + @"\login_pics\textbox_password.png");
         }
 
-        private void SignButton_Click(object sender, EventArgs e)
+        private async void SignButton_Click(object sender, EventArgs e)
         {
+            labelErrorUser.Visible = false;
+            labelErrorPass.Visible = false;
 
+            bool hasError = false;
+
+            if (UsernameTextBox.Text.Trim() == "")  
+            {
+                labelErrorUser.Text = "Please Enter Your Username";
+                labelErrorUser.Visible = true;
+                hasError = true;
+            }
+            else if (UsernameTextBox.Text != Pharmacy.User.Username)
+            {
+                labelErrorUser.Text = "Username is Incorrect";
+                labelErrorUser.Visible = true;
+                hasError = true;
+            }
+        
+            if (PasswordTextBox.Text == "")
+            {
+                labelErrorPass.Text = "Please Enter Your Password";
+                labelErrorPass.Visible = true;
+                hasError = true;
+            }
+            else if (PasswordTextBox.Text != Pharmacy.User.Password)
+            {
+                labelErrorPass.Text = "Password is Incorrect";
+                labelErrorPass.Visible = true;
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            SignButton.Enabled = false;
+            UsernameTextBox.Enabled = false;
+            PasswordTextBox.Enabled = false;
+
+
+            Forms.MainForm main = new Forms.MainForm();
+            main.StartPosition = FormStartPosition.Manual;
+            main.Location = this.Location;
+            main.Size = this.Size;
+            main.WindowState = this.WindowState;
+            main.Opacity = 0;
+            main.Show();
+
+            for (double i = 0; i <= 1; i += 0.03)
+            {
+                this.Opacity = 1 - i;
+                main.Opacity = i;
+                await Task.Delay(20);
+            }
+            main.Opacity = 1;
+            this.Hide();
         }
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Pharmacy_Project.Classes
 {
-    internal class User
+    public class User
     {
+        public string Username {  get; set; }
+        public string Password { get; set; }
     }
 }

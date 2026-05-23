@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pharmacy_Project.Classes
 {
-    internal class InvoiveItem
+    public class InvoiveItem
     {
     }
 }

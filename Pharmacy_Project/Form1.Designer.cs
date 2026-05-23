@@ -41,6 +41,8 @@
             PasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             UsernameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             LoginPic = new Guna.UI2.WinForms.Guna2PictureBox();
+            labelErrorUser = new Label();
+            labelErrorPass = new Label();
             guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LoginPic).BeginInit();
             SuspendLayout();
@@ -48,6 +50,8 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(labelErrorPass);
+            guna2ShadowPanel1.Controls.Add(labelErrorUser);
             guna2ShadowPanel1.Controls.Add(SignButton);
             guna2ShadowPanel1.Controls.Add(PasswordTextBox);
             guna2ShadowPanel1.Controls.Add(UsernameTextBox);
@@ -128,6 +132,26 @@
             LoginPic.TabIndex = 0;
             LoginPic.TabStop = false;
             // 
+            // labelErrorUser
+            // 
+            labelErrorUser.AutoSize = true;
+            labelErrorUser.ForeColor = Color.Red;
+            labelErrorUser.Location = new Point(290, 316);
+            labelErrorUser.Name = "labelErrorUser";
+            labelErrorUser.Size = new Size(0, 25);
+            labelErrorUser.TabIndex = 4;
+            labelErrorUser.Visible = false;
+            // 
+            // labelErrorPass
+            // 
+            labelErrorPass.AutoSize = true;
+            labelErrorPass.ForeColor = Color.Red;
+            labelErrorPass.Location = new Point(290, 424);
+            labelErrorPass.Name = "labelErrorPass";
+            labelErrorPass.Size = new Size(0, 25);
+            labelErrorPass.TabIndex = 5;
+            labelErrorPass.Visible = false;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -138,6 +162,7 @@
             Text = "LoginForm";
             Load += LoginForm_Load;
             guna2ShadowPanel1.ResumeLayout(false);
+            guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)LoginPic).EndInit();
             ResumeLayout(false);
         }
@@ -149,5 +174,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton SignButton;
         private Guna.UI2.WinForms.Guna2TextBox PasswordTextBox;
         private Guna.UI2.WinForms.Guna2TextBox UsernameTextBox;
+        private Label labelErrorPass;
+        private Label labelErrorUser;
     }
 }
