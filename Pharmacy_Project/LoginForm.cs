@@ -46,12 +46,10 @@ namespace Pharmacy_Project
         private void LoadImages()
         {
             for (int i = 0; i < 24; i++)
-            {
+                images.Add(Image.FromFile(location[i]));
 
-                Image img = Image.FromFile(location[i]);
-                images.Add(img);
-            }
             images.Add(Image.FromFile(Application.StartupPath + @"\login_pics\debut.jpg"));
+            images.Add(Image.FromFile(Application.StartupPath + @"\login_pics\textbox_password.png"));
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -62,12 +60,9 @@ namespace Pharmacy_Project
         {
             labelErrorUser.Visible = false;
             if (UsernameTextBox.Text.Length > 0 && UsernameTextBox.Text.Length <= 15)
-            {
                 LoginPic.Image = images[UsernameTextBox.Text.Length - 1];
-                LoginPic.BackgroundImageLayout = ImageLayout.Stretch;
-            }
             else if (UsernameTextBox.Text.Length <= 0)
-                LoginPic.Image = Image.FromFile(Application.StartupPath + @"\login_pics\debut.jpg");
+                LoginPic.Image = images[24];
             else
                 LoginPic.Image = images[23];
         }
@@ -76,13 +71,13 @@ namespace Pharmacy_Project
             if (UsernameTextBox.Text.Length > 0)
                 LoginPic.Image = images[UsernameTextBox.Text.Length - 1];
             else
-                LoginPic.Image = Image.FromFile(Application.StartupPath + @"\login_pics\debut.jpg");
+                LoginPic.Image = images[24];
         }
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
             labelErrorPass.Visible = false;
-            LoginPic.Image = Image.FromFile(Application.StartupPath + @"\login_pics\textbox_password.png");
+            LoginPic.Image = images[25];
         }
 
         private async void SignButton_Click(object sender, EventArgs e)
