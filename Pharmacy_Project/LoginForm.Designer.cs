@@ -191,6 +191,7 @@
             Controls.Add(LoginPanel);
             Name = "LoginForm";
             Text = "LoginForm";
+            FormClosed += LoginForm_FormClosed;
             Load += LoginForm_Load;
             LoginPanel.ResumeLayout(false);
             LoginPanel.PerformLayout();

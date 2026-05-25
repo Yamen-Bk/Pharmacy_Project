@@ -140,7 +140,12 @@ namespace Pharmacy_Project
 
         private void LoginPanel_Paint(object sender, PaintEventArgs e)
         {
-            
+
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
