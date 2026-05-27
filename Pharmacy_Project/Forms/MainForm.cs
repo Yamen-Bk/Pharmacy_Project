@@ -52,5 +52,10 @@ namespace Pharmacy_Project.Forms
         {
             MainTabControl.SelectedTab = TabSettings;
         }
+
+        private void MainForm_FormClosing(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

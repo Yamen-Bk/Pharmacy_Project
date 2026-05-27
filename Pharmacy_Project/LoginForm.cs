@@ -106,7 +106,7 @@ namespace Pharmacy_Project
                 labelErrorPass.Visible = true;
                 hasError = true;
             }
-            else if (PasswordTextBox.Text != Pharmacy.User.Password)
+            else if (BCrypt.Net.BCrypt.Verify(PasswordTextBox.Text, Pharmacy.User.Password))
             {
                 labelErrorPass.Text = "Password is Incorrect";
                 labelErrorPass.Visible = true;
@@ -136,16 +136,6 @@ namespace Pharmacy_Project
             }
             main.Opacity = 1;
             this.Hide();
-        }
-
-        private void LoginPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

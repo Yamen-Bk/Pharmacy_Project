@@ -72,7 +72,6 @@
             LoginPanel.ShadowShift = 15;
             LoginPanel.Size = new Size(550, 700);
             LoginPanel.TabIndex = 0;
-            LoginPanel.Paint += LoginPanel_Paint;
             // 
             // labelErrorPass
             // 
@@ -191,7 +190,6 @@
             Controls.Add(LoginPanel);
             Name = "LoginForm";
             Text = "LoginForm";
-            FormClosed += LoginForm_FormClosed;
             Load += LoginForm_Load;
             LoginPanel.ResumeLayout(false);
             LoginPanel.PerformLayout();
