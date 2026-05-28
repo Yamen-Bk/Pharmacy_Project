@@ -49,6 +49,7 @@
             TabPOS = new TabPage();
             TabInvoice = new TabPage();
             TabSettings = new TabPage();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             panel1.SuspendLayout();
             MainTabControl.SuspendLayout();
             SuspendLayout();
@@ -287,5 +288,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnNavMedicines;
         private TabPage TabHome;
         private Guna.UI2.WinForms.Guna2ImageButton btnNavSettings;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
