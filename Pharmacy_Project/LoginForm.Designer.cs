@@ -77,7 +77,7 @@
             // 
             labelErrorPass.AutoSize = true;
             labelErrorPass.ForeColor = Color.Red;
-            labelErrorPass.Location = new Point(131, 424);
+            labelErrorPass.Location = new Point(144, 412);
             labelErrorPass.Name = "labelErrorPass";
             labelErrorPass.Size = new Size(0, 25);
             labelErrorPass.TabIndex = 5;
@@ -87,7 +87,7 @@
             // 
             labelErrorUser.AutoSize = true;
             labelErrorUser.ForeColor = Color.Red;
-            labelErrorUser.Location = new Point(131, 316);
+            labelErrorUser.Location = new Point(144, 299);
             labelErrorUser.Name = "labelErrorUser";
             labelErrorUser.Size = new Size(0, 25);
             labelErrorUser.TabIndex = 4;
@@ -96,21 +96,26 @@
             // SignButton
             // 
             SignButton.CheckedState.ImageSize = new Size(64, 64);
-            SignButton.HoverState.ImageSize = new Size(205, 120);
+            SignButton.HoverState.ImageSize = new Size(245, 145);
             SignButton.Image = (Image)resources.GetObject("SignButton.Image");
             SignButton.ImageOffset = new Point(0, 0);
             SignButton.ImageRotate = 0F;
-            SignButton.ImageSize = new Size(200, 115);
-            SignButton.Location = new Point(187, 573);
+            SignButton.ImageSize = new Size(240, 140);
+            SignButton.Location = new Point(165, 547);
             SignButton.Name = "SignButton";
-            SignButton.PressedState.ImageSize = new Size(205, 120);
+            SignButton.PressedState.ImageSize = new Size(242, 142);
             SignButton.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            SignButton.Size = new Size(175, 50);
+            SignButton.Size = new Size(210, 73);
             SignButton.TabIndex = 3;
             SignButton.Click += SignButton_Click;
             // 
             // PasswordTextBox
             // 
+            PasswordTextBox.AutoRoundedCorners = true;
+            PasswordTextBox.BackColor = Color.Transparent;
+            PasswordTextBox.BorderColor = Color.DimGray;
+            PasswordTextBox.BorderRadius = 29;
+            PasswordTextBox.BorderThickness = 2;
             PasswordTextBox.CustomizableEdges = customizableEdges2;
             PasswordTextBox.DefaultText = "";
             PasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -118,20 +123,33 @@
             PasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             PasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             PasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            PasswordTextBox.Font = new Font("Segoe UI", 9F);
+            PasswordTextBox.Font = new Font("Segoe UI", 10F);
+            PasswordTextBox.ForeColor = SystemColors.ActiveCaptionText;
             PasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            PasswordTextBox.Location = new Point(122, 454);
-            PasswordTextBox.Margin = new Padding(4, 5, 4, 5);
+            PasswordTextBox.IconLeft = (Image)resources.GetObject("PasswordTextBox.IconLeft");
+            PasswordTextBox.IconLeftSize = new Size(50, 50);
+            PasswordTextBox.Location = new Point(121, 444);
+            PasswordTextBox.Margin = new Padding(4, 6, 4, 6);
             PasswordTextBox.Name = "PasswordTextBox";
-            PasswordTextBox.PlaceholderText = "";
+            PasswordTextBox.PlaceholderForeColor = Color.Gray;
+            PasswordTextBox.PlaceholderText = "Password";
             PasswordTextBox.SelectedText = "";
+            PasswordTextBox.ShadowDecoration.BorderRadius = 2;
             PasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            PasswordTextBox.Size = new Size(303, 54);
+            PasswordTextBox.ShadowDecoration.Depth = 10;
+            PasswordTextBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            PasswordTextBox.Size = new Size(310, 60);
             PasswordTextBox.TabIndex = 2;
+            PasswordTextBox.TextOffset = new Point(0, -1);
             PasswordTextBox.TextChanged += PasswordTextBox_TextChanged;
             // 
             // UsernameTextBox
             // 
+            UsernameTextBox.AutoRoundedCorners = true;
+            UsernameTextBox.BackColor = Color.Transparent;
+            UsernameTextBox.BorderColor = Color.DimGray;
+            UsernameTextBox.BorderRadius = 29;
+            UsernameTextBox.BorderThickness = 2;
             UsernameTextBox.CustomizableEdges = customizableEdges4;
             UsernameTextBox.DefaultText = "";
             UsernameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -139,16 +157,24 @@
             UsernameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             UsernameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             UsernameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            UsernameTextBox.Font = new Font("Segoe UI", 9F);
+            UsernameTextBox.Font = new Font("Segoe UI", 10F);
+            UsernameTextBox.ForeColor = SystemColors.ActiveCaptionText;
             UsernameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            UsernameTextBox.Location = new Point(122, 346);
-            UsernameTextBox.Margin = new Padding(4, 5, 4, 5);
+            UsernameTextBox.IconLeft = (Image)resources.GetObject("UsernameTextBox.IconLeft");
+            UsernameTextBox.IconLeftSize = new Size(50, 50);
+            UsernameTextBox.Location = new Point(121, 330);
+            UsernameTextBox.Margin = new Padding(4, 6, 4, 6);
             UsernameTextBox.Name = "UsernameTextBox";
-            UsernameTextBox.PlaceholderText = "";
+            UsernameTextBox.PlaceholderForeColor = Color.Gray;
+            UsernameTextBox.PlaceholderText = "Usernsme";
             UsernameTextBox.SelectedText = "";
+            UsernameTextBox.ShadowDecoration.BorderRadius = 2;
             UsernameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            UsernameTextBox.Size = new Size(303, 54);
+            UsernameTextBox.ShadowDecoration.Depth = 10;
+            UsernameTextBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            UsernameTextBox.Size = new Size(310, 60);
             UsernameTextBox.TabIndex = 1;
+            UsernameTextBox.TextOffset = new Point(0, -1);
             UsernameTextBox.TextChanged += UsernameTextBox_TextChanged;
             // 
             // LoginPic

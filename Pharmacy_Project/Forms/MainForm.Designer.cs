@@ -35,6 +35,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultLegend skDefaultLegend1 = new LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultLegend();
+            LiveChartsCore.Drawing.Padding padding1 = new LiveChartsCore.Drawing.Padding();
+            LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultTooltip skDefaultTooltip1 = new LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultTooltip();
+            LiveChartsCore.Drawing.Padding padding2 = new LiveChartsCore.Drawing.Padding();
             panel1 = new Panel();
             MedicinesTabSelectArrow = new PictureBox();
             ExpiredTabSelectArrow = new PictureBox();
@@ -50,6 +54,7 @@
             btnNavHome = new Guna.UI2.WinForms.Guna2ImageButton();
             MainTabControl = new TabControl();
             TabHome = new TabPage();
+            pieChart1 = new LiveChartsCore.SkiaSharpView.WinForms.PieChart();
             TabMedicines = new TabPage();
             TabExpired = new TabPage();
             TabPOS = new TabPage();
@@ -64,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)SettingsTabSelectArrow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)HomeTabSelectArrow).BeginInit();
             MainTabControl.SuspendLayout();
+            TabHome.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -162,7 +168,7 @@
             // btnNavSettings
             // 
             btnNavSettings.BackColor = Color.Transparent;
-            btnNavSettings.CheckedState.ImageSize = new Size(290, 165);
+            btnNavSettings.CheckedState.ImageSize = new Size(292, 167);
             btnNavSettings.Dock = DockStyle.Top;
             btnNavSettings.HoverState.ImageSize = new Size(295, 170);
             btnNavSettings.Image = (Image)resources.GetObject("btnNavSettings.Image");
@@ -180,7 +186,7 @@
             // btnNavInvoice
             // 
             btnNavInvoice.BackColor = Color.Transparent;
-            btnNavInvoice.CheckedState.ImageSize = new Size(290, 165);
+            btnNavInvoice.CheckedState.ImageSize = new Size(292, 167);
             btnNavInvoice.Dock = DockStyle.Top;
             btnNavInvoice.HoverState.ImageSize = new Size(295, 170);
             btnNavInvoice.Image = (Image)resources.GetObject("btnNavInvoice.Image");
@@ -198,7 +204,7 @@
             // btnNavPOS
             // 
             btnNavPOS.BackColor = Color.Transparent;
-            btnNavPOS.CheckedState.ImageSize = new Size(290, 165);
+            btnNavPOS.CheckedState.ImageSize = new Size(292, 167);
             btnNavPOS.Dock = DockStyle.Top;
             btnNavPOS.HoverState.ImageSize = new Size(295, 170);
             btnNavPOS.Image = (Image)resources.GetObject("btnNavPOS.Image");
@@ -216,7 +222,7 @@
             // btnNavExpired
             // 
             btnNavExpired.BackColor = Color.Transparent;
-            btnNavExpired.CheckedState.ImageSize = new Size(290, 165);
+            btnNavExpired.CheckedState.ImageSize = new Size(292, 167);
             btnNavExpired.Dock = DockStyle.Top;
             btnNavExpired.HoverState.ImageSize = new Size(295, 170);
             btnNavExpired.Image = (Image)resources.GetObject("btnNavExpired.Image");
@@ -234,7 +240,7 @@
             // btnNavMedicines
             // 
             btnNavMedicines.BackColor = Color.Transparent;
-            btnNavMedicines.CheckedState.ImageSize = new Size(290, 165);
+            btnNavMedicines.CheckedState.ImageSize = new Size(292, 167);
             btnNavMedicines.Dock = DockStyle.Top;
             btnNavMedicines.HoverState.ImageSize = new Size(295, 170);
             btnNavMedicines.Image = (Image)resources.GetObject("btnNavMedicines.Image");
@@ -252,7 +258,7 @@
             // btnNavHome
             // 
             btnNavHome.BackColor = Color.Transparent;
-            btnNavHome.CheckedState.ImageSize = new Size(290, 165);
+            btnNavHome.CheckedState.ImageSize = new Size(292, 167);
             btnNavHome.Dock = DockStyle.Top;
             btnNavHome.HoverState.ImageSize = new Size(295, 170);
             btnNavHome.Image = (Image)resources.GetObject("btnNavHome.Image");
@@ -290,11 +296,51 @@
             // 
             TabHome.BackColor = Color.FromArgb(205, 220, 248);
             TabHome.BackgroundImageLayout = ImageLayout.None;
+            TabHome.Controls.Add(pieChart1);
             TabHome.Location = new Point(4, 5);
             TabHome.Name = "TabHome";
             TabHome.Size = new Size(1470, 935);
             TabHome.TabIndex = 5;
             TabHome.Text = "Home";
+            // 
+            // pieChart1
+            // 
+            pieChart1.AutoUpdateEnabled = true;
+            pieChart1.ChartTheme = null;
+            skDefaultLegend1.AnimationsSpeed = TimeSpan.Parse("00:00:00.1500000");
+            skDefaultLegend1.Content = null;
+            skDefaultLegend1.IsValid = false;
+            skDefaultLegend1.Opacity = 1F;
+            padding1.Bottom = 0F;
+            padding1.Left = 0F;
+            padding1.Right = 0F;
+            padding1.Top = 0F;
+            skDefaultLegend1.Padding = padding1;
+            skDefaultLegend1.RemoveOnCompleted = false;
+            skDefaultLegend1.RotateTransform = 0F;
+            skDefaultLegend1.X = 0F;
+            skDefaultLegend1.Y = 0F;
+            pieChart1.Legend = skDefaultLegend1;
+            pieChart1.Location = new Point(665, 149);
+            pieChart1.Name = "pieChart1";
+            pieChart1.Size = new Size(180, 162);
+            pieChart1.TabIndex = 0;
+            skDefaultTooltip1.AnimationsSpeed = TimeSpan.Parse("00:00:00.1500000");
+            skDefaultTooltip1.Content = null;
+            skDefaultTooltip1.IsValid = false;
+            skDefaultTooltip1.Opacity = 1F;
+            padding2.Bottom = 0F;
+            padding2.Left = 0F;
+            padding2.Right = 0F;
+            padding2.Top = 0F;
+            skDefaultTooltip1.Padding = padding2;
+            skDefaultTooltip1.RemoveOnCompleted = false;
+            skDefaultTooltip1.RotateTransform = 0F;
+            skDefaultTooltip1.Wedge = 10;
+            skDefaultTooltip1.X = 0F;
+            skDefaultTooltip1.Y = 0F;
+            pieChart1.Tooltip = skDefaultTooltip1;
+            pieChart1.UpdaterThrottler = TimeSpan.Parse("00:00:00.0500000");
             // 
             // TabMedicines
             // 
@@ -366,6 +412,7 @@
             ((System.ComponentModel.ISupportInitialize)SettingsTabSelectArrow).EndInit();
             ((System.ComponentModel.ISupportInitialize)HomeTabSelectArrow).EndInit();
             MainTabControl.ResumeLayout(false);
+            TabHome.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -392,5 +439,6 @@
         private PictureBox POSTabSelectArrow;
         private PictureBox InvoiceTabSelectArrow;
         private PictureBox SettingsTabSelectArrow;
+        private LiveChartsCore.SkiaSharpView.WinForms.PieChart pieChart1;
     }
 }
