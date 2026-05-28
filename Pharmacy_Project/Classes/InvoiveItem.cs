@@ -8,5 +8,12 @@ namespace Pharmacy_Project.Classes
 {
     public class InvoiveItem
     {
+        public Medicine Medicine { get; set; }
+        public int Quantity { get; set; }
+        public double UnitPrice { get; set; }
+        public double SubTotal
+        {
+            get { return Quantity * UnitPrice; }
+        }
     }
 }

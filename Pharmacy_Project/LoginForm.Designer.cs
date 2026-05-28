@@ -103,7 +103,7 @@
             SignButton.ImageSize = new Size(200, 115);
             SignButton.Location = new Point(187, 573);
             SignButton.Name = "SignButton";
-            SignButton.PressedState.ImageSize = new Size(64, 64);
+            SignButton.PressedState.ImageSize = new Size(205, 120);
             SignButton.ShadowDecoration.CustomizableEdges = customizableEdges1;
             SignButton.Size = new Size(175, 50);
             SignButton.TabIndex = 3;
@@ -190,6 +190,7 @@
             Controls.Add(LoginPanel);
             Name = "LoginForm";
             Text = "LoginForm";
+            FormClosing += LoginForm_FormClosing;
             Load += LoginForm_Load;
             LoginPanel.ResumeLayout(false);
             LoginPanel.PerformLayout();

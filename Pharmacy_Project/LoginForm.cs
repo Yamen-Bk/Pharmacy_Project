@@ -20,7 +20,7 @@ namespace Pharmacy_Project
         private void LoadImages()
         {
             for (int i = 0; i < 24; i++)
-                images[i] = Image.FromFile(Application.StartupPath + $"\\login_pics\\textbox_user_{i+1}.jpg");
+                images[i] = Image.FromFile(Application.StartupPath + $"\\login_pics\\textbox_user_{i + 1}.jpg");
 
             images[24] = Image.FromFile(Application.StartupPath + @"\login_pics\debut.jpg");
             images[25] = Image.FromFile(Application.StartupPath + @"\login_pics\textbox_password.png");
@@ -110,6 +110,19 @@ namespace Pharmacy_Project
             }
             main.Opacity = 1;
             this.Hide();
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!this.Visible) return;
+            if(e.CloseReason != CloseReason.UserClosing) return;
+            DialogResult result = MessageBox.Show("Do you want to Exit the Application", "Exit",
+                                                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Pharmacy.SaveData();
+                Application.Exit();
+            }
         }
     }
 }

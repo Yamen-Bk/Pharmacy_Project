@@ -264,6 +264,7 @@
             Controls.Add(MainTabControl);
             Name = "MainForm";
             Text = "MainForm";
+            FormClosing += MainForm_FormClosing;
             Load += MainForm_Load;
             panel1.ResumeLayout(false);
             MainTabControl.ResumeLayout(false);

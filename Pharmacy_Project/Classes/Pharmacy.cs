@@ -22,8 +22,10 @@ namespace Pharmacy_Project.Classes
         {
             if (File.Exists(medicinesPath))
                 Medicines = JsonConvert.DeserializeObject<List<Medicine>>(File.ReadAllText(medicinesPath));
+
             if (File.Exists(invoicesPath))
                 Invoices = JsonConvert.DeserializeObject<List<Invoice>>(File.ReadAllText(invoicesPath));
+
             if (File.Exists(userPath))
                 User = JsonConvert.DeserializeObject<User>(File.ReadAllText(userPath));
         }
