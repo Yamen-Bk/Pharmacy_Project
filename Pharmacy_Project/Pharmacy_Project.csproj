@@ -10,7 +10,10 @@
 
   <ItemGroup>
     <None Remove="login_pics\debut.JPG" />
+    <None Remove="login_pics\Eye.png" />
+    <None Remove="login_pics\EyeClosed.png" />
     <None Remove="login_pics\textbox_password.png" />
+    <None Remove="login_pics\textbox_password_show.png" />
     <None Remove="login_pics\textbox_user_1.jpg" />
     <None Remove="login_pics\textbox_user_10.jpg" />
     <None Remove="login_pics\textbox_user_11.jpg" />
@@ -42,7 +45,16 @@
     <Content Include="login_pics\debut.JPG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="login_pics\Eye.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="login_pics\EyeClosed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="login_pics\textbox_password.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="login_pics\textbox_password_show.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="login_pics\textbox_user_1.jpg">

@@ -9,7 +9,7 @@ namespace Pharmacy_Project
 {
     public partial class LoginForm : Form
     {
-        Image[] images = new Image[26];
+        Image[] images = new Image[27];
         public LoginForm()
         {
             InitializeComponent();
@@ -24,6 +24,7 @@ namespace Pharmacy_Project
 
             images[24] = Image.FromFile(Application.StartupPath + @"\login_pics\debut.jpg");
             images[25] = Image.FromFile(Application.StartupPath + @"\login_pics\textbox_password.png");
+            images[26] = Image.FromFile(Application.StartupPath + @"\login_pics\textbox_password_show.png");
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -53,7 +54,19 @@ namespace Pharmacy_Project
             labelErrorPass.Visible = false;
             LoginPic.Image = images[25];
         }
-
+        private void PasswordTextBox_IconRightClick(object sender, EventArgs e)
+        {
+            if (PasswordTextBox.UseSystemPasswordChar == true)
+            {
+                PasswordTextBox.UseSystemPasswordChar = false;
+                LoginPic.Image = images[26];
+            }
+            else
+            {
+                PasswordTextBox.UseSystemPasswordChar = false;
+                LoginPic.Image = images[25];
+            }
+        }
         private async void SignButton_Click(object sender, EventArgs e)
         {
             labelErrorUser.Visible = false;
@@ -115,7 +128,7 @@ namespace Pharmacy_Project
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!this.Visible) return;
-            if(e.CloseReason != CloseReason.UserClosing) return;
+            if (e.CloseReason != CloseReason.UserClosing) return;
             DialogResult result = MessageBox.Show("Do you want to Exit the Application", "Exit",
                                                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
@@ -124,5 +137,6 @@ namespace Pharmacy_Project
                 Application.Exit();
             }
         }
+
     }
 }

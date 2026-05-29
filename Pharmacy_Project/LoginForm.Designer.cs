@@ -128,6 +128,9 @@
             PasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             PasswordTextBox.IconLeft = (Image)resources.GetObject("PasswordTextBox.IconLeft");
             PasswordTextBox.IconLeftSize = new Size(50, 50);
+            PasswordTextBox.IconRight = (Image)resources.GetObject("PasswordTextBox.IconRight");
+            PasswordTextBox.IconRightOffset = new Point(7, 0);
+            PasswordTextBox.IconRightSize = new Size(35, 35);
             PasswordTextBox.Location = new Point(121, 444);
             PasswordTextBox.Margin = new Padding(4, 6, 4, 6);
             PasswordTextBox.Name = "PasswordTextBox";
@@ -141,6 +144,8 @@
             PasswordTextBox.Size = new Size(310, 60);
             PasswordTextBox.TabIndex = 2;
             PasswordTextBox.TextOffset = new Point(0, -1);
+            PasswordTextBox.UseSystemPasswordChar = true;
+            PasswordTextBox.IconRightClick += PasswordTextBox_IconRightClick;
             PasswordTextBox.TextChanged += PasswordTextBox_TextChanged;
             // 
             // UsernameTextBox
