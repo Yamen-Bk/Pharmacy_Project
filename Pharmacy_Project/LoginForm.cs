@@ -48,24 +48,10 @@ namespace Pharmacy_Project
             else
                 LoginPic.Image = images[24];
         }
-
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
             labelErrorPass.Visible = false;
             LoginPic.Image = images[25];
-        }
-        private void PasswordTextBox_IconRightClick(object sender, EventArgs e)
-        {
-            if (PasswordTextBox.UseSystemPasswordChar == true)
-            {
-                PasswordTextBox.UseSystemPasswordChar = false;
-                LoginPic.Image = images[26];
-            }
-            else
-            {
-                PasswordTextBox.UseSystemPasswordChar = false;
-                LoginPic.Image = images[25];
-            }
         }
         private async void SignButton_Click(object sender, EventArgs e)
         {
@@ -138,5 +124,20 @@ namespace Pharmacy_Project
             }
         }
 
+        private void ShowPassbtn_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (PasswordTextBox.UseSystemPasswordChar == true)
+            {
+                PasswordTextBox.UseSystemPasswordChar = false;
+                ShowPassbtn.Checked = true;
+                LoginPic.Image = images[26];
+            }
+            else
+            {
+                PasswordTextBox.UseSystemPasswordChar = true;
+                ShowPassbtn.Checked = false;
+                LoginPic.Image = images[25];
+            }
+        }
     }
 }
