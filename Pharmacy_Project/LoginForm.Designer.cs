@@ -99,7 +99,6 @@
             PasswordTextBox.AutoRoundedCorners = true;
             PasswordTextBox.BackColor = Color.Transparent;
             PasswordTextBox.BorderColor = Color.DimGray;
-            PasswordTextBox.BorderRadius = 29;
             PasswordTextBox.BorderThickness = 2;
             PasswordTextBox.CustomizableEdges = customizableEdges2;
             PasswordTextBox.DefaultText = "";
@@ -108,7 +107,7 @@
             PasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             PasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             PasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            PasswordTextBox.Font = new Font("Segoe UI", 10F);
+            PasswordTextBox.Font = new Font("Segoe UI", 9F);
             PasswordTextBox.ForeColor = SystemColors.ActiveCaptionText;
             PasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             PasswordTextBox.IconLeft = (Image)resources.GetObject("PasswordTextBox.IconLeft");
@@ -172,7 +171,6 @@
             UsernameTextBox.AutoRoundedCorners = true;
             UsernameTextBox.BackColor = Color.Transparent;
             UsernameTextBox.BorderColor = Color.DimGray;
-            UsernameTextBox.BorderRadius = 29;
             UsernameTextBox.BorderThickness = 2;
             UsernameTextBox.CustomizableEdges = customizableEdges5;
             UsernameTextBox.DefaultText = "";
@@ -181,7 +179,7 @@
             UsernameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             UsernameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             UsernameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            UsernameTextBox.Font = new Font("Segoe UI", 10F);
+            UsernameTextBox.Font = new Font("Segoe UI", 9F);
             UsernameTextBox.ForeColor = SystemColors.ActiveCaptionText;
             UsernameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             UsernameTextBox.IconLeft = (Image)resources.GetObject("UsernameTextBox.IconLeft");
