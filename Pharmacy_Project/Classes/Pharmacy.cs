@@ -34,5 +34,34 @@ namespace Pharmacy_Project.Classes
             File.WriteAllText(medicinesPath, JsonConvert.SerializeObject(Medicines, Formatting.Indented));
             File.WriteAllText(invoicesPath, JsonConvert.SerializeObject(Invoices, Formatting.Indented));
         }
+        public static void LoadInitialData()
+        {
+            Medicines.Add(new Medicine
+            {
+                Id = 1,
+                TradeName = "بنادول",
+                ScientificName = "باراسيتامول",
+                Manufacturer = "GSK",
+                Price = 2500,
+                Quantity = 50,
+                ExpiryDate = DateTime.Now.AddMonths(6)
+                TradeName = "أموكسيل",
+                ScientificName = "أموكسيسيلين",
+                Manufacturer = "Pfizer",
+                Price = 4000,
+                Quantity = 3,
+                ExpiryDate = DateTime.Now.AddDays(10)
+            });
+            Medicines.Add(new Medicine
+            {
+                Id = 3,
+                TradeName = "فولتارين",
+                ScientificName = "ديكلوفيناك",
+                Manufacturer = "Novartis",
+                Price = 3000,
+                Quantity = 20,
+                ExpiryDate = DateTime.Now.AddYears(-1)
+            });
+        }
     }
 }

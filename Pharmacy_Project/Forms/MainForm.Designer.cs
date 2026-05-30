@@ -35,10 +35,28 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultLegend skDefaultLegend1 = new LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultLegend();
             LiveChartsCore.Drawing.Padding padding1 = new LiveChartsCore.Drawing.Padding();
             LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultTooltip skDefaultTooltip1 = new LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultTooltip();
             LiveChartsCore.Drawing.Padding padding2 = new LiveChartsCore.Drawing.Padding();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultLegend skDefaultLegend2 = new LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultLegend();
+            LiveChartsCore.Drawing.Padding padding3 = new LiveChartsCore.Drawing.Padding();
+            LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultTooltip skDefaultTooltip2 = new LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultTooltip();
+            LiveChartsCore.Drawing.Padding padding4 = new LiveChartsCore.Drawing.Padding();
             panel1 = new Panel();
             MedicinesTabSelectArrow = new PictureBox();
             ExpiredTabSelectArrow = new PictureBox();
@@ -54,7 +72,24 @@
             btnNavHome = new Guna.UI2.WinForms.Guna2ImageButton();
             MainTabControl = new TabControl();
             TabHome = new TabPage();
+            guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             pieChart1 = new LiveChartsCore.SkiaSharpView.WinForms.PieChart();
+            guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            label2 = new Label();
+            LabelTotalMedicines = new Label();
+            guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            label7 = new Label();
+            LabelExpired = new Label();
+            guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            label3 = new Label();
+            LabelLowStock = new Label();
+            guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            LabelTotalSales = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            LabelMedicinesSold = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            LabelWelcome = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            cartesianChart1 = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
             TabMedicines = new TabPage();
             TabExpired = new TabPage();
             TabPOS = new TabPage();
@@ -70,6 +105,13 @@
             ((System.ComponentModel.ISupportInitialize)HomeTabSelectArrow).BeginInit();
             MainTabControl.SuspendLayout();
             TabHome.SuspendLayout();
+            guna2GradientPanel7.SuspendLayout();
+            guna2GradientPanel1.SuspendLayout();
+            guna2GradientPanel4.SuspendLayout();
+            guna2GradientPanel2.SuspendLayout();
+            guna2GradientPanel6.SuspendLayout();
+            guna2GradientPanel5.SuspendLayout();
+            guna2GradientPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -296,12 +338,33 @@
             // 
             TabHome.BackColor = Color.FromArgb(205, 220, 248);
             TabHome.BackgroundImageLayout = ImageLayout.None;
-            TabHome.Controls.Add(pieChart1);
+            TabHome.Controls.Add(guna2GradientPanel7);
+            TabHome.Controls.Add(guna2GradientPanel6);
+            TabHome.Controls.Add(guna2GradientPanel5);
+            TabHome.Controls.Add(guna2GradientPanel3);
             TabHome.Location = new Point(4, 5);
             TabHome.Name = "TabHome";
             TabHome.Size = new Size(1470, 935);
             TabHome.TabIndex = 5;
             TabHome.Text = "Home";
+            // 
+            // guna2GradientPanel7
+            // 
+            guna2GradientPanel7.BorderColor = Color.DarkSlateGray;
+            guna2GradientPanel7.BorderRadius = 25;
+            guna2GradientPanel7.BorderThickness = 3;
+            guna2GradientPanel7.Controls.Add(pieChart1);
+            guna2GradientPanel7.Controls.Add(guna2GradientPanel1);
+            guna2GradientPanel7.Controls.Add(guna2GradientPanel4);
+            guna2GradientPanel7.Controls.Add(guna2GradientPanel2);
+            guna2GradientPanel7.CustomizableEdges = customizableEdges13;
+            guna2GradientPanel7.FillColor = Color.PaleTurquoise;
+            guna2GradientPanel7.FillColor2 = Color.Azure;
+            guna2GradientPanel7.Location = new Point(1043, 488);
+            guna2GradientPanel7.Name = "guna2GradientPanel7";
+            guna2GradientPanel7.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2GradientPanel7.Size = new Size(406, 393);
+            guna2GradientPanel7.TabIndex = 6;
             // 
             // pieChart1
             // 
@@ -321,9 +384,9 @@
             skDefaultLegend1.X = 0F;
             skDefaultLegend1.Y = 0F;
             pieChart1.Legend = skDefaultLegend1;
-            pieChart1.Location = new Point(665, 149);
+            pieChart1.Location = new Point(70, 22);
             pieChart1.Name = "pieChart1";
-            pieChart1.Size = new Size(180, 162);
+            pieChart1.Size = new Size(250, 250);
             pieChart1.TabIndex = 0;
             skDefaultTooltip1.AnimationsSpeed = TimeSpan.Parse("00:00:00.1500000");
             skDefaultTooltip1.Content = null;
@@ -341,6 +404,210 @@
             skDefaultTooltip1.Y = 0F;
             pieChart1.Tooltip = skDefaultTooltip1;
             pieChart1.UpdaterThrottler = TimeSpan.Parse("00:00:00.0500000");
+            // 
+            // guna2GradientPanel1
+            // 
+            guna2GradientPanel1.Controls.Add(label2);
+            guna2GradientPanel1.Controls.Add(LabelTotalMedicines);
+            guna2GradientPanel1.CustomizableEdges = customizableEdges7;
+            guna2GradientPanel1.Location = new Point(15, 312);
+            guna2GradientPanel1.Name = "guna2GradientPanel1";
+            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2GradientPanel1.Size = new Size(108, 57);
+            guna2GradientPanel1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(62, 18);
+            label2.Name = "label2";
+            label2.Size = new Size(32, 25);
+            label2.TabIndex = 1;
+            label2.Text = "50";
+            // 
+            // LabelTotalMedicines
+            // 
+            LabelTotalMedicines.AutoSize = true;
+            LabelTotalMedicines.Location = new Point(7, 18);
+            LabelTotalMedicines.Name = "LabelTotalMedicines";
+            LabelTotalMedicines.Size = new Size(49, 25);
+            LabelTotalMedicines.TabIndex = 0;
+            LabelTotalMedicines.Text = "Total";
+            // 
+            // guna2GradientPanel4
+            // 
+            guna2GradientPanel4.Controls.Add(label7);
+            guna2GradientPanel4.Controls.Add(LabelExpired);
+            guna2GradientPanel4.CustomizableEdges = customizableEdges9;
+            guna2GradientPanel4.Location = new Point(280, 312);
+            guna2GradientPanel4.Name = "guna2GradientPanel4";
+            guna2GradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2GradientPanel4.Size = new Size(108, 57);
+            guna2GradientPanel4.TabIndex = 2;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(69, 18);
+            label7.Name = "label7";
+            label7.Size = new Size(32, 25);
+            label7.TabIndex = 1;
+            label7.Text = "50";
+            // 
+            // LabelExpired
+            // 
+            LabelExpired.AutoSize = true;
+            LabelExpired.Location = new Point(2, 18);
+            LabelExpired.Name = "LabelExpired";
+            LabelExpired.Size = new Size(70, 25);
+            LabelExpired.TabIndex = 0;
+            LabelExpired.Text = "Expired";
+            // 
+            // guna2GradientPanel2
+            // 
+            guna2GradientPanel2.Controls.Add(label3);
+            guna2GradientPanel2.Controls.Add(LabelLowStock);
+            guna2GradientPanel2.CustomizableEdges = customizableEdges11;
+            guna2GradientPanel2.Location = new Point(135, 312);
+            guna2GradientPanel2.Name = "guna2GradientPanel2";
+            guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2GradientPanel2.Size = new Size(136, 57);
+            guna2GradientPanel2.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(92, 18);
+            label3.Name = "label3";
+            label3.Size = new Size(32, 25);
+            label3.TabIndex = 1;
+            label3.Text = "50";
+            // 
+            // LabelLowStock
+            // 
+            LabelLowStock.AutoSize = true;
+            LabelLowStock.Location = new Point(5, 18);
+            LabelLowStock.Name = "LabelLowStock";
+            LabelLowStock.Size = new Size(87, 25);
+            LabelLowStock.TabIndex = 0;
+            LabelLowStock.Text = "LowStock";
+            // 
+            // guna2GradientPanel6
+            // 
+            guna2GradientPanel6.BorderColor = Color.DarkSlateGray;
+            guna2GradientPanel6.BorderRadius = 25;
+            guna2GradientPanel6.BorderThickness = 3;
+            guna2GradientPanel6.Controls.Add(LabelTotalSales);
+            guna2GradientPanel6.Controls.Add(LabelMedicinesSold);
+            guna2GradientPanel6.CustomizableEdges = customizableEdges15;
+            guna2GradientPanel6.FillColor = Color.PaleTurquoise;
+            guna2GradientPanel6.FillColor2 = Color.Azure;
+            guna2GradientPanel6.Location = new Point(327, 236);
+            guna2GradientPanel6.Name = "guna2GradientPanel6";
+            guna2GradientPanel6.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2GradientPanel6.Size = new Size(1122, 195);
+            guna2GradientPanel6.TabIndex = 5;
+            // 
+            // LabelTotalSales
+            // 
+            LabelTotalSales.BackColor = Color.Transparent;
+            LabelTotalSales.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LabelTotalSales.Location = new Point(58, 51);
+            LabelTotalSales.Name = "LabelTotalSales";
+            LabelTotalSales.Size = new Size(63, 76);
+            LabelTotalSales.TabIndex = 1;
+            LabelTotalSales.Text = "55";
+            // 
+            // LabelMedicinesSold
+            // 
+            LabelMedicinesSold.BackColor = Color.Transparent;
+            LabelMedicinesSold.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LabelMedicinesSold.Location = new Point(913, 51);
+            LabelMedicinesSold.Name = "LabelMedicinesSold";
+            LabelMedicinesSold.Size = new Size(55, 67);
+            LabelMedicinesSold.TabIndex = 0;
+            LabelMedicinesSold.Text = "10";
+            // 
+            // guna2GradientPanel5
+            // 
+            guna2GradientPanel5.BorderColor = Color.DarkSlateGray;
+            guna2GradientPanel5.BorderRadius = 25;
+            guna2GradientPanel5.BorderThickness = 3;
+            guna2GradientPanel5.Controls.Add(LabelWelcome);
+            guna2GradientPanel5.CustomizableEdges = customizableEdges17;
+            guna2GradientPanel5.FillColor = Color.PaleTurquoise;
+            guna2GradientPanel5.FillColor2 = Color.Azure;
+            guna2GradientPanel5.Location = new Point(479, 38);
+            guna2GradientPanel5.Name = "guna2GradientPanel5";
+            guna2GradientPanel5.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2GradientPanel5.Size = new Size(807, 156);
+            guna2GradientPanel5.TabIndex = 4;
+            // 
+            // LabelWelcome
+            // 
+            LabelWelcome.BackColor = Color.Transparent;
+            LabelWelcome.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LabelWelcome.Location = new Point(150, 39);
+            LabelWelcome.Name = "LabelWelcome";
+            LabelWelcome.Size = new Size(185, 62);
+            LabelWelcome.TabIndex = 0;
+            LabelWelcome.Text = "Welcome";
+            // 
+            // guna2GradientPanel3
+            // 
+            guna2GradientPanel3.BorderColor = Color.DarkSlateGray;
+            guna2GradientPanel3.BorderRadius = 25;
+            guna2GradientPanel3.BorderThickness = 3;
+            guna2GradientPanel3.Controls.Add(cartesianChart1);
+            guna2GradientPanel3.CustomizableEdges = customizableEdges19;
+            guna2GradientPanel3.FillColor = Color.PaleTurquoise;
+            guna2GradientPanel3.FillColor2 = Color.Azure;
+            guna2GradientPanel3.Location = new Point(327, 488);
+            guna2GradientPanel3.Name = "guna2GradientPanel3";
+            guna2GradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2GradientPanel3.Size = new Size(680, 393);
+            guna2GradientPanel3.TabIndex = 7;
+            // 
+            // cartesianChart1
+            // 
+            cartesianChart1.AutoUpdateEnabled = true;
+            cartesianChart1.ChartTheme = null;
+            skDefaultLegend2.AnimationsSpeed = TimeSpan.Parse("00:00:00.1500000");
+            skDefaultLegend2.Content = null;
+            skDefaultLegend2.IsValid = false;
+            skDefaultLegend2.Opacity = 1F;
+            padding3.Bottom = 0F;
+            padding3.Left = 0F;
+            padding3.Right = 0F;
+            padding3.Top = 0F;
+            skDefaultLegend2.Padding = padding3;
+            skDefaultLegend2.RemoveOnCompleted = false;
+            skDefaultLegend2.RotateTransform = 0F;
+            skDefaultLegend2.X = 0F;
+            skDefaultLegend2.Y = 0F;
+            cartesianChart1.Legend = skDefaultLegend2;
+            cartesianChart1.Location = new Point(34, 45);
+            cartesianChart1.MatchAxesScreenDataRatio = false;
+            cartesianChart1.Name = "cartesianChart1";
+            cartesianChart1.Size = new Size(600, 300);
+            cartesianChart1.TabIndex = 3;
+            skDefaultTooltip2.AnimationsSpeed = TimeSpan.Parse("00:00:00.1500000");
+            skDefaultTooltip2.Content = null;
+            skDefaultTooltip2.IsValid = false;
+            skDefaultTooltip2.Opacity = 1F;
+            padding4.Bottom = 0F;
+            padding4.Left = 0F;
+            padding4.Right = 0F;
+            padding4.Top = 0F;
+            skDefaultTooltip2.Padding = padding4;
+            skDefaultTooltip2.RemoveOnCompleted = false;
+            skDefaultTooltip2.RotateTransform = 0F;
+            skDefaultTooltip2.Wedge = 10;
+            skDefaultTooltip2.X = 0F;
+            skDefaultTooltip2.Y = 0F;
+            cartesianChart1.Tooltip = skDefaultTooltip2;
+            cartesianChart1.TooltipFindingStrategy = LiveChartsCore.Measure.TooltipFindingStrategy.Automatic;
+            cartesianChart1.UpdaterThrottler = TimeSpan.Parse("00:00:00.0500000");
             // 
             // TabMedicines
             // 
@@ -412,6 +679,18 @@
             ((System.ComponentModel.ISupportInitialize)HomeTabSelectArrow).EndInit();
             MainTabControl.ResumeLayout(false);
             TabHome.ResumeLayout(false);
+            guna2GradientPanel7.ResumeLayout(false);
+            guna2GradientPanel1.ResumeLayout(false);
+            guna2GradientPanel1.PerformLayout();
+            guna2GradientPanel4.ResumeLayout(false);
+            guna2GradientPanel4.PerformLayout();
+            guna2GradientPanel2.ResumeLayout(false);
+            guna2GradientPanel2.PerformLayout();
+            guna2GradientPanel6.ResumeLayout(false);
+            guna2GradientPanel6.PerformLayout();
+            guna2GradientPanel5.ResumeLayout(false);
+            guna2GradientPanel5.PerformLayout();
+            guna2GradientPanel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -439,5 +718,22 @@
         private PictureBox InvoiceTabSelectArrow;
         private PictureBox SettingsTabSelectArrow;
         private LiveChartsCore.SkiaSharpView.WinForms.PieChart pieChart1;
+        private LiveChartsCore.SkiaSharpView.WinForms.CartesianChart cartesianChart1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
+        private Label label3;
+        private Label LabelLowStock;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
+        private Label label7;
+        private Label LabelExpired;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Label label2;
+        private Label LabelTotalMedicines;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LabelWelcome;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LabelTotalSales;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LabelMedicinesSold;
     }
 }
