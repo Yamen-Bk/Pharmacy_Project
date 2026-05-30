@@ -45,6 +45,10 @@ namespace Pharmacy_Project.Classes
                 Price = 2500,
                 Quantity = 50,
                 ExpiryDate = DateTime.Now.AddMonths(6)
+            });
+            Medicines.Add(new Medicine
+            {
+                Id = 2,
                 TradeName = "أموكسيل",
                 ScientificName = "أموكسيسيلين",
                 Manufacturer = "Pfizer",
