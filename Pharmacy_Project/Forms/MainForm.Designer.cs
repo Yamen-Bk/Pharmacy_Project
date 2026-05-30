@@ -57,6 +57,30 @@
             LiveChartsCore.Drawing.Padding padding3 = new LiveChartsCore.Drawing.Padding();
             LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultTooltip skDefaultTooltip2 = new LiveChartsCore.SkiaSharpView.SKCharts.SKDefaultTooltip();
             LiveChartsCore.Drawing.Padding padding4 = new LiveChartsCore.Drawing.Padding();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             MedicinesTabSelectArrow = new PictureBox();
             ExpiredTabSelectArrow = new PictureBox();
@@ -84,13 +108,42 @@
             label3 = new Label();
             LabelLowStock = new Label();
             guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            LabelTotalSales = new Guna.UI2.WinForms.Guna2HtmlLabel();
             LabelMedicinesSold = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            LabelTotalSales = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             LabelWelcome = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             cartesianChart1 = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
             TabMedicines = new TabPage();
+            FilterComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            FilterLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            AddMedicinePanel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            ManufacturerTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            ExpiryDateTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            QuantityTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            PriceTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            ScientificNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            Cancelbtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            Savebtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            TradeNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            ScientificNameLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            ManufacturerLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            PriceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            QuantityLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            ExpiryDateLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            TradeNameLable = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            MedicinesDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            TradeName = new DataGridViewTextBoxColumn();
+            ScientificName = new DataGridViewTextBoxColumn();
+            Manufacturer = new DataGridViewTextBoxColumn();
+            Price = new DataGridViewTextBoxColumn();
+            Quantity = new DataGridViewTextBoxColumn();
+            ExpiryDate = new DataGridViewTextBoxColumn();
+            status = new DataGridViewTextBoxColumn();
+            Deletebtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            Editbtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            AddMedicinebtn = new Guna.UI2.WinForms.Guna2ImageButton();
             TabExpired = new TabPage();
             TabPOS = new TabPage();
             TabInvoice = new TabPage();
@@ -112,6 +165,9 @@
             guna2GradientPanel6.SuspendLayout();
             guna2GradientPanel5.SuspendLayout();
             guna2GradientPanel3.SuspendLayout();
+            TabMedicines.SuspendLayout();
+            AddMedicinePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)MedicinesDataGridView).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -497,8 +553,8 @@
             guna2GradientPanel6.BorderColor = Color.DarkSlateGray;
             guna2GradientPanel6.BorderRadius = 25;
             guna2GradientPanel6.BorderThickness = 3;
-            guna2GradientPanel6.Controls.Add(LabelTotalSales);
             guna2GradientPanel6.Controls.Add(LabelMedicinesSold);
+            guna2GradientPanel6.Controls.Add(LabelTotalSales);
             guna2GradientPanel6.CustomizableEdges = customizableEdges15;
             guna2GradientPanel6.FillColor = Color.PaleTurquoise;
             guna2GradientPanel6.FillColor2 = Color.Azure;
@@ -508,25 +564,27 @@
             guna2GradientPanel6.Size = new Size(1122, 195);
             guna2GradientPanel6.TabIndex = 5;
             // 
-            // LabelTotalSales
-            // 
-            LabelTotalSales.BackColor = Color.Transparent;
-            LabelTotalSales.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelTotalSales.Location = new Point(58, 51);
-            LabelTotalSales.Name = "LabelTotalSales";
-            LabelTotalSales.Size = new Size(63, 76);
-            LabelTotalSales.TabIndex = 1;
-            LabelTotalSales.Text = "55";
-            // 
             // LabelMedicinesSold
             // 
             LabelMedicinesSold.BackColor = Color.Transparent;
-            LabelMedicinesSold.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelMedicinesSold.Location = new Point(913, 51);
+            LabelMedicinesSold.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelMedicinesSold.ForeColor = Color.FromArgb(9, 105, 137);
+            LabelMedicinesSold.Location = new Point(793, 51);
             LabelMedicinesSold.Name = "LabelMedicinesSold";
-            LabelMedicinesSold.Size = new Size(55, 67);
-            LabelMedicinesSold.TabIndex = 0;
-            LabelMedicinesSold.Text = "10";
+            LabelMedicinesSold.Size = new Size(213, 67);
+            LabelMedicinesSold.TabIndex = 3;
+            LabelMedicinesSold.Text = "Welcome";
+            // 
+            // LabelTotalSales
+            // 
+            LabelTotalSales.BackColor = Color.Transparent;
+            LabelTotalSales.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelTotalSales.ForeColor = Color.FromArgb(9, 105, 137);
+            LabelTotalSales.Location = new Point(106, 51);
+            LabelTotalSales.Name = "LabelTotalSales";
+            LabelTotalSales.Size = new Size(213, 67);
+            LabelTotalSales.TabIndex = 2;
+            LabelTotalSales.Text = "Welcome";
             // 
             // guna2GradientPanel5
             // 
@@ -546,10 +604,11 @@
             // LabelWelcome
             // 
             LabelWelcome.BackColor = Color.Transparent;
-            LabelWelcome.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelWelcome.Location = new Point(150, 39);
+            LabelWelcome.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelWelcome.ForeColor = Color.FromArgb(9, 105, 137);
+            LabelWelcome.Location = new Point(150, 47);
             LabelWelcome.Name = "LabelWelcome";
-            LabelWelcome.Size = new Size(185, 62);
+            LabelWelcome.Size = new Size(213, 67);
             LabelWelcome.TabIndex = 0;
             LabelWelcome.Text = "Welcome";
             // 
@@ -612,12 +671,484 @@
             // TabMedicines
             // 
             TabMedicines.BackColor = Color.FromArgb(205, 220, 248);
+            TabMedicines.Controls.Add(FilterComboBox);
+            TabMedicines.Controls.Add(FilterLabel);
+            TabMedicines.Controls.Add(AddMedicinePanel);
+            TabMedicines.Controls.Add(MedicinesDataGridView);
+            TabMedicines.Controls.Add(Deletebtn);
+            TabMedicines.Controls.Add(Editbtn);
+            TabMedicines.Controls.Add(AddMedicinebtn);
             TabMedicines.Location = new Point(4, 5);
             TabMedicines.Name = "TabMedicines";
             TabMedicines.Padding = new Padding(3);
             TabMedicines.Size = new Size(1470, 935);
             TabMedicines.TabIndex = 0;
             TabMedicines.Text = "Medicines";
+            // 
+            // FilterComboBox
+            // 
+            FilterComboBox.BackColor = Color.Transparent;
+            FilterComboBox.CustomizableEdges = customizableEdges21;
+            FilterComboBox.DrawMode = DrawMode.OwnerDrawFixed;
+            FilterComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            FilterComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
+            FilterComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            FilterComboBox.Font = new Font("Segoe UI", 10F);
+            FilterComboBox.ForeColor = Color.FromArgb(68, 88, 112);
+            FilterComboBox.ItemHeight = 30;
+            FilterComboBox.Items.AddRange(new object[] { "All", "Price", "Manufacturer", "Expiry" });
+            FilterComboBox.Location = new Point(507, 33);
+            FilterComboBox.Name = "FilterComboBox";
+            FilterComboBox.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            FilterComboBox.Size = new Size(193, 36);
+            FilterComboBox.TabIndex = 7;
+            FilterComboBox.SelectedIndexChanged += FilterComboBox_SelectedIndexChanged;
+            // 
+            // FilterLabel
+            // 
+            FilterLabel.BackColor = Color.Transparent;
+            FilterLabel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            FilterLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            FilterLabel.Location = new Point(335, 22);
+            FilterLabel.Name = "FilterLabel";
+            FilterLabel.Size = new Size(134, 50);
+            FilterLabel.TabIndex = 6;
+            FilterLabel.Text = "Filter by ";
+            // 
+            // AddMedicinePanel
+            // 
+            AddMedicinePanel.BackColor = SystemColors.Control;
+            AddMedicinePanel.BorderColor = Color.Gray;
+            AddMedicinePanel.BorderRadius = 35;
+            AddMedicinePanel.BorderThickness = 5;
+            AddMedicinePanel.Controls.Add(ManufacturerTextBox);
+            AddMedicinePanel.Controls.Add(ExpiryDateTextBox);
+            AddMedicinePanel.Controls.Add(QuantityTextBox);
+            AddMedicinePanel.Controls.Add(PriceTextBox);
+            AddMedicinePanel.Controls.Add(ScientificNameTextBox);
+            AddMedicinePanel.Controls.Add(Cancelbtn);
+            AddMedicinePanel.Controls.Add(Savebtn);
+            AddMedicinePanel.Controls.Add(TradeNameTextBox);
+            AddMedicinePanel.Controls.Add(ScientificNameLabel);
+            AddMedicinePanel.Controls.Add(ManufacturerLabel);
+            AddMedicinePanel.Controls.Add(PriceLabel);
+            AddMedicinePanel.Controls.Add(QuantityLabel);
+            AddMedicinePanel.Controls.Add(ExpiryDateLabel);
+            AddMedicinePanel.Controls.Add(TradeNameLable);
+            AddMedicinePanel.CustomizableEdges = customizableEdges37;
+            AddMedicinePanel.FillColor = Color.PaleTurquoise;
+            AddMedicinePanel.FillColor2 = Color.Azure;
+            AddMedicinePanel.Location = new Point(356, 197);
+            AddMedicinePanel.Name = "AddMedicinePanel";
+            AddMedicinePanel.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            AddMedicinePanel.Size = new Size(1053, 595);
+            AddMedicinePanel.TabIndex = 4;
+            AddMedicinePanel.Visible = false;
+            // 
+            // ManufacturerTextBox
+            // 
+            ManufacturerTextBox.BackColor = Color.Transparent;
+            ManufacturerTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            ManufacturerTextBox.BorderRadius = 15;
+            ManufacturerTextBox.BorderThickness = 2;
+            ManufacturerTextBox.CustomizableEdges = customizableEdges23;
+            ManufacturerTextBox.DefaultText = "";
+            ManufacturerTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            ManufacturerTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            ManufacturerTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            ManufacturerTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ManufacturerTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ManufacturerTextBox.Font = new Font("Segoe UI", 9F);
+            ManufacturerTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ManufacturerTextBox.Location = new Point(339, 186);
+            ManufacturerTextBox.Margin = new Padding(4, 5, 4, 5);
+            ManufacturerTextBox.Name = "ManufacturerTextBox";
+            ManufacturerTextBox.PlaceholderText = "";
+            ManufacturerTextBox.SelectedText = "";
+            ManufacturerTextBox.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            ManufacturerTextBox.Size = new Size(505, 40);
+            ManufacturerTextBox.TabIndex = 18;
+            // 
+            // ExpiryDateTextBox
+            // 
+            ExpiryDateTextBox.BackColor = Color.Transparent;
+            ExpiryDateTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            ExpiryDateTextBox.BorderRadius = 15;
+            ExpiryDateTextBox.BorderThickness = 2;
+            ExpiryDateTextBox.CustomizableEdges = customizableEdges25;
+            ExpiryDateTextBox.DefaultText = "";
+            ExpiryDateTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            ExpiryDateTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            ExpiryDateTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            ExpiryDateTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ExpiryDateTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ExpiryDateTextBox.Font = new Font("Segoe UI", 9F);
+            ExpiryDateTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ExpiryDateTextBox.Location = new Point(339, 412);
+            ExpiryDateTextBox.Margin = new Padding(4, 5, 4, 5);
+            ExpiryDateTextBox.Name = "ExpiryDateTextBox";
+            ExpiryDateTextBox.PlaceholderText = "";
+            ExpiryDateTextBox.SelectedText = "";
+            ExpiryDateTextBox.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            ExpiryDateTextBox.Size = new Size(505, 40);
+            ExpiryDateTextBox.TabIndex = 17;
+            // 
+            // QuantityTextBox
+            // 
+            QuantityTextBox.BackColor = Color.Transparent;
+            QuantityTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            QuantityTextBox.BorderRadius = 15;
+            QuantityTextBox.BorderThickness = 2;
+            QuantityTextBox.CustomizableEdges = customizableEdges27;
+            QuantityTextBox.DefaultText = "";
+            QuantityTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            QuantityTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            QuantityTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            QuantityTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            QuantityTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            QuantityTextBox.Font = new Font("Segoe UI", 9F);
+            QuantityTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            QuantityTextBox.Location = new Point(339, 340);
+            QuantityTextBox.Margin = new Padding(4, 5, 4, 5);
+            QuantityTextBox.Name = "QuantityTextBox";
+            QuantityTextBox.PlaceholderText = "";
+            QuantityTextBox.SelectedText = "";
+            QuantityTextBox.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            QuantityTextBox.Size = new Size(505, 40);
+            QuantityTextBox.TabIndex = 16;
+            // 
+            // PriceTextBox
+            // 
+            PriceTextBox.BackColor = Color.Transparent;
+            PriceTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            PriceTextBox.BorderRadius = 15;
+            PriceTextBox.BorderThickness = 2;
+            PriceTextBox.CustomizableEdges = customizableEdges29;
+            PriceTextBox.DefaultText = "";
+            PriceTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            PriceTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            PriceTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            PriceTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            PriceTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            PriceTextBox.Font = new Font("Segoe UI", 9F);
+            PriceTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            PriceTextBox.Location = new Point(339, 262);
+            PriceTextBox.Margin = new Padding(4, 5, 4, 5);
+            PriceTextBox.Name = "PriceTextBox";
+            PriceTextBox.PlaceholderText = "";
+            PriceTextBox.SelectedText = "";
+            PriceTextBox.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            PriceTextBox.Size = new Size(505, 40);
+            PriceTextBox.TabIndex = 15;
+            // 
+            // ScientificNameTextBox
+            // 
+            ScientificNameTextBox.BackColor = Color.Transparent;
+            ScientificNameTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            ScientificNameTextBox.BorderRadius = 15;
+            ScientificNameTextBox.BorderThickness = 2;
+            ScientificNameTextBox.CustomizableEdges = customizableEdges31;
+            ScientificNameTextBox.DefaultText = "";
+            ScientificNameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            ScientificNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            ScientificNameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            ScientificNameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ScientificNameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ScientificNameTextBox.Font = new Font("Segoe UI", 9F);
+            ScientificNameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ScientificNameTextBox.Location = new Point(339, 115);
+            ScientificNameTextBox.Margin = new Padding(4, 5, 4, 5);
+            ScientificNameTextBox.Name = "ScientificNameTextBox";
+            ScientificNameTextBox.PlaceholderText = "";
+            ScientificNameTextBox.SelectedText = "";
+            ScientificNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            ScientificNameTextBox.Size = new Size(505, 40);
+            ScientificNameTextBox.TabIndex = 14;
+            // 
+            // Cancelbtn
+            // 
+            Cancelbtn.BackColor = Color.Transparent;
+            Cancelbtn.CheckedState.ImageSize = new Size(292, 167);
+            Cancelbtn.HoverState.ImageSize = new Size(295, 170);
+            Cancelbtn.Image = (Image)resources.GetObject("Cancelbtn.Image");
+            Cancelbtn.ImageOffset = new Point(0, 0);
+            Cancelbtn.ImageRotate = 0F;
+            Cancelbtn.ImageSize = new Size(290, 165);
+            Cancelbtn.Location = new Point(28, 506);
+            Cancelbtn.Name = "Cancelbtn";
+            Cancelbtn.PressedState.ImageSize = new Size(64, 64);
+            Cancelbtn.ShadowDecoration.CustomizableEdges = customizableEdges33;
+            Cancelbtn.Size = new Size(251, 86);
+            Cancelbtn.TabIndex = 13;
+            Cancelbtn.Click += Cancelbtn_Click;
+            // 
+            // Savebtn
+            // 
+            Savebtn.BackColor = Color.Transparent;
+            Savebtn.CheckedState.ImageSize = new Size(292, 167);
+            Savebtn.HoverState.ImageSize = new Size(295, 170);
+            Savebtn.Image = (Image)resources.GetObject("Savebtn.Image");
+            Savebtn.ImageOffset = new Point(0, 0);
+            Savebtn.ImageRotate = 0F;
+            Savebtn.ImageSize = new Size(290, 165);
+            Savebtn.Location = new Point(783, 506);
+            Savebtn.Name = "Savebtn";
+            Savebtn.PressedState.ImageSize = new Size(64, 64);
+            Savebtn.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            Savebtn.Size = new Size(251, 86);
+            Savebtn.TabIndex = 12;
+            Savebtn.Click += Savebtn_Click;
+            // 
+            // TradeNameTextBox
+            // 
+            TradeNameTextBox.BackColor = Color.Transparent;
+            TradeNameTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            TradeNameTextBox.BorderRadius = 15;
+            TradeNameTextBox.BorderThickness = 2;
+            TradeNameTextBox.CustomizableEdges = customizableEdges35;
+            TradeNameTextBox.DefaultText = "";
+            TradeNameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            TradeNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            TradeNameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            TradeNameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            TradeNameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            TradeNameTextBox.Font = new Font("Segoe UI", 9F);
+            TradeNameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            TradeNameTextBox.Location = new Point(339, 40);
+            TradeNameTextBox.Margin = new Padding(4, 5, 4, 5);
+            TradeNameTextBox.Name = "TradeNameTextBox";
+            TradeNameTextBox.PlaceholderText = "";
+            TradeNameTextBox.SelectedText = "";
+            TradeNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            TradeNameTextBox.Size = new Size(505, 40);
+            TradeNameTextBox.TabIndex = 11;
+            // 
+            // ScientificNameLabel
+            // 
+            ScientificNameLabel.BackColor = Color.Transparent;
+            ScientificNameLabel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ScientificNameLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            ScientificNameLabel.Location = new Point(28, 105);
+            ScientificNameLabel.Name = "ScientificNameLabel";
+            ScientificNameLabel.Size = new Size(266, 50);
+            ScientificNameLabel.TabIndex = 10;
+            ScientificNameLabel.Text = "ScientificName :";
+            // 
+            // ManufacturerLabel
+            // 
+            ManufacturerLabel.BackColor = Color.Transparent;
+            ManufacturerLabel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ManufacturerLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            ManufacturerLabel.Location = new Point(28, 180);
+            ManufacturerLabel.Name = "ManufacturerLabel";
+            ManufacturerLabel.Size = new Size(243, 50);
+            ManufacturerLabel.TabIndex = 9;
+            ManufacturerLabel.Text = "Manufacturer :";
+            // 
+            // PriceLabel
+            // 
+            PriceLabel.BackColor = Color.Transparent;
+            PriceLabel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PriceLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            PriceLabel.Location = new Point(28, 255);
+            PriceLabel.Name = "PriceLabel";
+            PriceLabel.Size = new Size(101, 50);
+            PriceLabel.TabIndex = 8;
+            PriceLabel.Text = "Price :";
+            // 
+            // QuantityLabel
+            // 
+            QuantityLabel.BackColor = Color.Transparent;
+            QuantityLabel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            QuantityLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            QuantityLabel.Location = new Point(28, 330);
+            QuantityLabel.Name = "QuantityLabel";
+            QuantityLabel.Size = new Size(163, 50);
+            QuantityLabel.TabIndex = 7;
+            QuantityLabel.Text = "Quantity :";
+            // 
+            // ExpiryDateLabel
+            // 
+            ExpiryDateLabel.BackColor = Color.Transparent;
+            ExpiryDateLabel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExpiryDateLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            ExpiryDateLabel.Location = new Point(28, 405);
+            ExpiryDateLabel.Name = "ExpiryDateLabel";
+            ExpiryDateLabel.Size = new Size(198, 50);
+            ExpiryDateLabel.TabIndex = 6;
+            ExpiryDateLabel.Text = "ExpiryDate :";
+            // 
+            // TradeNameLable
+            // 
+            TradeNameLable.BackColor = Color.Transparent;
+            TradeNameLable.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TradeNameLable.ForeColor = Color.FromArgb(9, 105, 137);
+            TradeNameLable.Location = new Point(28, 30);
+            TradeNameLable.Name = "TradeNameLable";
+            TradeNameLable.Size = new Size(213, 50);
+            TradeNameLable.TabIndex = 5;
+            TradeNameLable.Text = "TradeName :";
+            // 
+            // MedicinesDataGridView
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            MedicinesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            MedicinesDataGridView.BackgroundColor = SystemColors.Control;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            MedicinesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            MedicinesDataGridView.ColumnHeadersHeight = 35;
+            MedicinesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            MedicinesDataGridView.Columns.AddRange(new DataGridViewColumn[] { Id, TradeName, ScientificName, Manufacturer, Price, Quantity, ExpiryDate, status });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            MedicinesDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            MedicinesDataGridView.GridColor = Color.FromArgb(231, 229, 255);
+            MedicinesDataGridView.Location = new Point(317, 108);
+            MedicinesDataGridView.Name = "MedicinesDataGridView";
+            MedicinesDataGridView.ReadOnly = true;
+            MedicinesDataGridView.RowHeadersVisible = false;
+            MedicinesDataGridView.RowHeadersWidth = 75;
+            MedicinesDataGridView.Size = new Size(1133, 715);
+            MedicinesDataGridView.TabIndex = 0;
+            MedicinesDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            MedicinesDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            MedicinesDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            MedicinesDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            MedicinesDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            MedicinesDataGridView.ThemeStyle.BackColor = SystemColors.Control;
+            MedicinesDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            MedicinesDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            MedicinesDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            MedicinesDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            MedicinesDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            MedicinesDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            MedicinesDataGridView.ThemeStyle.HeaderStyle.Height = 35;
+            MedicinesDataGridView.ThemeStyle.ReadOnly = true;
+            MedicinesDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
+            MedicinesDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            MedicinesDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            MedicinesDataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            MedicinesDataGridView.ThemeStyle.RowsStyle.Height = 33;
+            MedicinesDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            MedicinesDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // Id
+            // 
+            Id.HeaderText = "Id";
+            Id.MinimumWidth = 8;
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            // 
+            // TradeName
+            // 
+            TradeName.HeaderText = "TradeName";
+            TradeName.MinimumWidth = 8;
+            TradeName.Name = "TradeName";
+            TradeName.ReadOnly = true;
+            // 
+            // ScientificName
+            // 
+            ScientificName.HeaderText = "ScientificName";
+            ScientificName.MinimumWidth = 8;
+            ScientificName.Name = "ScientificName";
+            ScientificName.ReadOnly = true;
+            // 
+            // Manufacturer
+            // 
+            Manufacturer.HeaderText = "Manufacturer";
+            Manufacturer.MinimumWidth = 8;
+            Manufacturer.Name = "Manufacturer";
+            Manufacturer.ReadOnly = true;
+            // 
+            // Price
+            // 
+            Price.HeaderText = "Price";
+            Price.MinimumWidth = 8;
+            Price.Name = "Price";
+            Price.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            Quantity.HeaderText = "Quantity";
+            Quantity.MinimumWidth = 8;
+            Quantity.Name = "Quantity";
+            Quantity.ReadOnly = true;
+            // 
+            // ExpiryDate
+            // 
+            ExpiryDate.HeaderText = "ExpiryDate";
+            ExpiryDate.MinimumWidth = 8;
+            ExpiryDate.Name = "ExpiryDate";
+            ExpiryDate.ReadOnly = true;
+            // 
+            // status
+            // 
+            status.HeaderText = "status";
+            status.MinimumWidth = 8;
+            status.Name = "status";
+            status.ReadOnly = true;
+            // 
+            // Deletebtn
+            // 
+            Deletebtn.BackColor = Color.Transparent;
+            Deletebtn.CheckedState.ImageSize = new Size(292, 167);
+            Deletebtn.HoverState.ImageSize = new Size(295, 170);
+            Deletebtn.Image = (Image)resources.GetObject("Deletebtn.Image");
+            Deletebtn.ImageOffset = new Point(0, 0);
+            Deletebtn.ImageRotate = 0F;
+            Deletebtn.ImageSize = new Size(290, 165);
+            Deletebtn.Location = new Point(384, 841);
+            Deletebtn.Name = "Deletebtn";
+            Deletebtn.PressedState.ImageSize = new Size(64, 64);
+            Deletebtn.ShadowDecoration.CustomizableEdges = customizableEdges39;
+            Deletebtn.Size = new Size(251, 86);
+            Deletebtn.TabIndex = 3;
+            Deletebtn.Click += Deletebtn_Click;
+            // 
+            // Editbtn
+            // 
+            Editbtn.BackColor = Color.Transparent;
+            Editbtn.CheckedState.ImageSize = new Size(292, 167);
+            Editbtn.HoverState.ImageSize = new Size(295, 170);
+            Editbtn.Image = (Image)resources.GetObject("Editbtn.Image");
+            Editbtn.ImageOffset = new Point(0, 0);
+            Editbtn.ImageRotate = 0F;
+            Editbtn.ImageSize = new Size(290, 165);
+            Editbtn.Location = new Point(768, 841);
+            Editbtn.Name = "Editbtn";
+            Editbtn.PressedState.ImageSize = new Size(64, 64);
+            Editbtn.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            Editbtn.Size = new Size(251, 86);
+            Editbtn.TabIndex = 2;
+            Editbtn.Click += Editbtn_Click;
+            // 
+            // AddMedicinebtn
+            // 
+            AddMedicinebtn.BackColor = Color.Transparent;
+            AddMedicinebtn.CheckedState.ImageSize = new Size(292, 167);
+            AddMedicinebtn.HoverState.ImageSize = new Size(295, 170);
+            AddMedicinebtn.Image = (Image)resources.GetObject("AddMedicinebtn.Image");
+            AddMedicinebtn.ImageOffset = new Point(0, 0);
+            AddMedicinebtn.ImageRotate = 0F;
+            AddMedicinebtn.ImageSize = new Size(290, 165);
+            AddMedicinebtn.Location = new Point(1139, 841);
+            AddMedicinebtn.Name = "AddMedicinebtn";
+            AddMedicinebtn.PressedState.ImageSize = new Size(64, 64);
+            AddMedicinebtn.ShadowDecoration.CustomizableEdges = customizableEdges41;
+            AddMedicinebtn.Size = new Size(251, 86);
+            AddMedicinebtn.TabIndex = 1;
+            AddMedicinebtn.Click += AddMedicinebtn_Click;
             // 
             // TabExpired
             // 
@@ -691,6 +1222,11 @@
             guna2GradientPanel5.ResumeLayout(false);
             guna2GradientPanel5.PerformLayout();
             guna2GradientPanel3.ResumeLayout(false);
+            TabMedicines.ResumeLayout(false);
+            TabMedicines.PerformLayout();
+            AddMedicinePanel.ResumeLayout(false);
+            AddMedicinePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)MedicinesDataGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -733,7 +1269,36 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LabelTotalSales;
+        private Guna.UI2.WinForms.Guna2DataGridView MedicinesDataGridView;
+        private Guna.UI2.WinForms.Guna2ImageButton Deletebtn;
+        private Guna.UI2.WinForms.Guna2ImageButton Editbtn;
+        private Guna.UI2.WinForms.Guna2ImageButton AddMedicinebtn;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn TradeName;
+        private DataGridViewTextBoxColumn ScientificName;
+        private DataGridViewTextBoxColumn Manufacturer;
+        private DataGridViewTextBoxColumn Price;
+        private DataGridViewTextBoxColumn Quantity;
+        private DataGridViewTextBoxColumn ExpiryDate;
+        private DataGridViewTextBoxColumn status;
+        private Guna.UI2.WinForms.Guna2GradientPanel AddMedicinePanel;
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelMedicinesSold;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LabelTotalSales;
+        private Guna.UI2.WinForms.Guna2HtmlLabel TradeNameLable;
+        private Guna.UI2.WinForms.Guna2TextBox TradeNameTextBox;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ScientificNameLabel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ManufacturerLabel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel PriceLabel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel QuantityLabel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ExpiryDateLabel;
+        private Guna.UI2.WinForms.Guna2ImageButton Cancelbtn;
+        private Guna.UI2.WinForms.Guna2ImageButton Savebtn;
+        private Guna.UI2.WinForms.Guna2TextBox ManufacturerTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox ExpiryDateTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox QuantityTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox PriceTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox ScientificNameTextBox;
+        private Guna.UI2.WinForms.Guna2HtmlLabel FilterLabel;
+        private Guna.UI2.WinForms.Guna2ComboBox FilterComboBox;
     }
 }

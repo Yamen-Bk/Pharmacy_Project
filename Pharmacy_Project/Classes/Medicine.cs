@@ -18,22 +18,22 @@ namespace Pharmacy_Project.Classes
 
         public bool IsExpired()
         {
-            if(DateTime.Today > ExpiryDate.Date)
+            if (DateTime.Today > ExpiryDate.Date)
                 return true;
             return false;
         }
         public bool IsExpiringSoon()
         {
             TimeSpan remaining = ExpiryDate.Date - DateTime.Today;
-            if (remaining.Days < 30 && remaining.Days > 0) 
-                return true; 
+            if (remaining.Days < 30 && remaining.Days > 0)
+                return true;
             return false;
         }
         public bool IsLowStock()
         {
-            if(Quantity < 5)
+            if (Quantity < 5)
                 return true;
             return false;
         }
-   }
+    }
 }

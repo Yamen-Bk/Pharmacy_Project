@@ -34,38 +34,50 @@ namespace Pharmacy_Project.Classes
             File.WriteAllText(medicinesPath, JsonConvert.SerializeObject(Medicines, Formatting.Indented));
             File.WriteAllText(invoicesPath, JsonConvert.SerializeObject(Invoices, Formatting.Indented));
         }
-        public static void LoadInitialData()
+
+        public static void AddMedicine(Medicine m)
         {
-            Medicines.Add(new Medicine
-            {
-                Id = 1,
-                TradeName = "بنادول",
-                ScientificName = "باراسيتامول",
-                Manufacturer = "GSK",
-                Price = 2500,
-                Quantity = 50,
-                ExpiryDate = DateTime.Now.AddMonths(6)
-            });
-            Medicines.Add(new Medicine
-            {
-                Id = 2,
-                TradeName = "أموكسيل",
-                ScientificName = "أموكسيسيلين",
-                Manufacturer = "Pfizer",
-                Price = 4000,
-                Quantity = 3,
-                ExpiryDate = DateTime.Now.AddDays(10)
-            });
-            Medicines.Add(new Medicine
-            {
-                Id = 3,
-                TradeName = "فولتارين",
-                ScientificName = "ديكلوفيناك",
-                Manufacturer = "Novartis",
-                Price = 3000,
-                Quantity = 20,
-                ExpiryDate = DateTime.Now.AddYears(-1)
-            });
+            //if (Medicines.Count == 0)
+            //    m.Id = 1;
+            //else
+            //    m.Id = Medicines.Count+1;
+
+            m.Id = Medicines.Count == 0 ? 1 : Medicines.Max(x => x.Id) + 1;
+            Medicines.Add(m);
+            SaveData();
+        }
+
+        public static void RemoveMedicine(int id)
+        {
+            Medicines.RemoveAll(m => m.Id == id);
+            SaveData();
+        }
+
+        public static void UpdateMedicine(Medicine m)
+        {
+            int index = Medicines.FindIndex(x => x.Id == m.Id);
+            if (index >= 0)
+                Medicines[index] = m;
+            SaveData();
+        }
+        public static List<Medicine> FilterBy(string type, bool ascending)
+        {
+            if (type == "Price")
+                return ascending ?
+                    Medicines.OrderBy(m => m.Price).ToList():
+                    Medicines.OrderByDescending(m => m.Price).ToList();
+
+            if (type == "Manufacturer")
+                return ascending ?
+                    Medicines.OrderBy(m => m.Manufacturer).ToList() :
+                    Medicines.OrderByDescending(m => m.Manufacturer).ToList();
+
+            if (type == "Expiry")
+                return ascending ?
+                    Medicines.OrderBy(m => m.ExpiryDate).ToList() :
+                    Medicines.OrderByDescending(m => m.ExpiryDate).ToList();
+
+            return Medicines;
         }
     }
 }

@@ -70,6 +70,11 @@ namespace Pharmacy_Project
         }
         private async void SignButton_Click(object sender, EventArgs e)
         {
+            //string pass = "123456";
+            //string hash = BCrypt.Net.BCrypt.HashPassword(pass);
+            //MessageBox.Show(hash);
+            //Clipboard.SetText(hash);
+
             labelErrorUser.Visible = false;
             labelErrorPass.Visible = false;
 
@@ -94,7 +99,7 @@ namespace Pharmacy_Project
                 labelErrorPass.Visible = true;
                 hasError = true;
             }
-            else if (BCrypt.Net.BCrypt.Verify(PasswordTextBox.Text, Pharmacy.User.Password))
+            else if (!BCrypt.Net.BCrypt.Verify(PasswordTextBox.Text, Pharmacy.User.Password))
             {
                 labelErrorPass.Text = "Password is Incorrect";
                 labelErrorPass.Visible = true;
@@ -102,6 +107,9 @@ namespace Pharmacy_Project
             }
 
             if (hasError) return;
+
+            UsernameTextBox.Text = "";
+            PasswordTextBox.Text = "";
 
             SignButton.Enabled = false;
             UsernameTextBox.Enabled = false;
@@ -131,11 +139,15 @@ namespace Pharmacy_Project
             if (!this.Visible) return;
             if (e.CloseReason != CloseReason.UserClosing) return;
             DialogResult result = MessageBox.Show("Do you want to Exit the Application", "Exit",
-                                                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                                  MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 Pharmacy.SaveData();
                 Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
             }
         }
 

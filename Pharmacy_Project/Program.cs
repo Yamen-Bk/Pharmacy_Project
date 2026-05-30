@@ -9,7 +9,6 @@ namespace Pharmacy_Project
         {
             ApplicationConfiguration.Initialize();
             Pharmacy.LoadData();
-            Pharmacy.LoadInitialData();
             Application.Run(new LoginForm());
         }
     }

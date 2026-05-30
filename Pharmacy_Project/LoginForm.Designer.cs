@@ -120,9 +120,9 @@
             PasswordTextBox.PlaceholderForeColor = Color.Gray;
             PasswordTextBox.PlaceholderText = "Password";
             PasswordTextBox.SelectedText = "";
-            PasswordTextBox.ShadowDecoration.BorderRadius = 2;
+            PasswordTextBox.ShadowDecoration.BorderRadius = 0;
             PasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            PasswordTextBox.ShadowDecoration.Depth = 10;
+            PasswordTextBox.ShadowDecoration.Depth = 0;
             PasswordTextBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             PasswordTextBox.Size = new Size(310, 60);
             PasswordTextBox.TabIndex = 6;
@@ -190,9 +190,9 @@
             UsernameTextBox.PlaceholderForeColor = Color.Gray;
             UsernameTextBox.PlaceholderText = "Usernsme";
             UsernameTextBox.SelectedText = "";
-            UsernameTextBox.ShadowDecoration.BorderRadius = 2;
+            UsernameTextBox.ShadowDecoration.BorderRadius = 0;
             UsernameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            UsernameTextBox.ShadowDecoration.Depth = 10;
+            UsernameTextBox.ShadowDecoration.Depth = 0;
             UsernameTextBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             UsernameTextBox.Size = new Size(310, 60);
             UsernameTextBox.TabIndex = 1;

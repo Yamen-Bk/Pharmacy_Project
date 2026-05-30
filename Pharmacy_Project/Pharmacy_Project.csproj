@@ -152,12 +152,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="user.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Images\BackGrounds\" />
     <Folder Include="Images\Logos\" />
     <Folder Include="Images\Icons\" />
