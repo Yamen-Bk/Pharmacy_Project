@@ -61,6 +61,7 @@ namespace Pharmacy_Project.Forms
         {
             HideAllArrows();
             MainTabControl.SelectedTab = TabExpired;
+            LoadExpired();
             ExpiredTabSelectArrow.Visible = true;
         }
 
@@ -222,20 +223,24 @@ namespace Pharmacy_Project.Forms
                 {
                     MedicinesDataGridView.Rows[i].Cells["status"].Value = "Expired";
                     MedicinesDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 200, 200);
+                    MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 100, 100);
                 }
                 else if (m.IsExpiringSoon())
                 {
                     MedicinesDataGridView.Rows[i].Cells["status"].Value = "ExpiringSoon";
                     MedicinesDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 240, 180);
+                    MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 180, 80);
                 }
                 else if (m.IsLowStock())
                 {
                     MedicinesDataGridView.Rows[i].Cells["status"].Value = "LowStock";
                     MedicinesDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 220, 150);
+                    MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 160, 60);
                 }
                 else
                 {
                     MedicinesDataGridView.Rows[i].Cells["status"].Value = "Good";
+                    MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(180, 220, 255);
                 }
             }
         }
@@ -251,7 +256,7 @@ namespace Pharmacy_Project.Forms
             AddMedicinePanel.Visible = false;
         }
 
-        private void Savebtn_Click(object sender, EventArgs e)
+        private void SaveMedbtn_Click(object sender, EventArgs e)
         {
             Medicine m = new Medicine
             {
@@ -309,7 +314,7 @@ namespace Pharmacy_Project.Forms
             }
             int id = (int)MedicinesDataGridView.SelectedRows[0].Cells["Id"].Value;
             DialogResult result = MessageBox.Show("Do You Want To Delete This Medicine", "Are you Sure",
-                                                   MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                                                   MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 Pharmacy.RemoveMedicine(id);
@@ -320,6 +325,62 @@ namespace Pharmacy_Project.Forms
         private void FilterComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadMedicines();
+        }
+
+        /// <summary>
+        /// Expired Tab
+        /// </summary>
+
+        private void LoadExpired()
+        {
+            var list = Pharmacy.GetExpiredMedicines();
+
+            ExpiredDataGridView.Rows.Clear();
+
+            foreach (Medicine m in list)
+            {
+                int i = ExpiredDataGridView.Rows.Add();
+                ExpiredDataGridView.Rows[i].Cells["ExpId"].Value = m.Id;
+                ExpiredDataGridView.Rows[i].Cells["ExpTradeName"].Value = m.TradeName;
+                ExpiredDataGridView.Rows[i].Cells["ExpScientificName"].Value = m.ScientificName;
+                ExpiredDataGridView.Rows[i].Cells["ExpManufacturer"].Value = m.Manufacturer;
+                ExpiredDataGridView.Rows[i].Cells["ExpPrice"].Value = m.Price;
+                ExpiredDataGridView.Rows[i].Cells["ExpQuantity"].Value = m.Quantity;
+                ExpiredDataGridView.Rows[i].Cells["ExpExpiryDate"].Value = m.ExpiryDate.ToShortDateString();
+
+                ExpiredDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255,200,200);
+                ExpiredDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 100, 100);
+            }
+        }
+
+        private void DisposeSelectedbtn_Click(object sender, EventArgs e)
+        {
+            if (ExpiredDataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Select Medicine First");
+                return;
+            }
+            int id = (int)ExpiredDataGridView.SelectedRows[0].Cells["ExpId"].Value;
+            DialogResult result = MessageBox.Show("Do You Want To Delete This Medicine", "Are you Sure",
+                                                   MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Pharmacy.RemoveMedicine(id);
+                LoadExpired();
+                LoadMedicines();
+            }
+        }
+
+        private void DisposeAllbtn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Want To Delete All Expired Medicines ?" , "Are You Sure", 
+                                                   MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Pharmacy.RemoveAllExpired();
+                LoadExpired();
+                LoadMedicines();
+            }
         }
     }
 }

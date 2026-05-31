@@ -40,8 +40,9 @@ namespace Pharmacy_Project.Classes
             //if (Medicines.Count == 0)
             //    m.Id = 1;
             //else
-            //    m.Id = Medicines.Count+1;
+            //    m.Id = Medicines.Count + 1;
 
+            //condition ? value_if_true : value_if_false
             m.Id = Medicines.Count == 0 ? 1 : Medicines.Max(x => x.Id) + 1;
             Medicines.Add(m);
             SaveData();
@@ -50,6 +51,12 @@ namespace Pharmacy_Project.Classes
         public static void RemoveMedicine(int id)
         {
             Medicines.RemoveAll(m => m.Id == id);
+            SaveData();
+        }
+
+        public static void RemoveAllExpired()
+        {
+            Medicines.RemoveAll(m => m.IsExpired());
             SaveData();
         }
 
@@ -78,6 +85,10 @@ namespace Pharmacy_Project.Classes
                     Medicines.OrderByDescending(m => m.ExpiryDate).ToList();
 
             return Medicines;
+        }
+        public static List<Medicine> GetExpiredMedicines()
+        {
+            return Medicines.Where(m => m.IsExpired()).ToList();
         }
     }
 }

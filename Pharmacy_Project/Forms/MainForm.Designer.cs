@@ -81,6 +81,22 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             MedicinesTabSelectArrow = new PictureBox();
             ExpiredTabSelectArrow = new PictureBox();
@@ -124,7 +140,7 @@
             PriceTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             ScientificNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             Cancelbtn = new Guna.UI2.WinForms.Guna2ImageButton();
-            Savebtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            SaveMedbtn = new Guna.UI2.WinForms.Guna2ImageButton();
             TradeNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             ScientificNameLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ManufacturerLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -145,10 +161,31 @@
             Editbtn = new Guna.UI2.WinForms.Guna2ImageButton();
             AddMedicinebtn = new Guna.UI2.WinForms.Guna2ImageButton();
             TabExpired = new TabPage();
+            DisposeSelectedbtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            DisposeAllbtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            ExpiredDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            ExpId = new DataGridViewTextBoxColumn();
+            ExpTradeName = new DataGridViewTextBoxColumn();
+            ExpScientificName = new DataGridViewTextBoxColumn();
+            ExpManufacturer = new DataGridViewTextBoxColumn();
+            ExpPrice = new DataGridViewTextBoxColumn();
+            ExpQuantity = new DataGridViewTextBoxColumn();
+            ExpExpiryDate = new DataGridViewTextBoxColumn();
             TabPOS = new TabPage();
             TabInvoice = new TabPage();
             TabSettings = new TabPage();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            OldPassWordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            SaveSettingsbtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            NewPassWordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            NewPassWordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            ConfirmPassWordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            ConfirmPassWordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            OldPassWordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            NewUserNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            NewUserNameLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MedicinesTabSelectArrow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ExpiredTabSelectArrow).BeginInit();
@@ -168,6 +205,10 @@
             TabMedicines.SuspendLayout();
             AddMedicinePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MedicinesDataGridView).BeginInit();
+            TabExpired.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ExpiredDataGridView).BeginInit();
+            TabSettings.SuspendLayout();
+            guna2GradientPanel8.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -697,7 +738,7 @@
             FilterComboBox.ForeColor = Color.FromArgb(68, 88, 112);
             FilterComboBox.ItemHeight = 30;
             FilterComboBox.Items.AddRange(new object[] { "All", "Price", "Manufacturer", "Expiry" });
-            FilterComboBox.Location = new Point(507, 33);
+            FilterComboBox.Location = new Point(567, 36);
             FilterComboBox.Name = "FilterComboBox";
             FilterComboBox.ShadowDecoration.CustomizableEdges = customizableEdges22;
             FilterComboBox.Size = new Size(193, 36);
@@ -709,7 +750,7 @@
             FilterLabel.BackColor = Color.Transparent;
             FilterLabel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             FilterLabel.ForeColor = Color.FromArgb(9, 105, 137);
-            FilterLabel.Location = new Point(335, 22);
+            FilterLabel.Location = new Point(395, 25);
             FilterLabel.Name = "FilterLabel";
             FilterLabel.Size = new Size(134, 50);
             FilterLabel.TabIndex = 6;
@@ -727,7 +768,7 @@
             AddMedicinePanel.Controls.Add(PriceTextBox);
             AddMedicinePanel.Controls.Add(ScientificNameTextBox);
             AddMedicinePanel.Controls.Add(Cancelbtn);
-            AddMedicinePanel.Controls.Add(Savebtn);
+            AddMedicinePanel.Controls.Add(SaveMedbtn);
             AddMedicinePanel.Controls.Add(TradeNameTextBox);
             AddMedicinePanel.Controls.Add(ScientificNameLabel);
             AddMedicinePanel.Controls.Add(ManufacturerLabel);
@@ -738,7 +779,7 @@
             AddMedicinePanel.CustomizableEdges = customizableEdges37;
             AddMedicinePanel.FillColor = Color.PaleTurquoise;
             AddMedicinePanel.FillColor2 = Color.Azure;
-            AddMedicinePanel.Location = new Point(356, 197);
+            AddMedicinePanel.Location = new Point(356, 189);
             AddMedicinePanel.Name = "AddMedicinePanel";
             AddMedicinePanel.ShadowDecoration.CustomizableEdges = customizableEdges38;
             AddMedicinePanel.Size = new Size(1053, 595);
@@ -876,28 +917,28 @@
             Cancelbtn.ImageSize = new Size(290, 165);
             Cancelbtn.Location = new Point(28, 506);
             Cancelbtn.Name = "Cancelbtn";
-            Cancelbtn.PressedState.ImageSize = new Size(64, 64);
+            Cancelbtn.PressedState.ImageSize = new Size(292, 167);
             Cancelbtn.ShadowDecoration.CustomizableEdges = customizableEdges33;
             Cancelbtn.Size = new Size(251, 86);
             Cancelbtn.TabIndex = 13;
             Cancelbtn.Click += Cancelbtn_Click;
             // 
-            // Savebtn
+            // SaveMedbtn
             // 
-            Savebtn.BackColor = Color.Transparent;
-            Savebtn.CheckedState.ImageSize = new Size(292, 167);
-            Savebtn.HoverState.ImageSize = new Size(295, 170);
-            Savebtn.Image = (Image)resources.GetObject("Savebtn.Image");
-            Savebtn.ImageOffset = new Point(0, 0);
-            Savebtn.ImageRotate = 0F;
-            Savebtn.ImageSize = new Size(290, 165);
-            Savebtn.Location = new Point(783, 506);
-            Savebtn.Name = "Savebtn";
-            Savebtn.PressedState.ImageSize = new Size(64, 64);
-            Savebtn.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            Savebtn.Size = new Size(251, 86);
-            Savebtn.TabIndex = 12;
-            Savebtn.Click += Savebtn_Click;
+            SaveMedbtn.BackColor = Color.Transparent;
+            SaveMedbtn.CheckedState.ImageSize = new Size(292, 167);
+            SaveMedbtn.HoverState.ImageSize = new Size(295, 170);
+            SaveMedbtn.Image = (Image)resources.GetObject("SaveMedbtn.Image");
+            SaveMedbtn.ImageOffset = new Point(0, 0);
+            SaveMedbtn.ImageRotate = 0F;
+            SaveMedbtn.ImageSize = new Size(290, 165);
+            SaveMedbtn.Location = new Point(783, 506);
+            SaveMedbtn.Name = "SaveMedbtn";
+            SaveMedbtn.PressedState.ImageSize = new Size(292, 167);
+            SaveMedbtn.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            SaveMedbtn.Size = new Size(251, 86);
+            SaveMedbtn.TabIndex = 12;
+            SaveMedbtn.Click += SaveMedbtn_Click;
             // 
             // TradeNameTextBox
             // 
@@ -991,6 +1032,10 @@
             // 
             // MedicinesDataGridView
             // 
+            MedicinesDataGridView.AllowUserToAddRows = false;
+            MedicinesDataGridView.AllowUserToDeleteRows = false;
+            MedicinesDataGridView.AllowUserToResizeColumns = false;
+            MedicinesDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             MedicinesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             MedicinesDataGridView.BackgroundColor = SystemColors.Control;
@@ -1014,7 +1059,8 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             MedicinesDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             MedicinesDataGridView.GridColor = Color.FromArgb(231, 229, 255);
-            MedicinesDataGridView.Location = new Point(317, 108);
+            MedicinesDataGridView.Location = new Point(317, 94);
+            MedicinesDataGridView.MultiSelect = false;
             MedicinesDataGridView.Name = "MedicinesDataGridView";
             MedicinesDataGridView.ReadOnly = true;
             MedicinesDataGridView.RowHeadersVisible = false;
@@ -1108,9 +1154,9 @@
             Deletebtn.ImageOffset = new Point(0, 0);
             Deletebtn.ImageRotate = 0F;
             Deletebtn.ImageSize = new Size(290, 165);
-            Deletebtn.Location = new Point(384, 841);
+            Deletebtn.Location = new Point(384, 833);
             Deletebtn.Name = "Deletebtn";
-            Deletebtn.PressedState.ImageSize = new Size(64, 64);
+            Deletebtn.PressedState.ImageSize = new Size(292, 167);
             Deletebtn.ShadowDecoration.CustomizableEdges = customizableEdges39;
             Deletebtn.Size = new Size(251, 86);
             Deletebtn.TabIndex = 3;
@@ -1125,9 +1171,9 @@
             Editbtn.ImageOffset = new Point(0, 0);
             Editbtn.ImageRotate = 0F;
             Editbtn.ImageSize = new Size(290, 165);
-            Editbtn.Location = new Point(768, 841);
+            Editbtn.Location = new Point(768, 833);
             Editbtn.Name = "Editbtn";
-            Editbtn.PressedState.ImageSize = new Size(64, 64);
+            Editbtn.PressedState.ImageSize = new Size(292, 167);
             Editbtn.ShadowDecoration.CustomizableEdges = customizableEdges40;
             Editbtn.Size = new Size(251, 86);
             Editbtn.TabIndex = 2;
@@ -1142,9 +1188,9 @@
             AddMedicinebtn.ImageOffset = new Point(0, 0);
             AddMedicinebtn.ImageRotate = 0F;
             AddMedicinebtn.ImageSize = new Size(290, 165);
-            AddMedicinebtn.Location = new Point(1139, 841);
+            AddMedicinebtn.Location = new Point(1139, 833);
             AddMedicinebtn.Name = "AddMedicinebtn";
-            AddMedicinebtn.PressedState.ImageSize = new Size(64, 64);
+            AddMedicinebtn.PressedState.ImageSize = new Size(292, 167);
             AddMedicinebtn.ShadowDecoration.CustomizableEdges = customizableEdges41;
             AddMedicinebtn.Size = new Size(251, 86);
             AddMedicinebtn.TabIndex = 1;
@@ -1153,12 +1199,157 @@
             // TabExpired
             // 
             TabExpired.BackColor = Color.FromArgb(205, 220, 248);
+            TabExpired.Controls.Add(DisposeSelectedbtn);
+            TabExpired.Controls.Add(DisposeAllbtn);
+            TabExpired.Controls.Add(ExpiredDataGridView);
             TabExpired.Location = new Point(4, 5);
             TabExpired.Name = "TabExpired";
             TabExpired.Padding = new Padding(3);
             TabExpired.Size = new Size(1470, 935);
             TabExpired.TabIndex = 1;
             TabExpired.Text = "Expired";
+            // 
+            // DisposeSelectedbtn
+            // 
+            DisposeSelectedbtn.BackColor = Color.Transparent;
+            DisposeSelectedbtn.CheckedState.ImageSize = new Size(292, 167);
+            DisposeSelectedbtn.HoverState.ImageSize = new Size(295, 170);
+            DisposeSelectedbtn.Image = (Image)resources.GetObject("DisposeSelectedbtn.Image");
+            DisposeSelectedbtn.ImageOffset = new Point(0, 0);
+            DisposeSelectedbtn.ImageRotate = 0F;
+            DisposeSelectedbtn.ImageSize = new Size(290, 165);
+            DisposeSelectedbtn.Location = new Point(1139, 827);
+            DisposeSelectedbtn.Name = "DisposeSelectedbtn";
+            DisposeSelectedbtn.PressedState.ImageSize = new Size(292, 167);
+            DisposeSelectedbtn.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            DisposeSelectedbtn.Size = new Size(251, 86);
+            DisposeSelectedbtn.TabIndex = 14;
+            DisposeSelectedbtn.Click += DisposeSelectedbtn_Click;
+            // 
+            // DisposeAllbtn
+            // 
+            DisposeAllbtn.BackColor = Color.Transparent;
+            DisposeAllbtn.CheckedState.ImageSize = new Size(292, 167);
+            DisposeAllbtn.HoverState.ImageSize = new Size(295, 170);
+            DisposeAllbtn.Image = (Image)resources.GetObject("DisposeAllbtn.Image");
+            DisposeAllbtn.ImageOffset = new Point(0, 0);
+            DisposeAllbtn.ImageRotate = 0F;
+            DisposeAllbtn.ImageSize = new Size(290, 165);
+            DisposeAllbtn.Location = new Point(384, 827);
+            DisposeAllbtn.Name = "DisposeAllbtn";
+            DisposeAllbtn.PressedState.ImageSize = new Size(292, 167);
+            DisposeAllbtn.ShadowDecoration.CustomizableEdges = customizableEdges43;
+            DisposeAllbtn.Size = new Size(251, 86);
+            DisposeAllbtn.TabIndex = 13;
+            DisposeAllbtn.Click += DisposeAllbtn_Click;
+            // 
+            // ExpiredDataGridView
+            // 
+            ExpiredDataGridView.AllowUserToAddRows = false;
+            ExpiredDataGridView.AllowUserToDeleteRows = false;
+            ExpiredDataGridView.AllowUserToResizeColumns = false;
+            ExpiredDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            ExpiredDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            ExpiredDataGridView.BackgroundColor = SystemColors.Control;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            ExpiredDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            ExpiredDataGridView.ColumnHeadersHeight = 35;
+            ExpiredDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            ExpiredDataGridView.Columns.AddRange(new DataGridViewColumn[] { ExpId, ExpTradeName, ExpScientificName, ExpManufacturer, ExpPrice, ExpQuantity, ExpExpiryDate });
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            ExpiredDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            ExpiredDataGridView.GridColor = Color.FromArgb(231, 229, 255);
+            ExpiredDataGridView.Location = new Point(319, 28);
+            ExpiredDataGridView.MultiSelect = false;
+            ExpiredDataGridView.Name = "ExpiredDataGridView";
+            ExpiredDataGridView.ReadOnly = true;
+            ExpiredDataGridView.RowHeadersVisible = false;
+            ExpiredDataGridView.RowHeadersWidth = 75;
+            ExpiredDataGridView.Size = new Size(1133, 784);
+            ExpiredDataGridView.TabIndex = 1;
+            ExpiredDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            ExpiredDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            ExpiredDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            ExpiredDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            ExpiredDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            ExpiredDataGridView.ThemeStyle.BackColor = SystemColors.Control;
+            ExpiredDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            ExpiredDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            ExpiredDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            ExpiredDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            ExpiredDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            ExpiredDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            ExpiredDataGridView.ThemeStyle.HeaderStyle.Height = 35;
+            ExpiredDataGridView.ThemeStyle.ReadOnly = true;
+            ExpiredDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
+            ExpiredDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            ExpiredDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            ExpiredDataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            ExpiredDataGridView.ThemeStyle.RowsStyle.Height = 33;
+            ExpiredDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            ExpiredDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // ExpId
+            // 
+            ExpId.HeaderText = "Id";
+            ExpId.MinimumWidth = 8;
+            ExpId.Name = "ExpId";
+            ExpId.ReadOnly = true;
+            // 
+            // ExpTradeName
+            // 
+            ExpTradeName.HeaderText = "TradeName";
+            ExpTradeName.MinimumWidth = 8;
+            ExpTradeName.Name = "ExpTradeName";
+            ExpTradeName.ReadOnly = true;
+            // 
+            // ExpScientificName
+            // 
+            ExpScientificName.HeaderText = "ScientificName";
+            ExpScientificName.MinimumWidth = 8;
+            ExpScientificName.Name = "ExpScientificName";
+            ExpScientificName.ReadOnly = true;
+            // 
+            // ExpManufacturer
+            // 
+            ExpManufacturer.HeaderText = "Manufacturer";
+            ExpManufacturer.MinimumWidth = 8;
+            ExpManufacturer.Name = "ExpManufacturer";
+            ExpManufacturer.ReadOnly = true;
+            // 
+            // ExpPrice
+            // 
+            ExpPrice.HeaderText = "Price";
+            ExpPrice.MinimumWidth = 8;
+            ExpPrice.Name = "ExpPrice";
+            ExpPrice.ReadOnly = true;
+            // 
+            // ExpQuantity
+            // 
+            ExpQuantity.HeaderText = "Quantity";
+            ExpQuantity.MinimumWidth = 8;
+            ExpQuantity.Name = "ExpQuantity";
+            ExpQuantity.ReadOnly = true;
+            // 
+            // ExpExpiryDate
+            // 
+            ExpExpiryDate.HeaderText = "ExpiryDate";
+            ExpExpiryDate.MinimumWidth = 8;
+            ExpExpiryDate.Name = "ExpExpiryDate";
+            ExpExpiryDate.ReadOnly = true;
             // 
             // TabPOS
             // 
@@ -1183,12 +1374,204 @@
             // TabSettings
             // 
             TabSettings.BackColor = Color.FromArgb(205, 220, 248);
+            TabSettings.Controls.Add(guna2HtmlLabel1);
+            TabSettings.Controls.Add(guna2GradientPanel8);
             TabSettings.Location = new Point(4, 5);
             TabSettings.Name = "TabSettings";
             TabSettings.Padding = new Padding(3);
             TabSettings.Size = new Size(1470, 935);
             TabSettings.TabIndex = 4;
             TabSettings.Text = "Settings";
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.FromArgb(9, 105, 137);
+            guna2HtmlLabel1.Location = new Point(696, 64);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(290, 98);
+            guna2HtmlLabel1.TabIndex = 0;
+            guna2HtmlLabel1.Text = "Hi , User";
+            // 
+            // guna2GradientPanel8
+            // 
+            guna2GradientPanel8.BorderColor = Color.DarkSlateGray;
+            guna2GradientPanel8.BorderRadius = 25;
+            guna2GradientPanel8.BorderThickness = 3;
+            guna2GradientPanel8.Controls.Add(NewUserNameTextBox);
+            guna2GradientPanel8.Controls.Add(NewUserNameLabel);
+            guna2GradientPanel8.Controls.Add(ConfirmPassWordTextBox);
+            guna2GradientPanel8.Controls.Add(ConfirmPassWordLabel);
+            guna2GradientPanel8.Controls.Add(NewPassWordTextBox);
+            guna2GradientPanel8.Controls.Add(NewPassWordLabel);
+            guna2GradientPanel8.Controls.Add(SaveSettingsbtn);
+            guna2GradientPanel8.Controls.Add(OldPassWordTextBox);
+            guna2GradientPanel8.Controls.Add(OldPassWordLabel);
+            guna2GradientPanel8.CustomizableEdges = customizableEdges53;
+            guna2GradientPanel8.FillColor = Color.PaleTurquoise;
+            guna2GradientPanel8.FillColor2 = Color.Azure;
+            guna2GradientPanel8.Location = new Point(417, 268);
+            guna2GradientPanel8.Name = "guna2GradientPanel8";
+            guna2GradientPanel8.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            guna2GradientPanel8.Size = new Size(930, 584);
+            guna2GradientPanel8.TabIndex = 5;
+            // 
+            // OldPassWordTextBox
+            // 
+            OldPassWordTextBox.BackColor = Color.Transparent;
+            OldPassWordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            OldPassWordTextBox.BorderRadius = 15;
+            OldPassWordTextBox.BorderThickness = 2;
+            OldPassWordTextBox.CustomizableEdges = customizableEdges51;
+            OldPassWordTextBox.DefaultText = "";
+            OldPassWordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            OldPassWordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            OldPassWordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            OldPassWordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            OldPassWordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            OldPassWordTextBox.Font = new Font("Segoe UI", 9F);
+            OldPassWordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            OldPassWordTextBox.Location = new Point(437, 150);
+            OldPassWordTextBox.Margin = new Padding(4, 5, 4, 5);
+            OldPassWordTextBox.Name = "OldPassWordTextBox";
+            OldPassWordTextBox.PlaceholderText = "";
+            OldPassWordTextBox.SelectedText = "";
+            OldPassWordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            OldPassWordTextBox.Size = new Size(415, 40);
+            OldPassWordTextBox.TabIndex = 12;
+            // 
+            // SaveSettingsbtn
+            // 
+            SaveSettingsbtn.BackColor = Color.Transparent;
+            SaveSettingsbtn.CheckedState.ImageSize = new Size(292, 167);
+            SaveSettingsbtn.HoverState.ImageSize = new Size(295, 170);
+            SaveSettingsbtn.Image = (Image)resources.GetObject("SaveSettingsbtn.Image");
+            SaveSettingsbtn.ImageOffset = new Point(0, 0);
+            SaveSettingsbtn.ImageRotate = 0F;
+            SaveSettingsbtn.ImageSize = new Size(290, 165);
+            SaveSettingsbtn.Location = new Point(318, 449);
+            SaveSettingsbtn.Name = "SaveSettingsbtn";
+            SaveSettingsbtn.PressedState.ImageSize = new Size(292, 167);
+            SaveSettingsbtn.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            SaveSettingsbtn.Size = new Size(251, 86);
+            SaveSettingsbtn.TabIndex = 13;
+            // 
+            // NewPassWordTextBox
+            // 
+            NewPassWordTextBox.BackColor = Color.Transparent;
+            NewPassWordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            NewPassWordTextBox.BorderRadius = 15;
+            NewPassWordTextBox.BorderThickness = 2;
+            NewPassWordTextBox.CustomizableEdges = customizableEdges48;
+            NewPassWordTextBox.DefaultText = "";
+            NewPassWordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            NewPassWordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            NewPassWordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            NewPassWordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            NewPassWordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            NewPassWordTextBox.Font = new Font("Segoe UI", 9F);
+            NewPassWordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            NewPassWordTextBox.Location = new Point(437, 250);
+            NewPassWordTextBox.Margin = new Padding(4, 5, 4, 5);
+            NewPassWordTextBox.Name = "NewPassWordTextBox";
+            NewPassWordTextBox.PlaceholderText = "";
+            NewPassWordTextBox.SelectedText = "";
+            NewPassWordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges49;
+            NewPassWordTextBox.Size = new Size(415, 40);
+            NewPassWordTextBox.TabIndex = 15;
+            // 
+            // NewPassWordLabel
+            // 
+            NewPassWordLabel.BackColor = Color.Transparent;
+            NewPassWordLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NewPassWordLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            NewPassWordLabel.Location = new Point(64, 240);
+            NewPassWordLabel.Name = "NewPassWordLabel";
+            NewPassWordLabel.Size = new Size(260, 50);
+            NewPassWordLabel.TabIndex = 14;
+            NewPassWordLabel.Text = "New PassWord :";
+            // 
+            // ConfirmPassWordTextBox
+            // 
+            ConfirmPassWordTextBox.BackColor = Color.Transparent;
+            ConfirmPassWordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            ConfirmPassWordTextBox.BorderRadius = 15;
+            ConfirmPassWordTextBox.BorderThickness = 2;
+            ConfirmPassWordTextBox.CustomizableEdges = customizableEdges46;
+            ConfirmPassWordTextBox.DefaultText = "";
+            ConfirmPassWordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            ConfirmPassWordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            ConfirmPassWordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            ConfirmPassWordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ConfirmPassWordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ConfirmPassWordTextBox.Font = new Font("Segoe UI", 9F);
+            ConfirmPassWordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ConfirmPassWordTextBox.Location = new Point(437, 350);
+            ConfirmPassWordTextBox.Margin = new Padding(4, 5, 4, 5);
+            ConfirmPassWordTextBox.Name = "ConfirmPassWordTextBox";
+            ConfirmPassWordTextBox.PlaceholderText = "";
+            ConfirmPassWordTextBox.SelectedText = "";
+            ConfirmPassWordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges47;
+            ConfirmPassWordTextBox.Size = new Size(415, 40);
+            ConfirmPassWordTextBox.TabIndex = 17;
+            // 
+            // ConfirmPassWordLabel
+            // 
+            ConfirmPassWordLabel.BackColor = Color.Transparent;
+            ConfirmPassWordLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ConfirmPassWordLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            ConfirmPassWordLabel.Location = new Point(64, 340);
+            ConfirmPassWordLabel.Name = "ConfirmPassWordLabel";
+            ConfirmPassWordLabel.Size = new Size(315, 50);
+            ConfirmPassWordLabel.TabIndex = 16;
+            ConfirmPassWordLabel.Text = "Confirm PassWord :";
+            // 
+            // OldPassWordLabel
+            // 
+            OldPassWordLabel.BackColor = Color.Transparent;
+            OldPassWordLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            OldPassWordLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            OldPassWordLabel.Location = new Point(64, 140);
+            OldPassWordLabel.Name = "OldPassWordLabel";
+            OldPassWordLabel.Size = new Size(245, 50);
+            OldPassWordLabel.TabIndex = 1;
+            OldPassWordLabel.Text = "Old PassWord :";
+            // 
+            // NewUserNameTextBox
+            // 
+            NewUserNameTextBox.BackColor = Color.Transparent;
+            NewUserNameTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            NewUserNameTextBox.BorderRadius = 15;
+            NewUserNameTextBox.BorderThickness = 2;
+            NewUserNameTextBox.CustomizableEdges = customizableEdges44;
+            NewUserNameTextBox.DefaultText = "";
+            NewUserNameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            NewUserNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            NewUserNameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            NewUserNameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            NewUserNameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            NewUserNameTextBox.Font = new Font("Segoe UI", 9F);
+            NewUserNameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            NewUserNameTextBox.Location = new Point(437, 50);
+            NewUserNameTextBox.Margin = new Padding(4, 5, 4, 5);
+            NewUserNameTextBox.Name = "NewUserNameTextBox";
+            NewUserNameTextBox.PlaceholderText = "";
+            NewUserNameTextBox.SelectedText = "";
+            NewUserNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges45;
+            NewUserNameTextBox.Size = new Size(415, 40);
+            NewUserNameTextBox.TabIndex = 19;
+            // 
+            // NewUserNameLabel
+            // 
+            NewUserNameLabel.BackColor = Color.Transparent;
+            NewUserNameLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NewUserNameLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            NewUserNameLabel.Location = new Point(64, 40);
+            NewUserNameLabel.Name = "NewUserNameLabel";
+            NewUserNameLabel.Size = new Size(270, 50);
+            NewUserNameLabel.TabIndex = 18;
+            NewUserNameLabel.Text = "New UserName :";
             // 
             // MainForm
             // 
@@ -1227,6 +1610,12 @@
             AddMedicinePanel.ResumeLayout(false);
             AddMedicinePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)MedicinesDataGridView).EndInit();
+            TabExpired.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)ExpiredDataGridView).EndInit();
+            TabSettings.ResumeLayout(false);
+            TabSettings.PerformLayout();
+            guna2GradientPanel8.ResumeLayout(false);
+            guna2GradientPanel8.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1292,7 +1681,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel QuantityLabel;
         private Guna.UI2.WinForms.Guna2HtmlLabel ExpiryDateLabel;
         private Guna.UI2.WinForms.Guna2ImageButton Cancelbtn;
-        private Guna.UI2.WinForms.Guna2ImageButton Savebtn;
+        private Guna.UI2.WinForms.Guna2ImageButton SaveMedbtn;
         private Guna.UI2.WinForms.Guna2TextBox ManufacturerTextBox;
         private Guna.UI2.WinForms.Guna2TextBox ExpiryDateTextBox;
         private Guna.UI2.WinForms.Guna2TextBox QuantityTextBox;
@@ -1300,5 +1689,26 @@
         private Guna.UI2.WinForms.Guna2TextBox ScientificNameTextBox;
         private Guna.UI2.WinForms.Guna2HtmlLabel FilterLabel;
         private Guna.UI2.WinForms.Guna2ComboBox FilterComboBox;
+        private Guna.UI2.WinForms.Guna2DataGridView ExpiredDataGridView;
+        private Guna.UI2.WinForms.Guna2ImageButton DisposeSelectedbtn;
+        private Guna.UI2.WinForms.Guna2ImageButton DisposeAllbtn;
+        private DataGridViewTextBoxColumn ExpId;
+        private DataGridViewTextBoxColumn ExpTradeName;
+        private DataGridViewTextBoxColumn ExpScientificName;
+        private DataGridViewTextBoxColumn ExpManufacturer;
+        private DataGridViewTextBoxColumn ExpPrice;
+        private DataGridViewTextBoxColumn ExpQuantity;
+        private DataGridViewTextBoxColumn ExpExpiryDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
+        private Guna.UI2.WinForms.Guna2TextBox OldPassWordTextBox;
+        private Guna.UI2.WinForms.Guna2ImageButton SaveSettingsbtn;
+        private Guna.UI2.WinForms.Guna2TextBox NewUserNameTextBox;
+        private Guna.UI2.WinForms.Guna2HtmlLabel NewUserNameLabel;
+        private Guna.UI2.WinForms.Guna2TextBox ConfirmPassWordTextBox;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ConfirmPassWordLabel;
+        private Guna.UI2.WinForms.Guna2TextBox NewPassWordTextBox;
+        private Guna.UI2.WinForms.Guna2HtmlLabel NewPassWordLabel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel OldPassWordLabel;
     }
 }
