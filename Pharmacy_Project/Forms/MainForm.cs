@@ -2,6 +2,7 @@
 using LiveChartsCore;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
+using Newtonsoft.Json;
 using Pharmacy_Project.Classes;
 using SkiaSharp;
 using System;
@@ -205,7 +206,7 @@ namespace Pharmacy_Project.Forms
             else if (FilterComboBox.SelectedIndex == 2) type = "Manufacturer";
             else if (FilterComboBox.SelectedIndex == 3) type = "Expiry";
 
-            var list = Pharmacy.FilterBy(type, true);
+            var list = Pharmacy.FilterBy(type);
 
             MedicinesDataGridView.Rows.Clear();
             foreach (Medicine m in list)
@@ -291,7 +292,12 @@ namespace Pharmacy_Project.Forms
                 return;
             }
             int id = (int)MedicinesDataGridView.SelectedRows[0].Cells["Id"].Value;
-            Medicine m = Pharmacy.Medicines.Find(x => x.Id == id);
+            Medicine m = null;
+            foreach(Medicine med in Pharmacy.Medicines)
+            {
+                if(med.Id == id) 
+                    m = med;
+            }
 
             TradeNameTextBox.Text = m.TradeName;
             ScientificNameTextBox.Text = m.ScientificName;
@@ -348,7 +354,7 @@ namespace Pharmacy_Project.Forms
                 ExpiredDataGridView.Rows[i].Cells["ExpQuantity"].Value = m.Quantity;
                 ExpiredDataGridView.Rows[i].Cells["ExpExpiryDate"].Value = m.ExpiryDate.ToShortDateString();
 
-                ExpiredDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255,200,200);
+                ExpiredDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 200, 200);
                 ExpiredDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 100, 100);
             }
         }
@@ -373,7 +379,7 @@ namespace Pharmacy_Project.Forms
 
         private void DisposeAllbtn_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Want To Delete All Expired Medicines ?" , "Are You Sure", 
+            DialogResult result = MessageBox.Show("Want To Delete All Expired Medicines ?", "Are You Sure",
                                                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
@@ -381,6 +387,51 @@ namespace Pharmacy_Project.Forms
                 LoadExpired();
                 LoadMedicines();
             }
+        }
+
+        /// <summary>
+        /// Settings Tab
+        /// </summary>
+
+        private void SaveSettingsbtn_Click(object sender, EventArgs e)
+        {
+            if (OldPasswordTextBox.Text == "" || NewPasswordTextBox.Text == "" || ConfirmPasswordTextBox.Text == "")
+            {
+                MessageBox.Show("Pleas fill all password fields", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!BCrypt.Net.BCrypt.Verify(OldPasswordTextBox.Text,Pharmacy.User.Password))
+            {
+                MessageBox.Show("Current password is incorrect", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (NewPasswordLabel.Text != ConfirmPasswordTextBox.Text)
+            {
+                MessageBox.Show("Password do not match", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (NewUsernameTextBox.Text.Trim() != "")
+            {
+                Pharmacy.User.Username = NewUsernameTextBox.Text.Trim();
+            }
+
+            Pharmacy.User.Password = BCrypt.Net.BCrypt.HashPassword(NewUsernameTextBox.Text);
+
+            File.WriteAllText("user.json", JsonConvert.SerializeObject(Pharmacy.User, Formatting.Indented));
+
+
+            MessageBox.Show("Settings Saved Successfully !", "Success",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            NewUsernameTextBox.Text = "";
+            OldPasswordTextBox.Text = "";
+            NewPasswordTextBox.Text = "";
+            ConfirmPasswordTextBox.Text = "";
+
+            LabelWelcome.Text = $"Welcome Back, {Pharmacy.User.Username}";
         }
     }
 }

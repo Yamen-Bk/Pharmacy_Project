@@ -88,15 +88,15 @@
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             MedicinesTabSelectArrow = new PictureBox();
             ExpiredTabSelectArrow = new PictureBox();
@@ -176,16 +176,16 @@
             TabSettings = new TabPage();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            OldPassWordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            NewUsernameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            NewUsernameLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            ConfirmPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            ConfirmPasswordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            NewPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            NewPasswordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             SaveSettingsbtn = new Guna.UI2.WinForms.Guna2ImageButton();
-            NewPassWordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            NewPassWordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ConfirmPassWordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            ConfirmPassWordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            OldPassWordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            NewUserNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            NewUserNameLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            OldPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            OldPasswordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MedicinesTabSelectArrow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ExpiredTabSelectArrow).BeginInit();
@@ -1399,15 +1399,15 @@
             guna2GradientPanel8.BorderColor = Color.DarkSlateGray;
             guna2GradientPanel8.BorderRadius = 25;
             guna2GradientPanel8.BorderThickness = 3;
-            guna2GradientPanel8.Controls.Add(NewUserNameTextBox);
-            guna2GradientPanel8.Controls.Add(NewUserNameLabel);
-            guna2GradientPanel8.Controls.Add(ConfirmPassWordTextBox);
-            guna2GradientPanel8.Controls.Add(ConfirmPassWordLabel);
-            guna2GradientPanel8.Controls.Add(NewPassWordTextBox);
-            guna2GradientPanel8.Controls.Add(NewPassWordLabel);
+            guna2GradientPanel8.Controls.Add(NewUsernameTextBox);
+            guna2GradientPanel8.Controls.Add(NewUsernameLabel);
+            guna2GradientPanel8.Controls.Add(ConfirmPasswordTextBox);
+            guna2GradientPanel8.Controls.Add(ConfirmPasswordLabel);
+            guna2GradientPanel8.Controls.Add(NewPasswordTextBox);
+            guna2GradientPanel8.Controls.Add(NewPasswordLabel);
             guna2GradientPanel8.Controls.Add(SaveSettingsbtn);
-            guna2GradientPanel8.Controls.Add(OldPassWordTextBox);
-            guna2GradientPanel8.Controls.Add(OldPassWordLabel);
+            guna2GradientPanel8.Controls.Add(OldPasswordTextBox);
+            guna2GradientPanel8.Controls.Add(OldPasswordLabel);
             guna2GradientPanel8.CustomizableEdges = customizableEdges53;
             guna2GradientPanel8.FillColor = Color.PaleTurquoise;
             guna2GradientPanel8.FillColor2 = Color.Azure;
@@ -1417,29 +1417,110 @@
             guna2GradientPanel8.Size = new Size(930, 584);
             guna2GradientPanel8.TabIndex = 5;
             // 
-            // OldPassWordTextBox
+            // NewUsernameTextBox
             // 
-            OldPassWordTextBox.BackColor = Color.Transparent;
-            OldPassWordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
-            OldPassWordTextBox.BorderRadius = 15;
-            OldPassWordTextBox.BorderThickness = 2;
-            OldPassWordTextBox.CustomizableEdges = customizableEdges51;
-            OldPassWordTextBox.DefaultText = "";
-            OldPassWordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            OldPassWordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            OldPassWordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            OldPassWordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            OldPassWordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            OldPassWordTextBox.Font = new Font("Segoe UI", 9F);
-            OldPassWordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            OldPassWordTextBox.Location = new Point(437, 150);
-            OldPassWordTextBox.Margin = new Padding(4, 5, 4, 5);
-            OldPassWordTextBox.Name = "OldPassWordTextBox";
-            OldPassWordTextBox.PlaceholderText = "";
-            OldPassWordTextBox.SelectedText = "";
-            OldPassWordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges52;
-            OldPassWordTextBox.Size = new Size(415, 40);
-            OldPassWordTextBox.TabIndex = 12;
+            NewUsernameTextBox.BackColor = Color.Transparent;
+            NewUsernameTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            NewUsernameTextBox.BorderRadius = 15;
+            NewUsernameTextBox.BorderThickness = 2;
+            NewUsernameTextBox.CustomizableEdges = customizableEdges44;
+            NewUsernameTextBox.DefaultText = "";
+            NewUsernameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            NewUsernameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            NewUsernameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            NewUsernameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            NewUsernameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            NewUsernameTextBox.Font = new Font("Segoe UI", 9F);
+            NewUsernameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            NewUsernameTextBox.Location = new Point(437, 50);
+            NewUsernameTextBox.Margin = new Padding(4, 5, 4, 5);
+            NewUsernameTextBox.Name = "NewUsernameTextBox";
+            NewUsernameTextBox.PlaceholderText = "";
+            NewUsernameTextBox.SelectedText = "";
+            NewUsernameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges45;
+            NewUsernameTextBox.Size = new Size(415, 40);
+            NewUsernameTextBox.TabIndex = 19;
+            // 
+            // NewUsernameLabel
+            // 
+            NewUsernameLabel.BackColor = Color.Transparent;
+            NewUsernameLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NewUsernameLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            NewUsernameLabel.Location = new Point(64, 40);
+            NewUsernameLabel.Name = "NewUsernameLabel";
+            NewUsernameLabel.Size = new Size(263, 50);
+            NewUsernameLabel.TabIndex = 18;
+            NewUsernameLabel.Text = "New Username :";
+            // 
+            // ConfirmPasswordTextBox
+            // 
+            ConfirmPasswordTextBox.BackColor = Color.Transparent;
+            ConfirmPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            ConfirmPasswordTextBox.BorderRadius = 15;
+            ConfirmPasswordTextBox.BorderThickness = 2;
+            ConfirmPasswordTextBox.CustomizableEdges = customizableEdges46;
+            ConfirmPasswordTextBox.DefaultText = "";
+            ConfirmPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            ConfirmPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            ConfirmPasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            ConfirmPasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ConfirmPasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ConfirmPasswordTextBox.Font = new Font("Segoe UI", 9F);
+            ConfirmPasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ConfirmPasswordTextBox.Location = new Point(437, 350);
+            ConfirmPasswordTextBox.Margin = new Padding(4, 5, 4, 5);
+            ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
+            ConfirmPasswordTextBox.PlaceholderText = "";
+            ConfirmPasswordTextBox.SelectedText = "";
+            ConfirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges47;
+            ConfirmPasswordTextBox.Size = new Size(415, 40);
+            ConfirmPasswordTextBox.TabIndex = 17;
+            // 
+            // ConfirmPasswordLabel
+            // 
+            ConfirmPasswordLabel.BackColor = Color.Transparent;
+            ConfirmPasswordLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ConfirmPasswordLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            ConfirmPasswordLabel.Location = new Point(64, 340);
+            ConfirmPasswordLabel.Name = "ConfirmPasswordLabel";
+            ConfirmPasswordLabel.Size = new Size(281, 50);
+            ConfirmPasswordLabel.TabIndex = 16;
+            ConfirmPasswordLabel.Text = "Confirm Passord :";
+            // 
+            // NewPasswordTextBox
+            // 
+            NewPasswordTextBox.BackColor = Color.Transparent;
+            NewPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            NewPasswordTextBox.BorderRadius = 15;
+            NewPasswordTextBox.BorderThickness = 2;
+            NewPasswordTextBox.CustomizableEdges = customizableEdges48;
+            NewPasswordTextBox.DefaultText = "";
+            NewPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            NewPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            NewPasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            NewPasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            NewPasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            NewPasswordTextBox.Font = new Font("Segoe UI", 9F);
+            NewPasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            NewPasswordTextBox.Location = new Point(437, 250);
+            NewPasswordTextBox.Margin = new Padding(4, 5, 4, 5);
+            NewPasswordTextBox.Name = "NewPasswordTextBox";
+            NewPasswordTextBox.PlaceholderText = "";
+            NewPasswordTextBox.SelectedText = "";
+            NewPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges49;
+            NewPasswordTextBox.Size = new Size(415, 40);
+            NewPasswordTextBox.TabIndex = 15;
+            // 
+            // NewPasswordLabel
+            // 
+            NewPasswordLabel.BackColor = Color.Transparent;
+            NewPasswordLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NewPasswordLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            NewPasswordLabel.Location = new Point(64, 240);
+            NewPasswordLabel.Name = "NewPasswordLabel";
+            NewPasswordLabel.Size = new Size(252, 50);
+            NewPasswordLabel.TabIndex = 14;
+            NewPasswordLabel.Text = "New Password :";
             // 
             // SaveSettingsbtn
             // 
@@ -1456,122 +1537,42 @@
             SaveSettingsbtn.ShadowDecoration.CustomizableEdges = customizableEdges50;
             SaveSettingsbtn.Size = new Size(251, 86);
             SaveSettingsbtn.TabIndex = 13;
+            SaveSettingsbtn.Click += SaveSettingsbtn_Click;
             // 
-            // NewPassWordTextBox
+            // OldPasswordTextBox
             // 
-            NewPassWordTextBox.BackColor = Color.Transparent;
-            NewPassWordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
-            NewPassWordTextBox.BorderRadius = 15;
-            NewPassWordTextBox.BorderThickness = 2;
-            NewPassWordTextBox.CustomizableEdges = customizableEdges48;
-            NewPassWordTextBox.DefaultText = "";
-            NewPassWordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            NewPassWordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            NewPassWordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            NewPassWordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            NewPassWordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            NewPassWordTextBox.Font = new Font("Segoe UI", 9F);
-            NewPassWordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            NewPassWordTextBox.Location = new Point(437, 250);
-            NewPassWordTextBox.Margin = new Padding(4, 5, 4, 5);
-            NewPassWordTextBox.Name = "NewPassWordTextBox";
-            NewPassWordTextBox.PlaceholderText = "";
-            NewPassWordTextBox.SelectedText = "";
-            NewPassWordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges49;
-            NewPassWordTextBox.Size = new Size(415, 40);
-            NewPassWordTextBox.TabIndex = 15;
+            OldPasswordTextBox.BackColor = Color.Transparent;
+            OldPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
+            OldPasswordTextBox.BorderRadius = 15;
+            OldPasswordTextBox.BorderThickness = 2;
+            OldPasswordTextBox.CustomizableEdges = customizableEdges51;
+            OldPasswordTextBox.DefaultText = "";
+            OldPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            OldPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            OldPasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            OldPasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            OldPasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            OldPasswordTextBox.Font = new Font("Segoe UI", 9F);
+            OldPasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            OldPasswordTextBox.Location = new Point(437, 150);
+            OldPasswordTextBox.Margin = new Padding(4, 5, 4, 5);
+            OldPasswordTextBox.Name = "OldPasswordTextBox";
+            OldPasswordTextBox.PlaceholderText = "";
+            OldPasswordTextBox.SelectedText = "";
+            OldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            OldPasswordTextBox.Size = new Size(415, 40);
+            OldPasswordTextBox.TabIndex = 12;
             // 
-            // NewPassWordLabel
+            // OldPasswordLabel
             // 
-            NewPassWordLabel.BackColor = Color.Transparent;
-            NewPassWordLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            NewPassWordLabel.ForeColor = Color.FromArgb(9, 105, 137);
-            NewPassWordLabel.Location = new Point(64, 240);
-            NewPassWordLabel.Name = "NewPassWordLabel";
-            NewPassWordLabel.Size = new Size(260, 50);
-            NewPassWordLabel.TabIndex = 14;
-            NewPassWordLabel.Text = "New PassWord :";
-            // 
-            // ConfirmPassWordTextBox
-            // 
-            ConfirmPassWordTextBox.BackColor = Color.Transparent;
-            ConfirmPassWordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
-            ConfirmPassWordTextBox.BorderRadius = 15;
-            ConfirmPassWordTextBox.BorderThickness = 2;
-            ConfirmPassWordTextBox.CustomizableEdges = customizableEdges46;
-            ConfirmPassWordTextBox.DefaultText = "";
-            ConfirmPassWordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            ConfirmPassWordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            ConfirmPassWordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            ConfirmPassWordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            ConfirmPassWordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            ConfirmPassWordTextBox.Font = new Font("Segoe UI", 9F);
-            ConfirmPassWordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            ConfirmPassWordTextBox.Location = new Point(437, 350);
-            ConfirmPassWordTextBox.Margin = new Padding(4, 5, 4, 5);
-            ConfirmPassWordTextBox.Name = "ConfirmPassWordTextBox";
-            ConfirmPassWordTextBox.PlaceholderText = "";
-            ConfirmPassWordTextBox.SelectedText = "";
-            ConfirmPassWordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges47;
-            ConfirmPassWordTextBox.Size = new Size(415, 40);
-            ConfirmPassWordTextBox.TabIndex = 17;
-            // 
-            // ConfirmPassWordLabel
-            // 
-            ConfirmPassWordLabel.BackColor = Color.Transparent;
-            ConfirmPassWordLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ConfirmPassWordLabel.ForeColor = Color.FromArgb(9, 105, 137);
-            ConfirmPassWordLabel.Location = new Point(64, 340);
-            ConfirmPassWordLabel.Name = "ConfirmPassWordLabel";
-            ConfirmPassWordLabel.Size = new Size(315, 50);
-            ConfirmPassWordLabel.TabIndex = 16;
-            ConfirmPassWordLabel.Text = "Confirm PassWord :";
-            // 
-            // OldPassWordLabel
-            // 
-            OldPassWordLabel.BackColor = Color.Transparent;
-            OldPassWordLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            OldPassWordLabel.ForeColor = Color.FromArgb(9, 105, 137);
-            OldPassWordLabel.Location = new Point(64, 140);
-            OldPassWordLabel.Name = "OldPassWordLabel";
-            OldPassWordLabel.Size = new Size(245, 50);
-            OldPassWordLabel.TabIndex = 1;
-            OldPassWordLabel.Text = "Old PassWord :";
-            // 
-            // NewUserNameTextBox
-            // 
-            NewUserNameTextBox.BackColor = Color.Transparent;
-            NewUserNameTextBox.BorderColor = Color.FromArgb(9, 105, 137);
-            NewUserNameTextBox.BorderRadius = 15;
-            NewUserNameTextBox.BorderThickness = 2;
-            NewUserNameTextBox.CustomizableEdges = customizableEdges44;
-            NewUserNameTextBox.DefaultText = "";
-            NewUserNameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            NewUserNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            NewUserNameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            NewUserNameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            NewUserNameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            NewUserNameTextBox.Font = new Font("Segoe UI", 9F);
-            NewUserNameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            NewUserNameTextBox.Location = new Point(437, 50);
-            NewUserNameTextBox.Margin = new Padding(4, 5, 4, 5);
-            NewUserNameTextBox.Name = "NewUserNameTextBox";
-            NewUserNameTextBox.PlaceholderText = "";
-            NewUserNameTextBox.SelectedText = "";
-            NewUserNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges45;
-            NewUserNameTextBox.Size = new Size(415, 40);
-            NewUserNameTextBox.TabIndex = 19;
-            // 
-            // NewUserNameLabel
-            // 
-            NewUserNameLabel.BackColor = Color.Transparent;
-            NewUserNameLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            NewUserNameLabel.ForeColor = Color.FromArgb(9, 105, 137);
-            NewUserNameLabel.Location = new Point(64, 40);
-            NewUserNameLabel.Name = "NewUserNameLabel";
-            NewUserNameLabel.Size = new Size(270, 50);
-            NewUserNameLabel.TabIndex = 18;
-            NewUserNameLabel.Text = "New UserName :";
+            OldPasswordLabel.BackColor = Color.Transparent;
+            OldPasswordLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            OldPasswordLabel.ForeColor = Color.FromArgb(9, 105, 137);
+            OldPasswordLabel.Location = new Point(64, 140);
+            OldPasswordLabel.Name = "OldPasswordLabel";
+            OldPasswordLabel.Size = new Size(237, 50);
+            OldPasswordLabel.TabIndex = 1;
+            OldPasswordLabel.Text = "Old Password :";
             // 
             // MainForm
             // 
@@ -1701,14 +1702,14 @@
         private DataGridViewTextBoxColumn ExpExpiryDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
-        private Guna.UI2.WinForms.Guna2TextBox OldPassWordTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox OldPasswordTextBox;
         private Guna.UI2.WinForms.Guna2ImageButton SaveSettingsbtn;
-        private Guna.UI2.WinForms.Guna2TextBox NewUserNameTextBox;
-        private Guna.UI2.WinForms.Guna2HtmlLabel NewUserNameLabel;
-        private Guna.UI2.WinForms.Guna2TextBox ConfirmPassWordTextBox;
-        private Guna.UI2.WinForms.Guna2HtmlLabel ConfirmPassWordLabel;
-        private Guna.UI2.WinForms.Guna2TextBox NewPassWordTextBox;
-        private Guna.UI2.WinForms.Guna2HtmlLabel NewPassWordLabel;
-        private Guna.UI2.WinForms.Guna2HtmlLabel OldPassWordLabel;
+        private Guna.UI2.WinForms.Guna2TextBox NewUsernameTextBox;
+        private Guna.UI2.WinForms.Guna2HtmlLabel NewUsernameLabel;
+        private Guna.UI2.WinForms.Guna2TextBox ConfirmPasswordTextBox;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ConfirmPasswordLabel;
+        private Guna.UI2.WinForms.Guna2TextBox NewPasswordTextBox;
+        private Guna.UI2.WinForms.Guna2HtmlLabel NewPasswordLabel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel OldPasswordLabel;
     }
 }

@@ -29,7 +29,7 @@ namespace Pharmacy_Project.Classes
             if (File.Exists(userPath))
                 User = JsonConvert.DeserializeObject<User>(File.ReadAllText(userPath));
         }
-        public static void SaveData() 
+        public static void SaveData()
         {
             File.WriteAllText(medicinesPath, JsonConvert.SerializeObject(Medicines, Formatting.Indented));
             File.WriteAllText(invoicesPath, JsonConvert.SerializeObject(Invoices, Formatting.Indented));
@@ -37,58 +37,105 @@ namespace Pharmacy_Project.Classes
 
         public static void AddMedicine(Medicine m)
         {
-            //if (Medicines.Count == 0)
-            //    m.Id = 1;
-            //else
-            //    m.Id = Medicines.Count + 1;
-
-            //condition ? value_if_true : value_if_false
-            m.Id = Medicines.Count == 0 ? 1 : Medicines.Max(x => x.Id) + 1;
+            int maxid = 0;
+            if (Medicines.Count == 0)
+                m.Id = 1;
+            else
+            {
+                foreach (Medicine med in Medicines)
+                {
+                    if (m.Id > maxid)
+                        maxid = m.Id;
+                }
+            }
+            m.Id = maxid + 1;
             Medicines.Add(m);
             SaveData();
         }
-
         public static void RemoveMedicine(int id)
         {
-            Medicines.RemoveAll(m => m.Id == id);
+            Medicine toremove = null;
+            foreach (Medicine med in Medicines)
+            {
+                if (med.Id == id)
+                    toremove = med;
+            }
+            if (toremove != null)
+                Medicines.Remove(toremove);
             SaveData();
         }
-
         public static void RemoveAllExpired()
         {
-            Medicines.RemoveAll(m => m.IsExpired());
+            List<Medicine> toremove = new List<Medicine>();
+            foreach (Medicine med in Medicines)
+            {
+                if (med.IsExpired())
+                    toremove.Add(med);
+            }
+            foreach (Medicine med in toremove)
+            {
+                Medicines.Remove(med);
+            }
             SaveData();
         }
-
         public static void UpdateMedicine(Medicine m)
         {
-            int index = Medicines.FindIndex(x => x.Id == m.Id);
-            if (index >= 0)
-                Medicines[index] = m;
+            for (int i = 0; i < Medicines.Count; i++)
+            {
+                if (Medicines[i].Id == m.Id)
+                {
+                    Medicines[i] = m;
+                    break;
+                }
+            }
             SaveData();
         }
-        public static List<Medicine> FilterBy(string type, bool ascending)
+        public static List<Medicine> FilterBy(string type)
         {
-            if (type == "Price")
-                return ascending ?
-                    Medicines.OrderBy(m => m.Price).ToList():
-                    Medicines.OrderByDescending(m => m.Price).ToList();
-
-            if (type == "Manufacturer")
-                return ascending ?
-                    Medicines.OrderBy(m => m.Manufacturer).ToList() :
-                    Medicines.OrderByDescending(m => m.Manufacturer).ToList();
-
-            if (type == "Expiry")
-                return ascending ?
-                    Medicines.OrderBy(m => m.ExpiryDate).ToList() :
-                    Medicines.OrderByDescending(m => m.ExpiryDate).ToList();
-
-            return Medicines;
+            List<Medicine> result = new List<Medicine>();
+            foreach (Medicine me in Medicines)
+                result.Add(me);
+            if (type == "")
+                return result;
+            for (int i = 0; i < result.Count; i++)
+            {
+                for (int j = i + 1; j < result.Count; j++)
+                {
+                    bool shouldswap = false;
+                    if (type == "Price")
+                    {
+                        if (result[i].Price > result[j].Price)
+                            shouldswap = true;
+                    }
+                    else if (type == "Manufacturer")
+                    {
+                        if (result[i].Manufacturer[0] > result[j].Manufacturer[0])
+                            shouldswap = true;
+                    }
+                    else if (type == "Expiry")
+                    {
+                        if (result[i].ExpiryDate > result[j].ExpiryDate)
+                            shouldswap = true;
+                    }
+                    if (shouldswap)
+                    {
+                        Medicine temp = result[i];
+                        result[i] = result[j];
+                        result[j] = temp;
+                    }
+                }
+            }
+            return result;
         }
         public static List<Medicine> GetExpiredMedicines()
         {
-            return Medicines.Where(m => m.IsExpired()).ToList();
+            List<Medicine> result = new List<Medicine>();
+            foreach (Medicine m in Medicines)
+            {
+                if (m.IsExpired())
+                    result.Add(m);
+            }
+            return result;
         }
     }
 }
