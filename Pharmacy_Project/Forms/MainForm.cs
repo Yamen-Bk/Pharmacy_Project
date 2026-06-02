@@ -396,35 +396,33 @@ namespace Pharmacy_Project.Forms
         private void SaveSettingsbtn_Click(object sender, EventArgs e)
         {
             if (OldPasswordTextBox.Text == "" || NewPasswordTextBox.Text == "" || ConfirmPasswordTextBox.Text == "")
-            {
-                MessageBox.Show("Pleas fill all password fields", "Error",
+    {
+                MessageBox.Show("Please fill all password fields", "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (!BCrypt.Net.BCrypt.Verify(OldPasswordTextBox.Text,Pharmacy.User.Password))
+            if (!BCrypt.Net.BCrypt.Verify(OldPasswordTextBox.Text, Pharmacy.User.Password))
             {
                 MessageBox.Show("Current password is incorrect", "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (NewPasswordLabel.Text != ConfirmPasswordTextBox.Text)
+            if (NewPasswordTextBox.Text != ConfirmPasswordTextBox.Text)
             {
-                MessageBox.Show("Password do not match", "Error",
+                MessageBox.Show("Passwords do not match", "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (NewUsernameTextBox.Text.Trim() != "")
-            {
                 Pharmacy.User.Username = NewUsernameTextBox.Text.Trim();
-            }
 
-            Pharmacy.User.Password = BCrypt.Net.BCrypt.HashPassword(NewUsernameTextBox.Text);
+            Pharmacy.User.Password = BCrypt.Net.BCrypt.HashPassword(NewPasswordTextBox.Text);
 
             File.WriteAllText("user.json", JsonConvert.SerializeObject(Pharmacy.User, Formatting.Indented));
 
 
-            MessageBox.Show("Settings Saved Successfully !", "Success",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Settings saved successfully!", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             NewUsernameTextBox.Text = "";
             OldPasswordTextBox.Text = "";

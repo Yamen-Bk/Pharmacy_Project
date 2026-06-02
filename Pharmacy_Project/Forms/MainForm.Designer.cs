@@ -86,10 +86,8 @@
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -97,6 +95,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             MedicinesTabSelectArrow = new PictureBox();
             ExpiredTabSelectArrow = new PictureBox();
@@ -186,6 +188,8 @@
             OldPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             OldPasswordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MedicinesTabSelectArrow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ExpiredTabSelectArrow).BeginInit();
@@ -209,6 +213,7 @@
             ((System.ComponentModel.ISupportInitialize)ExpiredDataGridView).BeginInit();
             TabSettings.SuspendLayout();
             guna2GradientPanel8.SuspendLayout();
+            guna2GradientPanel9.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -1374,7 +1379,7 @@
             // TabSettings
             // 
             TabSettings.BackColor = Color.FromArgb(205, 220, 248);
-            TabSettings.Controls.Add(guna2HtmlLabel1);
+            TabSettings.Controls.Add(guna2GradientPanel9);
             TabSettings.Controls.Add(guna2GradientPanel8);
             TabSettings.Location = new Point(4, 5);
             TabSettings.Name = "TabSettings";
@@ -1388,11 +1393,11 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(9, 105, 137);
-            guna2HtmlLabel1.Location = new Point(696, 64);
+            guna2HtmlLabel1.Location = new Point(232, 16);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(290, 98);
+            guna2HtmlLabel1.Size = new Size(580, 98);
             guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "Hi , User";
+            guna2HtmlLabel1.Text = "Account Settings";
             // 
             // guna2GradientPanel8
             // 
@@ -1408,12 +1413,12 @@
             guna2GradientPanel8.Controls.Add(SaveSettingsbtn);
             guna2GradientPanel8.Controls.Add(OldPasswordTextBox);
             guna2GradientPanel8.Controls.Add(OldPasswordLabel);
-            guna2GradientPanel8.CustomizableEdges = customizableEdges53;
+            guna2GradientPanel8.CustomizableEdges = customizableEdges55;
             guna2GradientPanel8.FillColor = Color.PaleTurquoise;
             guna2GradientPanel8.FillColor2 = Color.Azure;
-            guna2GradientPanel8.Location = new Point(417, 268);
+            guna2GradientPanel8.Location = new Point(424, 300);
             guna2GradientPanel8.Name = "guna2GradientPanel8";
-            guna2GradientPanel8.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            guna2GradientPanel8.ShadowDecoration.CustomizableEdges = customizableEdges56;
             guna2GradientPanel8.Size = new Size(930, 584);
             guna2GradientPanel8.TabIndex = 5;
             // 
@@ -1423,7 +1428,7 @@
             NewUsernameTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             NewUsernameTextBox.BorderRadius = 15;
             NewUsernameTextBox.BorderThickness = 2;
-            NewUsernameTextBox.CustomizableEdges = customizableEdges44;
+            NewUsernameTextBox.CustomizableEdges = customizableEdges46;
             NewUsernameTextBox.DefaultText = "";
             NewUsernameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             NewUsernameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1437,7 +1442,7 @@
             NewUsernameTextBox.Name = "NewUsernameTextBox";
             NewUsernameTextBox.PlaceholderText = "";
             NewUsernameTextBox.SelectedText = "";
-            NewUsernameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges45;
+            NewUsernameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges47;
             NewUsernameTextBox.Size = new Size(415, 40);
             NewUsernameTextBox.TabIndex = 19;
             // 
@@ -1458,7 +1463,7 @@
             ConfirmPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             ConfirmPasswordTextBox.BorderRadius = 15;
             ConfirmPasswordTextBox.BorderThickness = 2;
-            ConfirmPasswordTextBox.CustomizableEdges = customizableEdges46;
+            ConfirmPasswordTextBox.CustomizableEdges = customizableEdges48;
             ConfirmPasswordTextBox.DefaultText = "";
             ConfirmPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             ConfirmPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1472,7 +1477,7 @@
             ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
             ConfirmPasswordTextBox.PlaceholderText = "";
             ConfirmPasswordTextBox.SelectedText = "";
-            ConfirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges47;
+            ConfirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges49;
             ConfirmPasswordTextBox.Size = new Size(415, 40);
             ConfirmPasswordTextBox.TabIndex = 17;
             // 
@@ -1493,7 +1498,7 @@
             NewPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             NewPasswordTextBox.BorderRadius = 15;
             NewPasswordTextBox.BorderThickness = 2;
-            NewPasswordTextBox.CustomizableEdges = customizableEdges48;
+            NewPasswordTextBox.CustomizableEdges = customizableEdges50;
             NewPasswordTextBox.DefaultText = "";
             NewPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             NewPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1507,7 +1512,7 @@
             NewPasswordTextBox.Name = "NewPasswordTextBox";
             NewPasswordTextBox.PlaceholderText = "";
             NewPasswordTextBox.SelectedText = "";
-            NewPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges49;
+            NewPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges51;
             NewPasswordTextBox.Size = new Size(415, 40);
             NewPasswordTextBox.TabIndex = 15;
             // 
@@ -1534,7 +1539,7 @@
             SaveSettingsbtn.Location = new Point(318, 449);
             SaveSettingsbtn.Name = "SaveSettingsbtn";
             SaveSettingsbtn.PressedState.ImageSize = new Size(292, 167);
-            SaveSettingsbtn.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            SaveSettingsbtn.ShadowDecoration.CustomizableEdges = customizableEdges52;
             SaveSettingsbtn.Size = new Size(251, 86);
             SaveSettingsbtn.TabIndex = 13;
             SaveSettingsbtn.Click += SaveSettingsbtn_Click;
@@ -1545,7 +1550,7 @@
             OldPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             OldPasswordTextBox.BorderRadius = 15;
             OldPasswordTextBox.BorderThickness = 2;
-            OldPasswordTextBox.CustomizableEdges = customizableEdges51;
+            OldPasswordTextBox.CustomizableEdges = customizableEdges53;
             OldPasswordTextBox.DefaultText = "";
             OldPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             OldPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1559,7 +1564,7 @@
             OldPasswordTextBox.Name = "OldPasswordTextBox";
             OldPasswordTextBox.PlaceholderText = "";
             OldPasswordTextBox.SelectedText = "";
-            OldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            OldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges54;
             OldPasswordTextBox.Size = new Size(415, 40);
             OldPasswordTextBox.TabIndex = 12;
             // 
@@ -1573,6 +1578,33 @@
             OldPasswordLabel.Size = new Size(237, 50);
             OldPasswordLabel.TabIndex = 1;
             OldPasswordLabel.Text = "Old Password :";
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.ForeColor = Color.FromArgb(9, 105, 137);
+            guna2HtmlLabel2.Location = new Point(103, 135);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(868, 67);
+            guna2HtmlLabel2.TabIndex = 6;
+            guna2HtmlLabel2.Text = "Manage Your Username and Password";
+            // 
+            // guna2GradientPanel9
+            // 
+            guna2GradientPanel9.BorderColor = Color.DarkSlateGray;
+            guna2GradientPanel9.BorderRadius = 25;
+            guna2GradientPanel9.BorderThickness = 3;
+            guna2GradientPanel9.Controls.Add(guna2HtmlLabel2);
+            guna2GradientPanel9.Controls.Add(guna2HtmlLabel1);
+            guna2GradientPanel9.CustomizableEdges = customizableEdges44;
+            guna2GradientPanel9.FillColor = Color.PaleTurquoise;
+            guna2GradientPanel9.FillColor2 = Color.Azure;
+            guna2GradientPanel9.Location = new Point(345, 28);
+            guna2GradientPanel9.Name = "guna2GradientPanel9";
+            guna2GradientPanel9.ShadowDecoration.CustomizableEdges = customizableEdges45;
+            guna2GradientPanel9.Size = new Size(1076, 240);
+            guna2GradientPanel9.TabIndex = 7;
             // 
             // MainForm
             // 
@@ -1614,9 +1646,10 @@
             TabExpired.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)ExpiredDataGridView).EndInit();
             TabSettings.ResumeLayout(false);
-            TabSettings.PerformLayout();
             guna2GradientPanel8.ResumeLayout(false);
             guna2GradientPanel8.PerformLayout();
+            guna2GradientPanel9.ResumeLayout(false);
+            guna2GradientPanel9.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1711,5 +1744,7 @@
         private Guna.UI2.WinForms.Guna2TextBox NewPasswordTextBox;
         private Guna.UI2.WinForms.Guna2HtmlLabel NewPasswordLabel;
         private Guna.UI2.WinForms.Guna2HtmlLabel OldPasswordLabel;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel9;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }
