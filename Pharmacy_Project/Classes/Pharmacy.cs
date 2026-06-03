@@ -137,5 +137,26 @@ namespace Pharmacy_Project.Classes
             }
             return result;
         }
+        public static void ProcessSale(List<InvoiveItem> cart)
+        {
+            foreach(InvoiveItem item in cart)
+            {
+                foreach (Medicine m in Medicines)
+                {
+                    if(m.Id == item.Medicine.Id)
+                    {
+                        m.Quantity -= item.Quantity;
+                        break;
+                    }
+                }
+            }
+            Invoice inv = new Invoice();
+            inv.Id = Invoices.Count + 1;
+            inv.Date = DateTime.Now;
+            inv.Items = cart;
+            inv.CalculateTotal();
+            Invoices.Add(inv);
+            SaveData();
+        }
     }
 }

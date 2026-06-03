@@ -22,8 +22,9 @@ namespace Pharmacy_Project.Forms
         int EditingId = -1;
 
         /// <summary>
-        /// MainForm
+        //!? MainForm
         /// </summary>
+
         public MainForm()
         {
             InitializeComponent();
@@ -32,7 +33,6 @@ namespace Pharmacy_Project.Forms
         private void MainForm_Load(object sender, EventArgs e)
         {
             LoadMedicines();
-            //LoadHomeData();
         }
         private void HideAllArrows()
         {
@@ -70,6 +70,7 @@ namespace Pharmacy_Project.Forms
         {
             HideAllArrows();
             MainTabControl.SelectedTab = TabPOS;
+            LoadPOSMedicines();
             POSTabSelectArrow.Visible = true;
         }
 
@@ -103,91 +104,13 @@ namespace Pharmacy_Project.Forms
             }
         }
         /// <summary>
-        /// Home Tab
+        //!? Home Tab
         /// </summary>
-        //private void LoadHomeData()
-        //{
-        //    // Welcome
-        //    LabelWelcome.Text = $"Welcome back, {Pharmacy.User.Username} 👋";
-        //    //lblDate.Text = DateTime.Now.ToString("dddd, MMM dd yyyy");
 
-        //    // إحصائيات
-        //    int totalMeds = Pharmacy.Medicines.Count;
-        //    int expired = Pharmacy.Medicines.Count(m => m.IsExpired());
-        //    int lowStock = Pharmacy.Medicines.Count(m => m.IsLowStock());
-        //    int totalSold = Pharmacy.Invoices
-        //                      .SelectMany(i => i.Items)
-        //                      .Sum(i => i.Quantity);
-        //    double totalSales = Pharmacy.Invoices
-        //                       .Sum(i => i.TotalPrice);
 
-        //    LabelMedicinesSold.Text = totalSold.ToString();
-        //    LabelTotalSales.Text = totalSales.ToString("N0") + " SYP";
-
-        //    // Cartesian Chart — أكتر 5 أدوية بالمخزون
-        //    var top5 = Pharmacy.Medicines
-        //               .OrderByDescending(m => m.Quantity)
-        //               .Take(5)
-        //               .ToList();
-
-        //    cartesianChart1.Series = new ISeries[]
-        //    {
-        //new ColumnSeries<int>
-        //{
-        //    Name   = "Stock",
-        //    Values = top5.Select(m => m.Quantity).ToArray(),
-        //    Fill   = new SolidColorPaint(SKColor.Parse("#1565C0")),
-        //    Stroke = null,
-        //    MaxBarWidth = 40
-        //}
-        //    };
-
-        //    cartesianChart1.XAxes = new Axis[]
-        //    {
-        //new Axis
-        //{
-        //    Labels      = top5.Select(m => m.TradeName).ToArray(),
-        //    LabelsPaint = new SolidColorPaint(SKColor.Parse("#333333")),
-        //    TicksPaint  = null
-        //}
-        //    };
-
-        //    cartesianChart1.YAxes = new Axis[]
-        //    {
-        //new Axis
-        //{
-        //    LabelsPaint = new SolidColorPaint(SKColor.Parse("#333333"))
-        //}
-        //    };
-
-        //    // Pie Chart — Total / LowStock / Expired
-        //    int normal = totalMeds - expired - lowStock;
-
-        //    pieChart1.Series = new ISeries[]
-        //    {
-        //new PieSeries<int>
-        //{
-        //    Name   = "Normal",
-        //    Values = new[] { normal },
-        //    Fill   = new SolidColorPaint(SKColor.Parse("#4CAF50"))
-        //},
-        //new PieSeries<int>
-        //{
-        //    Name   = "Low Stock",
-        //    Values = new[] { lowStock },
-        //    Fill   = new SolidColorPaint(SKColor.Parse("#FF9800"))
-        //},
-        //new PieSeries<int>
-        //{
-        //    Name   = "Expired",
-        //    Values = new[] { expired },
-        //    Fill   = new SolidColorPaint(SKColor.Parse("#F44336"))
-        //}
-        //    };
-        //}
 
         /// <summary>
-        /// Medicine Tab
+        //!? Medicine Tab
         /// </summary>
 
         private void ClearFields()
@@ -293,9 +216,9 @@ namespace Pharmacy_Project.Forms
             }
             int id = (int)MedicinesDataGridView.SelectedRows[0].Cells["Id"].Value;
             Medicine m = null;
-            foreach(Medicine med in Pharmacy.Medicines)
+            foreach (Medicine med in Pharmacy.Medicines)
             {
-                if(med.Id == id) 
+                if (med.Id == id)
                     m = med;
             }
 
@@ -334,7 +257,7 @@ namespace Pharmacy_Project.Forms
         }
 
         /// <summary>
-        /// Expired Tab
+        //!? Expired Tab
         /// </summary>
 
         private void LoadExpired()
@@ -390,13 +313,117 @@ namespace Pharmacy_Project.Forms
         }
 
         /// <summary>
-        /// Settings Tab
+        //!? POS Tab
+        /// </summary>
+
+        List<InvoiveItem> cart = new List<InvoiveItem>();
+        private void UpdateCartTotal()
+        {
+            double total = 0;
+            foreach (InvoiveItem item in cart)
+            {
+                total += item.SubTotal;
+            }
+            POSTotalPriceLabel.Text = total.ToString();
+        }
+        private void LoadPOSMedicines()
+        {
+            POSNameComboBox.Items.Clear();
+            foreach (Medicine m in Pharmacy.Medicines)
+            {
+                if (!m.IsExpired())
+                    POSNameComboBox.Items.Add(m.TradeName);
+            }
+        }
+        private void POSNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (POSNameComboBox.SelectedIndex == -1) return;
+
+            string selectedName = POSNameComboBox.SelectedItem.ToString();
+
+            foreach (Medicine m in Pharmacy.Medicines)
+            {
+                if (m.TradeName == selectedName)
+                {
+                    POSAvailableLabel.Text = m.Quantity.ToString();
+                    POSPriceLabel.Text = m.Price.ToString();
+                    QuantityNumeric.Maximum = m.Quantity;
+                    QuantityNumeric.Minimum = 1;
+                    QuantityNumeric.Value = 1;
+                    break;
+                }
+            }
+        }
+        private void POSClearAllbtn_Click(object sender, EventArgs e)
+        {
+            cart.Clear();
+            POSDataGridView.Rows.Clear();
+            POSTotalPriceLabel.Text = "0";
+        }
+
+        private void POSClearbtn_Click(object sender, EventArgs e)
+        {
+            if (POSDataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Select Medicine First");
+                return;
+            }
+            int index = POSDataGridView.SelectedRows[0].Index;
+            cart.RemoveAt(index);
+            POSDataGridView.Rows.RemoveAt(index);
+            UpdateCartTotal();
+        }
+
+
+        private void POSAddbtn_Click(object sender, EventArgs e)
+        {
+            if (POSNameComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select Medicine First");
+                return;
+            }
+            string selectedName = POSNameComboBox.SelectedItem.ToString();
+            Medicine selectedMedicine = null;
+            foreach (Medicine m in Pharmacy.Medicines)
+            {
+                if (m.TradeName == selectedName)
+                {
+                    selectedMedicine = m;
+                }
+            }
+            int quantity = (int)QuantityNumeric.Value;
+            if (quantity > selectedMedicine.Quantity)
+            {
+                MessageBox.Show("Quantity exceeds available Stock!");
+                return;
+            }
+
+            InvoiveItem item = new InvoiveItem();
+            item.Medicine = selectedMedicine;
+            item.Quantity = quantity;
+            item.UnitPrice = selectedMedicine.Price;
+            cart.Add(item);
+
+            int i = POSDataGridView.Rows.Add();
+            POSDataGridView.Rows[i].Cells["POSTradeName"].Value = selectedMedicine.TradeName;
+            POSDataGridView.Rows[i].Cells["POSPrice"].Value = selectedMedicine.Price;
+            POSDataGridView.Rows[i].Cells["POSQuantity"].Value = quantity;
+            POSDataGridView.Rows[i].Cells["POSSubtotal"].Value = item.SubTotal;
+            UpdateCartTotal();
+        }
+        private void POSBuybtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        //!? Settings Tab
         /// </summary>
 
         private void SaveSettingsbtn_Click(object sender, EventArgs e)
         {
             if (OldPasswordTextBox.Text == "" || NewPasswordTextBox.Text == "" || ConfirmPasswordTextBox.Text == "")
-    {
+            {
                 MessageBox.Show("Please fill all password fields", "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -431,5 +458,6 @@ namespace Pharmacy_Project.Forms
 
             LabelWelcome.Text = $"Welcome Back, {Pharmacy.User.Username}";
         }
+
     }
 }

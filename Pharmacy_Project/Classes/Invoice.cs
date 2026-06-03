@@ -9,10 +9,10 @@ namespace Pharmacy_Project.Classes
     public class Invoice
     {
         public int Id { get; set; }
-        public DateTime Date { get; set; }
         public List<InvoiveItem> Items { get; set; }
+        public DateTime Date { get; set; }
         public double TotalPrice { get; set; }
-
+         
         public void CalculateTotal()
         {
             TotalPrice = 0;
