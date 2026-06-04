@@ -317,6 +317,7 @@ namespace Pharmacy_Project.Forms
         /// </summary>
 
         List<InvoiveItem> cart = new List<InvoiveItem>();
+        int editingCartIndex = -1;
         private void UpdateCartTotal()
         {
             double total = 0;
@@ -331,7 +332,7 @@ namespace Pharmacy_Project.Forms
             POSNameComboBox.Items.Clear();
             foreach (Medicine m in Pharmacy.Medicines)
             {
-                if (!m.IsExpired())
+                if (!m.IsExpired() && m.Quantity > 0)
                     POSNameComboBox.Items.Add(m.TradeName);
             }
         }
@@ -347,8 +348,8 @@ namespace Pharmacy_Project.Forms
                 {
                     POSAvailableLabel.Text = m.Quantity.ToString();
                     POSPriceLabel.Text = m.Price.ToString();
-                    QuantityNumeric.Maximum = m.Quantity;
                     QuantityNumeric.Minimum = 1;
+                    QuantityNumeric.Maximum = m.Quantity;
                     QuantityNumeric.Value = 1;
                     break;
                 }
@@ -382,6 +383,7 @@ namespace Pharmacy_Project.Forms
                 MessageBox.Show("Select Medicine First");
                 return;
             }
+
             string selectedName = POSNameComboBox.SelectedItem.ToString();
             Medicine selectedMedicine = null;
             foreach (Medicine m in Pharmacy.Medicines)
@@ -389,8 +391,19 @@ namespace Pharmacy_Project.Forms
                 if (m.TradeName == selectedName)
                 {
                     selectedMedicine = m;
+                    break;
                 }
             }
+
+            foreach (InvoiveItem existing in cart)
+            {
+                if (existing.Medicine.Id == selectedMedicine.Id)
+                {
+                    MessageBox.Show("This Medicine is Already in the cart \n Use Edit To Change its Quantity");
+                    return;
+                }
+            }
+
             int quantity = (int)QuantityNumeric.Value;
             if (quantity > selectedMedicine.Quantity)
             {
@@ -411,9 +424,77 @@ namespace Pharmacy_Project.Forms
             POSDataGridView.Rows[i].Cells["POSSubtotal"].Value = item.SubTotal;
             UpdateCartTotal();
         }
+        private void POSEditbtn_Click(object sender, EventArgs e)
+        {
+            if (POSDataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Select a medicine from the cart first.");
+                return;
+            }
+
+            editingCartIndex = POSDataGridView.SelectedRows[0].Index;
+            InvoiveItem item = cart[editingCartIndex];
+
+            POSNameComboBox.SelectedItem = item.Medicine.TradeName;
+            QuantityNumeric.Value = item.Quantity;
+
+            POSAddbtn.Visible = false;
+            POSSavebtn.Visible = true;
+        }
+
         private void POSBuybtn_Click(object sender, EventArgs e)
         {
+            if (cart.Count == 0)
+            {
+                MessageBox.Show("Cart is empty! Add medicines first.","Empty Cart",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            DialogResult confirm = MessageBox.Show( $"Complete purchase?\nTotal: {POSTotalPriceLabel.Text}",
+                                            "Confirm Sale", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm != DialogResult.Yes) return;
+
+            Pharmacy.ProcessSale(cart);
+
+            cart.Clear();
+            POSDataGridView.Rows.Clear();
+            POSTotalPriceLabel.Text = "0";
+            POSNameComboBox.SelectedIndex = -1;
+            POSAvailableLabel.Text = "0";
+            POSPriceLabel.Text = "0";
+            QuantityNumeric.Value = 1;
+
+            LoadPOSMedicines();
+
+            MessageBox.Show("Sale completed successfully!\nInvoice has been saved.",
+                            "Success",MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void POSSavebtn_Click(object sender, EventArgs e)
+        {
+            int newQuantity = (int)QuantityNumeric.Value;
+            InvoiveItem item = cart[editingCartIndex];
+
+            if (newQuantity > item.Medicine.Quantity)
+            {
+                MessageBox.Show("Quantity exceeds available stock!");
+                return;
+            }
+
+            item.Quantity = newQuantity;
+
+            POSDataGridView.Rows[editingCartIndex].Cells["POSQuantity"].Value = newQuantity;
+            POSDataGridView.Rows[editingCartIndex].Cells["POSSubtotal"].Value = item.SubTotal;
+
+            UpdateCartTotal();
+
+            editingCartIndex = -1;
+            POSSavebtn.Visible = false;
+            POSAddbtn.Visible = true;
+
+            POSNameComboBox.SelectedIndex = -1;
+            QuantityNumeric.Value = 1;
         }
 
         /// <summary>

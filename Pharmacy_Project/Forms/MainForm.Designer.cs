@@ -87,24 +87,23 @@
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges67 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges68 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -112,6 +111,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             MedicinesTabSelectArrow = new PictureBox();
             ExpiredTabSelectArrow = new PictureBox();
@@ -187,6 +189,7 @@
             ExpQuantity = new DataGridViewTextBoxColumn();
             ExpExpiryDate = new DataGridViewTextBoxColumn();
             TabPOS = new TabPage();
+            POSEditbtn = new Guna.UI2.WinForms.Guna2ImageButton();
             POSClearAllbtn = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2GradientPanel10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -226,6 +229,7 @@
             OldPasswordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            POSSavebtn = new Guna.UI2.WinForms.Guna2ImageButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MedicinesTabSelectArrow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ExpiredTabSelectArrow).BeginInit();
@@ -1399,6 +1403,7 @@
             // TabPOS
             // 
             TabPOS.BackColor = Color.FromArgb(205, 220, 248);
+            TabPOS.Controls.Add(POSEditbtn);
             TabPOS.Controls.Add(POSClearAllbtn);
             TabPOS.Controls.Add(guna2GradientPanel10);
             TabPOS.Controls.Add(POSTotalPriceLabel);
@@ -1413,6 +1418,23 @@
             TabPOS.TabIndex = 2;
             TabPOS.Text = "POS";
             // 
+            // POSEditbtn
+            // 
+            POSEditbtn.BackColor = Color.Transparent;
+            POSEditbtn.CheckedState.ImageSize = new Size(292, 167);
+            POSEditbtn.HoverState.ImageSize = new Size(295, 170);
+            POSEditbtn.Image = (Image)resources.GetObject("POSEditbtn.Image");
+            POSEditbtn.ImageOffset = new Point(0, 0);
+            POSEditbtn.ImageRotate = 0F;
+            POSEditbtn.ImageSize = new Size(290, 165);
+            POSEditbtn.Location = new Point(374, 732);
+            POSEditbtn.Name = "POSEditbtn";
+            POSEditbtn.PressedState.ImageSize = new Size(292, 167);
+            POSEditbtn.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            POSEditbtn.Size = new Size(251, 86);
+            POSEditbtn.TabIndex = 19;
+            POSEditbtn.Click += POSEditbtn_Click;
+            // 
             // POSClearAllbtn
             // 
             POSClearAllbtn.BackColor = Color.Transparent;
@@ -1425,7 +1447,7 @@
             POSClearAllbtn.Location = new Point(373, 833);
             POSClearAllbtn.Name = "POSClearAllbtn";
             POSClearAllbtn.PressedState.ImageSize = new Size(292, 167);
-            POSClearAllbtn.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            POSClearAllbtn.ShadowDecoration.CustomizableEdges = customizableEdges45;
             POSClearAllbtn.Size = new Size(251, 86);
             POSClearAllbtn.TabIndex = 18;
             POSClearAllbtn.Click += POSClearAllbtn_Click;
@@ -1435,10 +1457,10 @@
             guna2GradientPanel10.BorderColor = Color.DarkSlateGray;
             guna2GradientPanel10.BorderRadius = 25;
             guna2GradientPanel10.BorderThickness = 3;
+            guna2GradientPanel10.Controls.Add(POSAddbtn);
             guna2GradientPanel10.Controls.Add(guna2HtmlLabel12);
             guna2GradientPanel10.Controls.Add(guna2HtmlLabel11);
             guna2GradientPanel10.Controls.Add(POSPriceLabel);
-            guna2GradientPanel10.Controls.Add(POSAddbtn);
             guna2GradientPanel10.Controls.Add(QuantityNumeric);
             guna2GradientPanel10.Controls.Add(POSAvailableLabel);
             guna2GradientPanel10.Controls.Add(guna2HtmlLabel8);
@@ -1446,13 +1468,14 @@
             guna2GradientPanel10.Controls.Add(guna2HtmlLabel3);
             guna2GradientPanel10.Controls.Add(guna2HtmlLabel5);
             guna2GradientPanel10.Controls.Add(POSNameComboBox);
-            guna2GradientPanel10.CustomizableEdges = customizableEdges50;
+            guna2GradientPanel10.Controls.Add(POSSavebtn);
+            guna2GradientPanel10.CustomizableEdges = customizableEdges52;
             guna2GradientPanel10.FillColor = Color.PaleTurquoise;
             guna2GradientPanel10.FillColor2 = Color.Azure;
-            guna2GradientPanel10.Location = new Point(317, 28);
+            guna2GradientPanel10.Location = new Point(318, 28);
             guna2GradientPanel10.Name = "guna2GradientPanel10";
-            guna2GradientPanel10.ShadowDecoration.CustomizableEdges = customizableEdges51;
-            guna2GradientPanel10.Size = new Size(377, 719);
+            guna2GradientPanel10.ShadowDecoration.CustomizableEdges = customizableEdges53;
+            guna2GradientPanel10.Size = new Size(377, 691);
             guna2GradientPanel10.TabIndex = 17;
             // 
             // guna2HtmlLabel12
@@ -1482,7 +1505,7 @@
             POSPriceLabel.BackColor = Color.Transparent;
             POSPriceLabel.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
             POSPriceLabel.ForeColor = Color.FromArgb(9, 105, 137);
-            POSPriceLabel.Location = new Point(220, 400);
+            POSPriceLabel.Location = new Point(220, 378);
             POSPriceLabel.Name = "POSPriceLabel";
             POSPriceLabel.Size = new Size(21, 47);
             POSPriceLabel.TabIndex = 22;
@@ -1497,10 +1520,10 @@
             POSAddbtn.ImageOffset = new Point(0, 0);
             POSAddbtn.ImageRotate = 0F;
             POSAddbtn.ImageSize = new Size(290, 165);
-            POSAddbtn.Location = new Point(56, 600);
+            POSAddbtn.Location = new Point(56, 567);
             POSAddbtn.Name = "POSAddbtn";
             POSAddbtn.PressedState.ImageSize = new Size(292, 167);
-            POSAddbtn.ShadowDecoration.CustomizableEdges = customizableEdges45;
+            POSAddbtn.ShadowDecoration.CustomizableEdges = customizableEdges46;
             POSAddbtn.Size = new Size(251, 86);
             POSAddbtn.TabIndex = 15;
             POSAddbtn.Click += POSAddbtn_Click;
@@ -1508,12 +1531,12 @@
             // QuantityNumeric
             // 
             QuantityNumeric.BackColor = Color.Transparent;
-            QuantityNumeric.CustomizableEdges = customizableEdges46;
+            QuantityNumeric.CustomizableEdges = customizableEdges47;
             QuantityNumeric.Font = new Font("Segoe UI", 9F);
-            QuantityNumeric.Location = new Point(177, 511);
+            QuantityNumeric.Location = new Point(177, 484);
             QuantityNumeric.Margin = new Padding(4, 5, 4, 5);
             QuantityNumeric.Name = "QuantityNumeric";
-            QuantityNumeric.ShadowDecoration.CustomizableEdges = customizableEdges47;
+            QuantityNumeric.ShadowDecoration.CustomizableEdges = customizableEdges48;
             QuantityNumeric.Size = new Size(166, 36);
             QuantityNumeric.TabIndex = 9;
             // 
@@ -1522,7 +1545,7 @@
             POSAvailableLabel.BackColor = Color.Transparent;
             POSAvailableLabel.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
             POSAvailableLabel.ForeColor = Color.FromArgb(9, 105, 137);
-            POSAvailableLabel.Location = new Point(220, 300);
+            POSAvailableLabel.Location = new Point(220, 283);
             POSAvailableLabel.Name = "POSAvailableLabel";
             POSAvailableLabel.Size = new Size(21, 47);
             POSAvailableLabel.TabIndex = 21;
@@ -1533,7 +1556,7 @@
             guna2HtmlLabel8.BackColor = Color.Transparent;
             guna2HtmlLabel8.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel8.ForeColor = Color.FromArgb(9, 105, 137);
-            guna2HtmlLabel8.Location = new Point(10, 300);
+            guna2HtmlLabel8.Location = new Point(10, 283);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             guna2HtmlLabel8.Size = new Size(151, 47);
             guna2HtmlLabel8.TabIndex = 20;
@@ -1544,7 +1567,7 @@
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
             guna2HtmlLabel7.ForeColor = Color.FromArgb(9, 105, 137);
-            guna2HtmlLabel7.Location = new Point(10, 400);
+            guna2HtmlLabel7.Location = new Point(10, 378);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(91, 47);
             guna2HtmlLabel7.TabIndex = 19;
@@ -1555,7 +1578,7 @@
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
             guna2HtmlLabel3.ForeColor = Color.FromArgb(9, 105, 137);
-            guna2HtmlLabel3.Location = new Point(10, 500);
+            guna2HtmlLabel3.Location = new Point(10, 473);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(147, 47);
             guna2HtmlLabel3.TabIndex = 10;
@@ -1566,7 +1589,7 @@
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel5.ForeColor = Color.FromArgb(9, 105, 137);
-            guna2HtmlLabel5.Location = new Point(10, 200);
+            guna2HtmlLabel5.Location = new Point(10, 188);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(107, 47);
             guna2HtmlLabel5.TabIndex = 8;
@@ -1575,7 +1598,7 @@
             // POSNameComboBox
             // 
             POSNameComboBox.BackColor = Color.Transparent;
-            POSNameComboBox.CustomizableEdges = customizableEdges48;
+            POSNameComboBox.CustomizableEdges = customizableEdges49;
             POSNameComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             POSNameComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             POSNameComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -1583,9 +1606,9 @@
             POSNameComboBox.Font = new Font("Segoe UI", 10F);
             POSNameComboBox.ForeColor = Color.FromArgb(68, 88, 112);
             POSNameComboBox.ItemHeight = 30;
-            POSNameComboBox.Location = new Point(177, 211);
+            POSNameComboBox.Location = new Point(177, 199);
             POSNameComboBox.Name = "POSNameComboBox";
-            POSNameComboBox.ShadowDecoration.CustomizableEdges = customizableEdges49;
+            POSNameComboBox.ShadowDecoration.CustomizableEdges = customizableEdges50;
             POSNameComboBox.Size = new Size(166, 36);
             POSNameComboBox.TabIndex = 0;
             POSNameComboBox.SelectedIndexChanged += POSNameComboBox_SelectedIndexChanged;
@@ -1613,7 +1636,7 @@
             POSBuybtn.Location = new Point(1139, 833);
             POSBuybtn.Name = "POSBuybtn";
             POSBuybtn.PressedState.ImageSize = new Size(292, 167);
-            POSBuybtn.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            POSBuybtn.ShadowDecoration.CustomizableEdges = customizableEdges54;
             POSBuybtn.Size = new Size(251, 86);
             POSBuybtn.TabIndex = 14;
             POSBuybtn.Click += POSBuybtn_Click;
@@ -1630,7 +1653,7 @@
             POSClearbtn.Location = new Point(768, 833);
             POSClearbtn.Name = "POSClearbtn";
             POSClearbtn.PressedState.ImageSize = new Size(292, 167);
-            POSClearbtn.ShadowDecoration.CustomizableEdges = customizableEdges53;
+            POSClearbtn.ShadowDecoration.CustomizableEdges = customizableEdges55;
             POSClearbtn.Size = new Size(251, 86);
             POSClearbtn.TabIndex = 13;
             POSClearbtn.Click += POSClearbtn_Click;
@@ -1762,12 +1785,12 @@
             guna2GradientPanel9.BorderThickness = 3;
             guna2GradientPanel9.Controls.Add(guna2HtmlLabel2);
             guna2GradientPanel9.Controls.Add(guna2HtmlLabel1);
-            guna2GradientPanel9.CustomizableEdges = customizableEdges54;
+            guna2GradientPanel9.CustomizableEdges = customizableEdges56;
             guna2GradientPanel9.FillColor = Color.PaleTurquoise;
             guna2GradientPanel9.FillColor2 = Color.Azure;
             guna2GradientPanel9.Location = new Point(345, 28);
             guna2GradientPanel9.Name = "guna2GradientPanel9";
-            guna2GradientPanel9.ShadowDecoration.CustomizableEdges = customizableEdges55;
+            guna2GradientPanel9.ShadowDecoration.CustomizableEdges = customizableEdges57;
             guna2GradientPanel9.Size = new Size(1076, 240);
             guna2GradientPanel9.TabIndex = 7;
             // 
@@ -1807,12 +1830,12 @@
             guna2GradientPanel8.Controls.Add(SaveSettingsbtn);
             guna2GradientPanel8.Controls.Add(OldPasswordTextBox);
             guna2GradientPanel8.Controls.Add(OldPasswordLabel);
-            guna2GradientPanel8.CustomizableEdges = customizableEdges65;
+            guna2GradientPanel8.CustomizableEdges = customizableEdges67;
             guna2GradientPanel8.FillColor = Color.PaleTurquoise;
             guna2GradientPanel8.FillColor2 = Color.Azure;
             guna2GradientPanel8.Location = new Point(424, 300);
             guna2GradientPanel8.Name = "guna2GradientPanel8";
-            guna2GradientPanel8.ShadowDecoration.CustomizableEdges = customizableEdges66;
+            guna2GradientPanel8.ShadowDecoration.CustomizableEdges = customizableEdges68;
             guna2GradientPanel8.Size = new Size(930, 584);
             guna2GradientPanel8.TabIndex = 5;
             // 
@@ -1822,7 +1845,7 @@
             NewUsernameTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             NewUsernameTextBox.BorderRadius = 15;
             NewUsernameTextBox.BorderThickness = 2;
-            NewUsernameTextBox.CustomizableEdges = customizableEdges56;
+            NewUsernameTextBox.CustomizableEdges = customizableEdges58;
             NewUsernameTextBox.DefaultText = "";
             NewUsernameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             NewUsernameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1836,7 +1859,7 @@
             NewUsernameTextBox.Name = "NewUsernameTextBox";
             NewUsernameTextBox.PlaceholderText = "";
             NewUsernameTextBox.SelectedText = "";
-            NewUsernameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges57;
+            NewUsernameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges59;
             NewUsernameTextBox.Size = new Size(415, 40);
             NewUsernameTextBox.TabIndex = 19;
             // 
@@ -1857,7 +1880,7 @@
             ConfirmPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             ConfirmPasswordTextBox.BorderRadius = 15;
             ConfirmPasswordTextBox.BorderThickness = 2;
-            ConfirmPasswordTextBox.CustomizableEdges = customizableEdges58;
+            ConfirmPasswordTextBox.CustomizableEdges = customizableEdges60;
             ConfirmPasswordTextBox.DefaultText = "";
             ConfirmPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             ConfirmPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1871,7 +1894,7 @@
             ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
             ConfirmPasswordTextBox.PlaceholderText = "";
             ConfirmPasswordTextBox.SelectedText = "";
-            ConfirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges59;
+            ConfirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges61;
             ConfirmPasswordTextBox.Size = new Size(415, 40);
             ConfirmPasswordTextBox.TabIndex = 17;
             // 
@@ -1892,7 +1915,7 @@
             NewPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             NewPasswordTextBox.BorderRadius = 15;
             NewPasswordTextBox.BorderThickness = 2;
-            NewPasswordTextBox.CustomizableEdges = customizableEdges60;
+            NewPasswordTextBox.CustomizableEdges = customizableEdges62;
             NewPasswordTextBox.DefaultText = "";
             NewPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             NewPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1906,7 +1929,7 @@
             NewPasswordTextBox.Name = "NewPasswordTextBox";
             NewPasswordTextBox.PlaceholderText = "";
             NewPasswordTextBox.SelectedText = "";
-            NewPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges61;
+            NewPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges63;
             NewPasswordTextBox.Size = new Size(415, 40);
             NewPasswordTextBox.TabIndex = 15;
             // 
@@ -1933,7 +1956,7 @@
             SaveSettingsbtn.Location = new Point(318, 449);
             SaveSettingsbtn.Name = "SaveSettingsbtn";
             SaveSettingsbtn.PressedState.ImageSize = new Size(292, 167);
-            SaveSettingsbtn.ShadowDecoration.CustomizableEdges = customizableEdges62;
+            SaveSettingsbtn.ShadowDecoration.CustomizableEdges = customizableEdges64;
             SaveSettingsbtn.Size = new Size(251, 86);
             SaveSettingsbtn.TabIndex = 13;
             SaveSettingsbtn.Click += SaveSettingsbtn_Click;
@@ -1944,7 +1967,7 @@
             OldPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             OldPasswordTextBox.BorderRadius = 15;
             OldPasswordTextBox.BorderThickness = 2;
-            OldPasswordTextBox.CustomizableEdges = customizableEdges63;
+            OldPasswordTextBox.CustomizableEdges = customizableEdges65;
             OldPasswordTextBox.DefaultText = "";
             OldPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             OldPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1958,7 +1981,7 @@
             OldPasswordTextBox.Name = "OldPasswordTextBox";
             OldPasswordTextBox.PlaceholderText = "";
             OldPasswordTextBox.SelectedText = "";
-            OldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges64;
+            OldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges66;
             OldPasswordTextBox.Size = new Size(415, 40);
             OldPasswordTextBox.TabIndex = 12;
             // 
@@ -1983,6 +2006,24 @@
             guna2HtmlLabel6.Size = new Size(195, 47);
             guna2HtmlLabel6.TabIndex = 8;
             guna2HtmlLabel6.Text = "TradeName :";
+            // 
+            // POSSavebtn
+            // 
+            POSSavebtn.BackColor = Color.Transparent;
+            POSSavebtn.CheckedState.ImageSize = new Size(292, 167);
+            POSSavebtn.HoverState.ImageSize = new Size(295, 170);
+            POSSavebtn.Image = (Image)resources.GetObject("POSSavebtn.Image");
+            POSSavebtn.ImageOffset = new Point(0, 0);
+            POSSavebtn.ImageRotate = 0F;
+            POSSavebtn.ImageSize = new Size(290, 165);
+            POSSavebtn.Location = new Point(56, 567);
+            POSSavebtn.Name = "POSSavebtn";
+            POSSavebtn.PressedState.ImageSize = new Size(292, 167);
+            POSSavebtn.ShadowDecoration.CustomizableEdges = customizableEdges51;
+            POSSavebtn.Size = new Size(251, 86);
+            POSSavebtn.TabIndex = 20;
+            POSSavebtn.Visible = false;
+            POSSavebtn.Click += POSSavebtn_Click;
             // 
             // MainForm
             // 
@@ -2153,5 +2194,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton POSClearAllbtn;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2ImageButton POSEditbtn;
+        private Guna.UI2.WinForms.Guna2ImageButton POSSavebtn;
     }
 }

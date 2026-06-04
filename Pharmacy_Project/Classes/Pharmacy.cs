@@ -44,8 +44,8 @@ namespace Pharmacy_Project.Classes
             {
                 foreach (Medicine med in Medicines)
                 {
-                    if (m.Id > maxid)
-                        maxid = m.Id;
+                    if (med.Id > maxid)
+                        maxid = med.Id;
                 }
             }
             m.Id = maxid + 1;
@@ -153,7 +153,7 @@ namespace Pharmacy_Project.Classes
             Invoice inv = new Invoice();
             inv.Id = Invoices.Count + 1;
             inv.Date = DateTime.Now;
-            inv.Items = cart;
+            inv.Items = new List<InvoiveItem>(cart);
             inv.CalculateTotal();
             Invoices.Add(inv);
             SaveData();
