@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 1,
+    "TradeName": "dfgh",
+    "ScientificName": "dfgh",
+    "Manufacturer": "dfgh",
+    "Price": 456.0,
+    "Quantity": 65,
+    "ExpiryDate": "2024-10-11T00:00:00"
+  },
+  {
+    "Id": 4,
+    "TradeName": "dsfgb",
+    "ScientificName": "sdfg",
+    "Manufacturer": "sdgf",
+    "Price": 4.0,
+    "Quantity": 25,
+    "ExpiryDate": "2029-10-10T00:00:00"
+  },
+  {
+    "Id": 9,
+    "TradeName": "ergdfw",
+    "ScientificName": "sdgf",
+    "Manufacturer": "dsfg",
+    "Price": 324.0,
+    "Quantity": 0,
+    "ExpiryDate": "2026-10-05T00:00:00"
+  },
+  {
+    "Id": 11,
+    "TradeName": "gfhdfghd",
+    "ScientificName": "dfgh",
+    "Manufacturer": "ftgyd",
+    "Price": 35.0,
+    "Quantity": 46,
+    "ExpiryDate": "2026-06-05T00:00:00"
+  },
+  {
+    "Id": 12,
+    "TradeName": "gfhdfghd",
+    "ScientificName": "dfgh",
+    "Manufacturer": "ftgyd",
+    "Price": 35.0,
+    "Quantity": 0,
+    "ExpiryDate": "2026-06-05T00:00:00"
+  },
+  {
+    "Id": 14,
+    "TradeName": "qqqqq",
+    "ScientificName": "qqqq",
+    "Manufacturer": "qqq",
+    "Price": 2.0,
+    "Quantity": 0,
+    "ExpiryDate": "1000-10-10T00:00:00"
+  }
+]

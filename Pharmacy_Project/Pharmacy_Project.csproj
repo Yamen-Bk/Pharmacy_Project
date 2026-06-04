@@ -157,4 +157,16 @@
     <Folder Include="Images\Icons\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="invoices.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="medicines.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="user.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -32,6 +32,7 @@ namespace Pharmacy_Project.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            LoadHomeData();
             LoadMedicines();
         }
         private void HideAllArrows()
@@ -48,6 +49,7 @@ namespace Pharmacy_Project.Forms
         {
             HideAllArrows();
             MainTabControl.SelectedTab = TabHome;
+            LoadHomeData();
             HomeTabSelectArrow.Visible = true;
         }
 
@@ -108,7 +110,98 @@ namespace Pharmacy_Project.Forms
         //!? Home Tab
         /// </summary>
 
+        private void LoadHomeData()
+        {
+            // Welcome
+            HomWelcomeLabel.Text = $"Welcome Back, {Pharmacy.User.Username}";
 
+            // Stats
+            int soldCount = 0;
+            double totalSales = 0;
+
+            foreach (Invoice inv in Pharmacy.Invoices)
+            {
+                totalSales += inv.TotalPrice;
+                foreach (InvoiveItem item in inv.Items)
+                    soldCount += item.Quantity;
+            }
+
+            HomSoldCountLabel.Text = soldCount.ToString();
+            HomTotalSalesLabel.Text = totalSales.ToString("F2");
+
+            // Cartesian Chart — أدوية Low Stock
+            int lowStockCount = 0;
+            foreach (Medicine m in Pharmacy.Medicines)
+                if (m.IsLowStock() && !m.IsExpired())
+                    lowStockCount++;
+
+            double[] barValues = new double[lowStockCount];
+            string[] barLabels = new string[lowStockCount];
+            int idx = 0;
+
+            foreach (Medicine m in Pharmacy.Medicines)
+            {
+                if (m.IsLowStock() && !m.IsExpired())
+                {
+                    barValues[idx] = m.Quantity;
+                    barLabels[idx] = m.TradeName;
+                    idx++;
+                }
+            }
+
+            cartesianChart1.Series = new ISeries[]
+            {
+        new ColumnSeries<double>
+        {
+            Values = barValues,
+            Name = "Stock",
+            Fill = new SolidColorPaint(SKColor.Parse("#4CAF50"))
+        }
+            };
+            cartesianChart1.XAxes = new Axis[]
+            {
+        new Axis { Labels = barLabels }
+            };
+
+            // Pie Chart — Total / LowStock / Expired
+            int total = Pharmacy.Medicines.Count;
+            int expired = 0;
+            int lowStock = 0;
+
+            foreach (Medicine m in Pharmacy.Medicines)
+            {
+                if (m.IsExpired()) expired++;
+                if (m.IsLowStock()) lowStock++;
+            }
+
+            pieChart1.Series = new ISeries[]
+            {
+        new PieSeries<double>
+        {
+            Values = new double[] { total },
+            Name = "Total",
+            InnerRadius =60,
+            MaxRadialColumnWidth =40,
+            Fill = new SolidColorPaint(SKColor.Parse("#2196F3"))
+        },
+        new PieSeries<double>
+        {
+            Values = new double[] { lowStock },
+            Name = "LowStock",
+            InnerRadius =60,
+            MaxRadialColumnWidth =40,
+            Fill = new SolidColorPaint(SKColor.Parse("#FF9800"))
+        },
+        new PieSeries<double>
+        {
+            Values = new double[] { expired },
+            Name = "Expired",
+            InnerRadius =60,
+            MaxRadialColumnWidth =40,
+            Fill = new SolidColorPaint(SKColor.Parse("#F44336"))
+        }
+            };
+        }
 
         /// <summary>
         //!? Medicine Tab
@@ -586,7 +679,7 @@ namespace Pharmacy_Project.Forms
             NewPasswordTextBox.Text = "";
             ConfirmPasswordTextBox.Text = "";
 
-            LabelWelcome.Text = $"Welcome Back, {Pharmacy.User.Username}";
+            HomWelcomeLabel.Text = $"Welcome Back, {Pharmacy.User.Username}";
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)
