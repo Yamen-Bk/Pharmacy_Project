@@ -221,6 +221,10 @@
             POSSubtotal = new DataGridViewTextBoxColumn();
             TabInvoice = new TabPage();
             InvoiceItemsDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            ItemTradeName = new DataGridViewTextBoxColumn();
+            ItemUnitPrice = new DataGridViewTextBoxColumn();
+            ItemQuantity = new DataGridViewTextBoxColumn();
+            ItemSubtotal = new DataGridViewTextBoxColumn();
             InvoicesDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             InvoiceId = new DataGridViewTextBoxColumn();
             InvoiceDate = new DataGridViewTextBoxColumn();
@@ -241,10 +245,6 @@
             OldPasswordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ItemTradeName = new DataGridViewTextBoxColumn();
-            ItemUnitPrice = new DataGridViewTextBoxColumn();
-            ItemQuantity = new DataGridViewTextBoxColumn();
-            ItemSubtotal = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MedicinesTabSelectArrow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ExpiredTabSelectArrow).BeginInit();
@@ -1107,6 +1107,7 @@
             MedicinesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             MedicinesDataGridView.BackgroundColor = SystemColors.Control;
             MedicinesDataGridView.BorderStyle = BorderStyle.FixedSingle;
+            MedicinesDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 255, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -1144,7 +1145,7 @@
             MedicinesDataGridView.ThemeStyle.BackColor = SystemColors.Control;
             MedicinesDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             MedicinesDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            MedicinesDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            MedicinesDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Raised;
             MedicinesDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             MedicinesDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             MedicinesDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
@@ -1321,15 +1322,16 @@
             dataGridViewCellStyle4.BackColor = Color.White;
             ExpiredDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             ExpiredDataGridView.BackgroundColor = SystemColors.Control;
+            ExpiredDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(192, 255, 255);
             dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.ForeColor = Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
             ExpiredDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            ExpiredDataGridView.ColumnHeadersHeight = 35;
+            ExpiredDataGridView.ColumnHeadersHeight = 40;
             ExpiredDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             ExpiredDataGridView.Columns.AddRange(new DataGridViewColumn[] { ExpId, ExpTradeName, ExpScientificName, ExpManufacturer, ExpPrice, ExpQuantity, ExpExpiryDate });
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -1347,6 +1349,7 @@
             ExpiredDataGridView.ReadOnly = true;
             ExpiredDataGridView.RowHeadersVisible = false;
             ExpiredDataGridView.RowHeadersWidth = 75;
+            ExpiredDataGridView.RowTemplate.Height = 40;
             ExpiredDataGridView.Size = new Size(1133, 784);
             ExpiredDataGridView.TabIndex = 1;
             ExpiredDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -1357,17 +1360,17 @@
             ExpiredDataGridView.ThemeStyle.BackColor = SystemColors.Control;
             ExpiredDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             ExpiredDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            ExpiredDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            ExpiredDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Raised;
             ExpiredDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             ExpiredDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             ExpiredDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            ExpiredDataGridView.ThemeStyle.HeaderStyle.Height = 35;
+            ExpiredDataGridView.ThemeStyle.HeaderStyle.Height = 40;
             ExpiredDataGridView.ThemeStyle.ReadOnly = true;
             ExpiredDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
             ExpiredDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             ExpiredDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
             ExpiredDataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            ExpiredDataGridView.ThemeStyle.RowsStyle.Height = 33;
+            ExpiredDataGridView.ThemeStyle.RowsStyle.Height = 40;
             ExpiredDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             ExpiredDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
@@ -1716,10 +1719,11 @@
             dataGridViewCellStyle7.BackColor = Color.White;
             POSDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             POSDataGridView.BackgroundColor = SystemColors.Control;
+            POSDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(192, 255, 255);
             dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = Color.White;
+            dataGridViewCellStyle8.ForeColor = Color.Black;
             dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
@@ -1742,6 +1746,7 @@
             POSDataGridView.ReadOnly = true;
             POSDataGridView.RowHeadersVisible = false;
             POSDataGridView.RowHeadersWidth = 75;
+            POSDataGridView.RowTemplate.Height = 40;
             POSDataGridView.Size = new Size(731, 719);
             POSDataGridView.TabIndex = 11;
             POSDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -1752,7 +1757,7 @@
             POSDataGridView.ThemeStyle.BackColor = SystemColors.Control;
             POSDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             POSDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            POSDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            POSDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Raised;
             POSDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             POSDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             POSDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
@@ -1762,7 +1767,7 @@
             POSDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             POSDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
             POSDataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            POSDataGridView.ThemeStyle.RowsStyle.Height = 33;
+            POSDataGridView.ThemeStyle.RowsStyle.Height = 40;
             POSDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             POSDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
@@ -1816,15 +1821,16 @@
             InvoiceItemsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             InvoiceItemsDataGridView.BackgroundColor = SystemColors.Control;
             InvoiceItemsDataGridView.BorderStyle = BorderStyle.FixedSingle;
+            InvoiceItemsDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(192, 255, 255);
             dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle11.ForeColor = Color.White;
+            dataGridViewCellStyle11.ForeColor = Color.Black;
             dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
             InvoiceItemsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            InvoiceItemsDataGridView.ColumnHeadersHeight = 35;
+            InvoiceItemsDataGridView.ColumnHeadersHeight = 40;
             InvoiceItemsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             InvoiceItemsDataGridView.Columns.AddRange(new DataGridViewColumn[] { ItemTradeName, ItemUnitPrice, ItemQuantity, ItemSubtotal });
             dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -1842,6 +1848,7 @@
             InvoiceItemsDataGridView.ReadOnly = true;
             InvoiceItemsDataGridView.RowHeadersVisible = false;
             InvoiceItemsDataGridView.RowHeadersWidth = 75;
+            InvoiceItemsDataGridView.RowTemplate.Height = 40;
             InvoiceItemsDataGridView.Size = new Size(564, 719);
             InvoiceItemsDataGridView.TabIndex = 13;
             InvoiceItemsDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -1852,19 +1859,47 @@
             InvoiceItemsDataGridView.ThemeStyle.BackColor = SystemColors.Control;
             InvoiceItemsDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Raised;
             InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.Height = 35;
+            InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.Height = 40;
             InvoiceItemsDataGridView.ThemeStyle.ReadOnly = true;
             InvoiceItemsDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
             InvoiceItemsDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             InvoiceItemsDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
             InvoiceItemsDataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            InvoiceItemsDataGridView.ThemeStyle.RowsStyle.Height = 33;
+            InvoiceItemsDataGridView.ThemeStyle.RowsStyle.Height = 40;
             InvoiceItemsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             InvoiceItemsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // ItemTradeName
+            // 
+            ItemTradeName.HeaderText = "TradeName";
+            ItemTradeName.MinimumWidth = 8;
+            ItemTradeName.Name = "ItemTradeName";
+            ItemTradeName.ReadOnly = true;
+            // 
+            // ItemUnitPrice
+            // 
+            ItemUnitPrice.HeaderText = "Price";
+            ItemUnitPrice.MinimumWidth = 8;
+            ItemUnitPrice.Name = "ItemUnitPrice";
+            ItemUnitPrice.ReadOnly = true;
+            // 
+            // ItemQuantity
+            // 
+            ItemQuantity.HeaderText = "Quantity";
+            ItemQuantity.MinimumWidth = 8;
+            ItemQuantity.Name = "ItemQuantity";
+            ItemQuantity.ReadOnly = true;
+            // 
+            // ItemSubtotal
+            // 
+            ItemSubtotal.HeaderText = "Subtotal";
+            ItemSubtotal.MinimumWidth = 8;
+            ItemSubtotal.Name = "ItemSubtotal";
+            ItemSubtotal.ReadOnly = true;
             // 
             // InvoicesDataGridView
             // 
@@ -1876,15 +1911,16 @@
             InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             InvoicesDataGridView.BackgroundColor = SystemColors.Control;
             InvoicesDataGridView.BorderStyle = BorderStyle.FixedSingle;
+            InvoicesDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle14.BackColor = Color.FromArgb(192, 255, 255);
             dataGridViewCellStyle14.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle14.ForeColor = Color.White;
+            dataGridViewCellStyle14.ForeColor = Color.Black;
             dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
             InvoicesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            InvoicesDataGridView.ColumnHeadersHeight = 35;
+            InvoicesDataGridView.ColumnHeadersHeight = 40;
             InvoicesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             InvoicesDataGridView.Columns.AddRange(new DataGridViewColumn[] { InvoiceId, InvoiceDate, InvoiceTotal });
             dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -1902,6 +1938,7 @@
             InvoicesDataGridView.ReadOnly = true;
             InvoicesDataGridView.RowHeadersVisible = false;
             InvoicesDataGridView.RowHeadersWidth = 75;
+            InvoicesDataGridView.RowTemplate.Height = 40;
             InvoicesDataGridView.Size = new Size(550, 719);
             InvoicesDataGridView.TabIndex = 12;
             InvoicesDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -1912,17 +1949,17 @@
             InvoicesDataGridView.ThemeStyle.BackColor = SystemColors.Control;
             InvoicesDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             InvoicesDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            InvoicesDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            InvoicesDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Raised;
             InvoicesDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             InvoicesDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             InvoicesDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            InvoicesDataGridView.ThemeStyle.HeaderStyle.Height = 35;
+            InvoicesDataGridView.ThemeStyle.HeaderStyle.Height = 40;
             InvoicesDataGridView.ThemeStyle.ReadOnly = true;
             InvoicesDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
             InvoicesDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             InvoicesDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
             InvoicesDataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            InvoicesDataGridView.ThemeStyle.RowsStyle.Height = 33;
+            InvoicesDataGridView.ThemeStyle.RowsStyle.Height = 40;
             InvoicesDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             InvoicesDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
@@ -2187,34 +2224,6 @@
             guna2HtmlLabel6.Size = new Size(195, 47);
             guna2HtmlLabel6.TabIndex = 8;
             guna2HtmlLabel6.Text = "TradeName :";
-            // 
-            // ItemTradeName
-            // 
-            ItemTradeName.HeaderText = "TradeName";
-            ItemTradeName.MinimumWidth = 8;
-            ItemTradeName.Name = "ItemTradeName";
-            ItemTradeName.ReadOnly = true;
-            // 
-            // ItemUnitPrice
-            // 
-            ItemUnitPrice.HeaderText = "Price";
-            ItemUnitPrice.MinimumWidth = 8;
-            ItemUnitPrice.Name = "ItemUnitPrice";
-            ItemUnitPrice.ReadOnly = true;
-            // 
-            // ItemQuantity
-            // 
-            ItemQuantity.HeaderText = "Quantity";
-            ItemQuantity.MinimumWidth = 8;
-            ItemQuantity.Name = "ItemQuantity";
-            ItemQuantity.ReadOnly = true;
-            // 
-            // ItemSubtotal
-            // 
-            ItemSubtotal.HeaderText = "Subtotal";
-            ItemSubtotal.MinimumWidth = 8;
-            ItemSubtotal.Name = "ItemSubtotal";
-            ItemSubtotal.ReadOnly = true;
             // 
             // MainForm
             // 
