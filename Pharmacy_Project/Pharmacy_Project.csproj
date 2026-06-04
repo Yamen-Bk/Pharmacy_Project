@@ -9,6 +9,7 @@
 	<OutputType>WinExe</OutputType>
 	<TargetFramework>net8.0-windows</TargetFramework>
 	<NoWarn>NU1701</NoWarn>
+	<ApplicationIcon>Images\Logos\Main_logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -48,6 +49,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Images\Logos\Main_logo.ico" />
     <Content Include="Jsons\invoices.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -168,7 +170,6 @@
 
   <ItemGroup>
     <Folder Include="Images\BackGrounds\" />
-    <Folder Include="Images\Logos\" />
     <Folder Include="Images\Icons\" />
   </ItemGroup>
 

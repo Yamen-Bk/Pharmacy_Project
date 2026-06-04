@@ -2094,6 +2094,7 @@
             ClientSize = new Size(1478, 944);
             Controls.Add(panel1);
             Controls.Add(MainTabControl);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             Text = "MainForm";
             FormClosing += MainForm_FormClosing;

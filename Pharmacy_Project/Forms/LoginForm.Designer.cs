@@ -235,6 +235,7 @@
             ClientSize = new Size(1478, 944);
             Controls.Add(guna2PictureBox1);
             Controls.Add(LoginPanel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginForm";
             Text = "LoginForm";
             FormClosing += LoginForm_FormClosing;
