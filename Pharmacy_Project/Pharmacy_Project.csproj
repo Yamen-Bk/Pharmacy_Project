@@ -6,6 +6,9 @@
     <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+	<OutputType>WinExe</OutputType>
+	<TargetFramework>net8.0-windows</TargetFramework>
+	<NoWarn>NU1701</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
