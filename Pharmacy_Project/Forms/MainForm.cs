@@ -112,10 +112,8 @@ namespace Pharmacy_Project.Forms
 
         private void LoadHomeData()
         {
-            // Welcome
             HomWelcomeLabel.Text = $"Welcome Back, {Pharmacy.User.Username}";
 
-            // Stats
             int soldCount = 0;
             double totalSales = 0;
 
@@ -129,7 +127,6 @@ namespace Pharmacy_Project.Forms
             HomSoldCountLabel.Text = soldCount.ToString();
             HomTotalSalesLabel.Text = totalSales.ToString("F2");
 
-            // Cartesian Chart — أدوية Low Stock
             int lowStockCount = 0;
             foreach (Medicine m in Pharmacy.Medicines)
                 if (m.IsLowStock() && !m.IsExpired())
@@ -163,7 +160,6 @@ namespace Pharmacy_Project.Forms
         new Axis { Labels = barLabels }
             };
 
-            // Pie Chart — Total / LowStock / Expired
             int total = Pharmacy.Medicines.Count;
             int expired = 0;
             int lowStock = 0;

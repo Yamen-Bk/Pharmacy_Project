@@ -158,13 +158,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="invoices.json">
+    <None Update="Jsons\invoices.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="medicines.json">
+    <None Update="Jsons\medicines.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="user.json">
+    <None Update="Jsons\user.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
