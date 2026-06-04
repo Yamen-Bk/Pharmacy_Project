@@ -95,11 +95,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges67 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -113,7 +120,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             MedicinesTabSelectArrow = new PictureBox();
             ExpiredTabSelectArrow = new PictureBox();
@@ -192,10 +198,10 @@
             POSEditbtn = new Guna.UI2.WinForms.Guna2ImageButton();
             POSClearAllbtn = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2GradientPanel10 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            POSAddbtn = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             POSPriceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            POSAddbtn = new Guna.UI2.WinForms.Guna2ImageButton();
             QuantityNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
             POSAvailableLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -203,6 +209,7 @@
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             POSNameComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            POSSavebtn = new Guna.UI2.WinForms.Guna2ImageButton();
             POSTotalPriceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             POSBuybtn = new Guna.UI2.WinForms.Guna2ImageButton();
             POSClearbtn = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -213,6 +220,11 @@
             POSQuantity = new DataGridViewTextBoxColumn();
             POSSubtotal = new DataGridViewTextBoxColumn();
             TabInvoice = new TabPage();
+            InvoiceItemsDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            InvoicesDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            InvoiceId = new DataGridViewTextBoxColumn();
+            InvoiceDate = new DataGridViewTextBoxColumn();
+            InvoiceTotal = new DataGridViewTextBoxColumn();
             TabSettings = new TabPage();
             guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -229,7 +241,10 @@
             OldPasswordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            POSSavebtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            ItemTradeName = new DataGridViewTextBoxColumn();
+            ItemUnitPrice = new DataGridViewTextBoxColumn();
+            ItemQuantity = new DataGridViewTextBoxColumn();
+            ItemSubtotal = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MedicinesTabSelectArrow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ExpiredTabSelectArrow).BeginInit();
@@ -255,6 +270,9 @@
             guna2GradientPanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)QuantityNumeric).BeginInit();
             ((System.ComponentModel.ISupportInitialize)POSDataGridView).BeginInit();
+            TabInvoice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)InvoiceItemsDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)InvoicesDataGridView).BeginInit();
             TabSettings.SuspendLayout();
             guna2GradientPanel9.SuspendLayout();
             guna2GradientPanel8.SuspendLayout();
@@ -1088,15 +1106,16 @@
             dataGridViewCellStyle1.BackColor = Color.White;
             MedicinesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             MedicinesDataGridView.BackgroundColor = SystemColors.Control;
+            MedicinesDataGridView.BorderStyle = BorderStyle.FixedSingle;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 255, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.ForeColor = Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             MedicinesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            MedicinesDataGridView.ColumnHeadersHeight = 35;
+            MedicinesDataGridView.ColumnHeadersHeight = 40;
             MedicinesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             MedicinesDataGridView.Columns.AddRange(new DataGridViewColumn[] { Id, TradeName, ScientificName, Manufacturer, Price, Quantity, ExpiryDate, status });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -1114,6 +1133,7 @@
             MedicinesDataGridView.ReadOnly = true;
             MedicinesDataGridView.RowHeadersVisible = false;
             MedicinesDataGridView.RowHeadersWidth = 75;
+            MedicinesDataGridView.RowTemplate.Height = 40;
             MedicinesDataGridView.Size = new Size(1133, 715);
             MedicinesDataGridView.TabIndex = 0;
             MedicinesDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -1128,13 +1148,13 @@
             MedicinesDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             MedicinesDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             MedicinesDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            MedicinesDataGridView.ThemeStyle.HeaderStyle.Height = 35;
+            MedicinesDataGridView.ThemeStyle.HeaderStyle.Height = 40;
             MedicinesDataGridView.ThemeStyle.ReadOnly = true;
             MedicinesDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
             MedicinesDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             MedicinesDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
             MedicinesDataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            MedicinesDataGridView.ThemeStyle.RowsStyle.Height = 33;
+            MedicinesDataGridView.ThemeStyle.RowsStyle.Height = 40;
             MedicinesDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             MedicinesDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
@@ -1478,6 +1498,23 @@
             guna2GradientPanel10.Size = new Size(377, 691);
             guna2GradientPanel10.TabIndex = 17;
             // 
+            // POSAddbtn
+            // 
+            POSAddbtn.BackColor = Color.Transparent;
+            POSAddbtn.CheckedState.ImageSize = new Size(292, 167);
+            POSAddbtn.HoverState.ImageSize = new Size(295, 170);
+            POSAddbtn.Image = (Image)resources.GetObject("POSAddbtn.Image");
+            POSAddbtn.ImageOffset = new Point(0, 0);
+            POSAddbtn.ImageRotate = 0F;
+            POSAddbtn.ImageSize = new Size(290, 165);
+            POSAddbtn.Location = new Point(56, 567);
+            POSAddbtn.Name = "POSAddbtn";
+            POSAddbtn.PressedState.ImageSize = new Size(292, 167);
+            POSAddbtn.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            POSAddbtn.Size = new Size(251, 86);
+            POSAddbtn.TabIndex = 15;
+            POSAddbtn.Click += POSAddbtn_Click;
+            // 
             // guna2HtmlLabel12
             // 
             guna2HtmlLabel12.BackColor = Color.Transparent;
@@ -1510,23 +1547,6 @@
             POSPriceLabel.Size = new Size(21, 47);
             POSPriceLabel.TabIndex = 22;
             POSPriceLabel.Text = "0";
-            // 
-            // POSAddbtn
-            // 
-            POSAddbtn.BackColor = Color.Transparent;
-            POSAddbtn.CheckedState.ImageSize = new Size(292, 167);
-            POSAddbtn.HoverState.ImageSize = new Size(295, 170);
-            POSAddbtn.Image = (Image)resources.GetObject("POSAddbtn.Image");
-            POSAddbtn.ImageOffset = new Point(0, 0);
-            POSAddbtn.ImageRotate = 0F;
-            POSAddbtn.ImageSize = new Size(290, 165);
-            POSAddbtn.Location = new Point(56, 567);
-            POSAddbtn.Name = "POSAddbtn";
-            POSAddbtn.PressedState.ImageSize = new Size(292, 167);
-            POSAddbtn.ShadowDecoration.CustomizableEdges = customizableEdges46;
-            POSAddbtn.Size = new Size(251, 86);
-            POSAddbtn.TabIndex = 15;
-            POSAddbtn.Click += POSAddbtn_Click;
             // 
             // QuantityNumeric
             // 
@@ -1613,6 +1633,24 @@
             POSNameComboBox.TabIndex = 0;
             POSNameComboBox.SelectedIndexChanged += POSNameComboBox_SelectedIndexChanged;
             // 
+            // POSSavebtn
+            // 
+            POSSavebtn.BackColor = Color.Transparent;
+            POSSavebtn.CheckedState.ImageSize = new Size(292, 167);
+            POSSavebtn.HoverState.ImageSize = new Size(295, 170);
+            POSSavebtn.Image = (Image)resources.GetObject("POSSavebtn.Image");
+            POSSavebtn.ImageOffset = new Point(0, 0);
+            POSSavebtn.ImageRotate = 0F;
+            POSSavebtn.ImageSize = new Size(290, 165);
+            POSSavebtn.Location = new Point(56, 567);
+            POSSavebtn.Name = "POSSavebtn";
+            POSSavebtn.PressedState.ImageSize = new Size(292, 167);
+            POSSavebtn.ShadowDecoration.CustomizableEdges = customizableEdges51;
+            POSSavebtn.Size = new Size(251, 86);
+            POSSavebtn.TabIndex = 20;
+            POSSavebtn.Visible = false;
+            POSSavebtn.Click += POSSavebtn_Click;
+            // 
             // POSTotalPriceLabel
             // 
             POSTotalPriceLabel.BackColor = Color.Transparent;
@@ -1686,13 +1724,13 @@
             dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
             POSDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            POSDataGridView.ColumnHeadersHeight = 35;
+            POSDataGridView.ColumnHeadersHeight = 40;
             POSDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             POSDataGridView.Columns.AddRange(new DataGridViewColumn[] { POSTradeName, POSPrice, POSQuantity, POSSubtotal });
             dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.White;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(192, 255, 255);
             dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle9.ForeColor = Color.Black;
             dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
@@ -1718,7 +1756,7 @@
             POSDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             POSDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             POSDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            POSDataGridView.ThemeStyle.HeaderStyle.Height = 35;
+            POSDataGridView.ThemeStyle.HeaderStyle.Height = 40;
             POSDataGridView.ThemeStyle.ReadOnly = true;
             POSDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
             POSDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -1759,12 +1797,155 @@
             // TabInvoice
             // 
             TabInvoice.BackColor = Color.FromArgb(205, 220, 248);
+            TabInvoice.Controls.Add(InvoiceItemsDataGridView);
+            TabInvoice.Controls.Add(InvoicesDataGridView);
             TabInvoice.Location = new Point(4, 5);
             TabInvoice.Name = "TabInvoice";
             TabInvoice.Padding = new Padding(3);
             TabInvoice.Size = new Size(1470, 935);
             TabInvoice.TabIndex = 3;
             TabInvoice.Text = "Invoice";
+            // 
+            // InvoiceItemsDataGridView
+            // 
+            InvoiceItemsDataGridView.AllowUserToAddRows = false;
+            InvoiceItemsDataGridView.AllowUserToDeleteRows = false;
+            InvoiceItemsDataGridView.AllowUserToResizeColumns = false;
+            InvoiceItemsDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle10.BackColor = Color.White;
+            InvoiceItemsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            InvoiceItemsDataGridView.BackgroundColor = SystemColors.Control;
+            InvoiceItemsDataGridView.BorderStyle = BorderStyle.FixedSingle;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle11.ForeColor = Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            InvoiceItemsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            InvoiceItemsDataGridView.ColumnHeadersHeight = 35;
+            InvoiceItemsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            InvoiceItemsDataGridView.Columns.AddRange(new DataGridViewColumn[] { ItemTradeName, ItemUnitPrice, ItemQuantity, ItemSubtotal });
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = Color.White;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle12.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
+            InvoiceItemsDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            InvoiceItemsDataGridView.GridColor = Color.FromArgb(231, 229, 255);
+            InvoiceItemsDataGridView.Location = new Point(896, 93);
+            InvoiceItemsDataGridView.MultiSelect = false;
+            InvoiceItemsDataGridView.Name = "InvoiceItemsDataGridView";
+            InvoiceItemsDataGridView.ReadOnly = true;
+            InvoiceItemsDataGridView.RowHeadersVisible = false;
+            InvoiceItemsDataGridView.RowHeadersWidth = 75;
+            InvoiceItemsDataGridView.Size = new Size(564, 719);
+            InvoiceItemsDataGridView.TabIndex = 13;
+            InvoiceItemsDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            InvoiceItemsDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            InvoiceItemsDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            InvoiceItemsDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            InvoiceItemsDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            InvoiceItemsDataGridView.ThemeStyle.BackColor = SystemColors.Control;
+            InvoiceItemsDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            InvoiceItemsDataGridView.ThemeStyle.HeaderStyle.Height = 35;
+            InvoiceItemsDataGridView.ThemeStyle.ReadOnly = true;
+            InvoiceItemsDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
+            InvoiceItemsDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            InvoiceItemsDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            InvoiceItemsDataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            InvoiceItemsDataGridView.ThemeStyle.RowsStyle.Height = 33;
+            InvoiceItemsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            InvoiceItemsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // InvoicesDataGridView
+            // 
+            InvoicesDataGridView.AllowUserToAddRows = false;
+            InvoicesDataGridView.AllowUserToDeleteRows = false;
+            InvoicesDataGridView.AllowUserToResizeColumns = false;
+            InvoicesDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle13.BackColor = Color.White;
+            InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            InvoicesDataGridView.BackgroundColor = SystemColors.Control;
+            InvoicesDataGridView.BorderStyle = BorderStyle.FixedSingle;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle14.ForeColor = Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
+            InvoicesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            InvoicesDataGridView.ColumnHeadersHeight = 35;
+            InvoicesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            InvoicesDataGridView.Columns.AddRange(new DataGridViewColumn[] { InvoiceId, InvoiceDate, InvoiceTotal });
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = Color.White;
+            dataGridViewCellStyle15.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle15.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.False;
+            InvoicesDataGridView.DefaultCellStyle = dataGridViewCellStyle15;
+            InvoicesDataGridView.GridColor = Color.FromArgb(231, 229, 255);
+            InvoicesDataGridView.Location = new Point(317, 93);
+            InvoicesDataGridView.MultiSelect = false;
+            InvoicesDataGridView.Name = "InvoicesDataGridView";
+            InvoicesDataGridView.ReadOnly = true;
+            InvoicesDataGridView.RowHeadersVisible = false;
+            InvoicesDataGridView.RowHeadersWidth = 75;
+            InvoicesDataGridView.Size = new Size(550, 719);
+            InvoicesDataGridView.TabIndex = 12;
+            InvoicesDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            InvoicesDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            InvoicesDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            InvoicesDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            InvoicesDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            InvoicesDataGridView.ThemeStyle.BackColor = SystemColors.Control;
+            InvoicesDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            InvoicesDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            InvoicesDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            InvoicesDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            InvoicesDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            InvoicesDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            InvoicesDataGridView.ThemeStyle.HeaderStyle.Height = 35;
+            InvoicesDataGridView.ThemeStyle.ReadOnly = true;
+            InvoicesDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
+            InvoicesDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            InvoicesDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            InvoicesDataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            InvoicesDataGridView.ThemeStyle.RowsStyle.Height = 33;
+            InvoicesDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            InvoicesDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // InvoiceId
+            // 
+            InvoiceId.HeaderText = "ID";
+            InvoiceId.MinimumWidth = 8;
+            InvoiceId.Name = "InvoiceId";
+            InvoiceId.ReadOnly = true;
+            // 
+            // InvoiceDate
+            // 
+            InvoiceDate.HeaderText = "Date";
+            InvoiceDate.MinimumWidth = 8;
+            InvoiceDate.Name = "InvoiceDate";
+            InvoiceDate.ReadOnly = true;
+            // 
+            // InvoiceTotal
+            // 
+            InvoiceTotal.HeaderText = "Total";
+            InvoiceTotal.MinimumWidth = 8;
+            InvoiceTotal.Name = "InvoiceTotal";
+            InvoiceTotal.ReadOnly = true;
             // 
             // TabSettings
             // 
@@ -2007,23 +2188,33 @@
             guna2HtmlLabel6.TabIndex = 8;
             guna2HtmlLabel6.Text = "TradeName :";
             // 
-            // POSSavebtn
+            // ItemTradeName
             // 
-            POSSavebtn.BackColor = Color.Transparent;
-            POSSavebtn.CheckedState.ImageSize = new Size(292, 167);
-            POSSavebtn.HoverState.ImageSize = new Size(295, 170);
-            POSSavebtn.Image = (Image)resources.GetObject("POSSavebtn.Image");
-            POSSavebtn.ImageOffset = new Point(0, 0);
-            POSSavebtn.ImageRotate = 0F;
-            POSSavebtn.ImageSize = new Size(290, 165);
-            POSSavebtn.Location = new Point(56, 567);
-            POSSavebtn.Name = "POSSavebtn";
-            POSSavebtn.PressedState.ImageSize = new Size(292, 167);
-            POSSavebtn.ShadowDecoration.CustomizableEdges = customizableEdges51;
-            POSSavebtn.Size = new Size(251, 86);
-            POSSavebtn.TabIndex = 20;
-            POSSavebtn.Visible = false;
-            POSSavebtn.Click += POSSavebtn_Click;
+            ItemTradeName.HeaderText = "TradeName";
+            ItemTradeName.MinimumWidth = 8;
+            ItemTradeName.Name = "ItemTradeName";
+            ItemTradeName.ReadOnly = true;
+            // 
+            // ItemUnitPrice
+            // 
+            ItemUnitPrice.HeaderText = "Price";
+            ItemUnitPrice.MinimumWidth = 8;
+            ItemUnitPrice.Name = "ItemUnitPrice";
+            ItemUnitPrice.ReadOnly = true;
+            // 
+            // ItemQuantity
+            // 
+            ItemQuantity.HeaderText = "Quantity";
+            ItemQuantity.MinimumWidth = 8;
+            ItemQuantity.Name = "ItemQuantity";
+            ItemQuantity.ReadOnly = true;
+            // 
+            // ItemSubtotal
+            // 
+            ItemSubtotal.HeaderText = "Subtotal";
+            ItemSubtotal.MinimumWidth = 8;
+            ItemSubtotal.Name = "ItemSubtotal";
+            ItemSubtotal.ReadOnly = true;
             // 
             // MainForm
             // 
@@ -2070,6 +2261,9 @@
             guna2GradientPanel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)QuantityNumeric).EndInit();
             ((System.ComponentModel.ISupportInitialize)POSDataGridView).EndInit();
+            TabInvoice.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)InvoiceItemsDataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)InvoicesDataGridView).EndInit();
             TabSettings.ResumeLayout(false);
             guna2GradientPanel9.ResumeLayout(false);
             guna2GradientPanel9.PerformLayout();
@@ -2196,5 +2390,14 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2ImageButton POSEditbtn;
         private Guna.UI2.WinForms.Guna2ImageButton POSSavebtn;
+        private Guna.UI2.WinForms.Guna2DataGridView InvoiceItemsDataGridView;
+        private Guna.UI2.WinForms.Guna2DataGridView InvoicesDataGridView;
+        private DataGridViewTextBoxColumn InvoiceId;
+        private DataGridViewTextBoxColumn InvoiceDate;
+        private DataGridViewTextBoxColumn InvoiceTotal;
+        private DataGridViewTextBoxColumn ItemTradeName;
+        private DataGridViewTextBoxColumn ItemUnitPrice;
+        private DataGridViewTextBoxColumn ItemQuantity;
+        private DataGridViewTextBoxColumn ItemSubtotal;
     }
 }

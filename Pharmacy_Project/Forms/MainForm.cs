@@ -78,6 +78,7 @@ namespace Pharmacy_Project.Forms
         {
             HideAllArrows();
             MainTabControl.SelectedTab = TabInvoice;
+            LoadInvoices();
             InvoiceTabSelectArrow.Visible = true;
         }
 
@@ -496,6 +497,54 @@ namespace Pharmacy_Project.Forms
             POSNameComboBox.SelectedIndex = -1;
             QuantityNumeric.Value = 1;
         }
+
+        /// <summary>
+        //!? Invoice Tab
+        /// </summary>
+        private void LoadInvoices()
+        {
+            InvoicesDataGridView.Rows.Clear();
+
+            foreach (Invoice inv in Pharmacy.Invoices)
+            {
+                int i = InvoicesDataGridView.Rows.Add();
+                InvoicesDataGridView.Rows[i].Cells["InvId"].Value = inv.Id;
+                InvoicesDataGridView.Rows[i].Cells["InvDate"].Value = inv.Date.ToString("yyyy-MM-dd HH:mm");
+                InvoicesDataGridView.Rows[i].Cells["InvTotal"].Value = inv.TotalPrice.ToString("F2");
+            }
+
+            InvoiceItemsDataGridView.Rows.Clear();
+        }
+
+        private void InvoicesDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (InvoicesDataGridView.SelectedRows.Count == 0) return;
+
+            int invId = (int)InvoicesDataGridView.SelectedRows[0].Cells["InvId"].Value;
+
+            Invoice selected = null;
+            foreach (Invoice inv in Pharmacy.Invoices)
+            {
+                if (inv.Id == invId)
+                {
+                    selected = inv;
+                    break;
+                }
+            }
+
+            if (selected == null) return;
+
+            InvoiceItemsDataGridView.Rows.Clear();
+            foreach (InvoiveItem item in selected.Items)
+            {
+                int i = InvoiceItemsDataGridView.Rows.Add();
+                InvoiceItemsDataGridView.Rows[i].Cells["ItemTradeName"].Value = item.Medicine.TradeName;
+                InvoiceItemsDataGridView.Rows[i].Cells["ItemUnitPrice"].Value = item.UnitPrice.ToString("F2");
+                InvoiceItemsDataGridView.Rows[i].Cells["ItemQuantity"].Value = item.Quantity;
+                InvoiceItemsDataGridView.Rows[i].Cells["ItemSubtotal"].Value = item.SubTotal.ToString("F2");
+            }
+        }
+
 
         /// <summary>
         //!? Settings Tab
