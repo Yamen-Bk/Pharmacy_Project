@@ -31,7 +31,7 @@ namespace Pharmacy_Project.Classes
         }
         public bool IsLowStock()
         {
-            if (Quantity < 5)
+            if (Quantity < 10)
                 return true;
             return false;
         }
