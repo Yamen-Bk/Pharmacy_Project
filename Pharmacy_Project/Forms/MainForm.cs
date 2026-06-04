@@ -112,8 +112,10 @@ namespace Pharmacy_Project.Forms
 
         private void LoadHomeData()
         {
+            // Welcome
             HomWelcomeLabel.Text = $"Welcome Back, {Pharmacy.User.Username}";
 
+            // Stats
             int soldCount = 0;
             double totalSales = 0;
 
@@ -127,23 +129,29 @@ namespace Pharmacy_Project.Forms
             HomSoldCountLabel.Text = soldCount.ToString();
             HomTotalSalesLabel.Text = totalSales.ToString("F2");
 
-            int lowStockCount = 0;
-            foreach (Medicine m in Pharmacy.Medicines)
-                if (m.IsLowStock() && !m.IsExpired())
-                    lowStockCount++;
-
-            double[] barValues = new double[lowStockCount];
-            string[] barLabels = new string[lowStockCount];
-            int idx = 0;
-
-            foreach (Medicine m in Pharmacy.Medicines)
+            // Cartesian Chart — أكتر 5 أدوية بالستوك
+            List<Medicine> sorted = new List<Medicine>(Pharmacy.Medicines);
+            for (int i = 0; i < sorted.Count - 1; i++)
             {
-                if (m.IsLowStock() && !m.IsExpired())
+                for (int j = 0; j < sorted.Count - 1 - i; j++)
                 {
-                    barValues[idx] = m.Quantity;
-                    barLabels[idx] = m.TradeName;
-                    idx++;
+                    if (sorted[j].Quantity < sorted[j + 1].Quantity)
+                    {
+                        Medicine temp = sorted[j];
+                        sorted[j] = sorted[j + 1];
+                        sorted[j + 1] = temp;
+                    }
                 }
+            }
+
+            int take = sorted.Count >= 5 ? 5 : sorted.Count;
+            double[] barValues = new double[take];
+            string[] barLabels = new string[take];
+
+            for (int i = 0; i < take; i++)
+            {
+                barValues[i] = sorted[i].Quantity;
+                barLabels[i] = sorted[i].TradeName;
             }
 
             cartesianChart1.Series = new ISeries[]
@@ -152,6 +160,8 @@ namespace Pharmacy_Project.Forms
         {
             Values = barValues,
             Name = "Stock",
+            Rx = 8,
+            Ry = 8,
             Fill = new SolidColorPaint(SKColor.Parse("#4CAF50"))
         }
             };
@@ -160,6 +170,7 @@ namespace Pharmacy_Project.Forms
         new Axis { Labels = barLabels }
             };
 
+            // Pie Chart — Total / LowStock / Expired
             int total = Pharmacy.Medicines.Count;
             int expired = 0;
             int lowStock = 0;
@@ -176,24 +187,24 @@ namespace Pharmacy_Project.Forms
         {
             Values = new double[] { total },
             Name = "Total",
-            InnerRadius =60,
-            MaxRadialColumnWidth =40,
+            InnerRadius = 60,
+            MaxRadialColumnWidth = 40,
             Fill = new SolidColorPaint(SKColor.Parse("#2196F3"))
         },
         new PieSeries<double>
         {
             Values = new double[] { lowStock },
             Name = "LowStock",
-            InnerRadius =60,
-            MaxRadialColumnWidth =40,
+            InnerRadius = 60,
+            MaxRadialColumnWidth = 40,
             Fill = new SolidColorPaint(SKColor.Parse("#FF9800"))
         },
         new PieSeries<double>
         {
             Values = new double[] { expired },
             Name = "Expired",
-            InnerRadius =60,
-            MaxRadialColumnWidth =40,
+            InnerRadius = 60,
+            MaxRadialColumnWidth = 40,
             Fill = new SolidColorPaint(SKColor.Parse("#F44336"))
         }
             };
