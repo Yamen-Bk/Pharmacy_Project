@@ -447,12 +447,12 @@ namespace Pharmacy_Project.Forms
         {
             if (cart.Count == 0)
             {
-                MessageBox.Show("Cart is empty! Add medicines first.","Empty Cart",
+                MessageBox.Show("Cart is empty! Add medicines first.", "Empty Cart",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DialogResult confirm = MessageBox.Show( $"Complete purchase?\nTotal: {POSTotalPriceLabel.Text}",
+            DialogResult confirm = MessageBox.Show($"Complete purchase?\nTotal: {POSTotalPriceLabel.Text}",
                                             "Confirm Sale", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirm != DialogResult.Yes) return;
@@ -470,7 +470,7 @@ namespace Pharmacy_Project.Forms
             LoadPOSMedicines();
 
             MessageBox.Show("Sale completed successfully!\nInvoice has been saved.",
-                            "Success",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void POSSavebtn_Click(object sender, EventArgs e)
         {
@@ -588,6 +588,5 @@ namespace Pharmacy_Project.Forms
 
             LabelWelcome.Text = $"Welcome Back, {Pharmacy.User.Username}";
         }
-
     }
 }
