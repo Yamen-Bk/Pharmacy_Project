@@ -14,9 +14,11 @@ namespace Pharmacy_Project.Classes
         public static List<Invoice> Invoices = new List<Invoice>();
         public static User User;
 
-        private static string medicinesPath = "medicines.json";
-        private static string invoicesPath = "invoices.json";
-        private static string userPath = "user.json";
+        private static string medicinesPath = Path.Combine(Application.StartupPath, "Jsons", "medicines.json");
+
+        private static string invoicesPath = Path.Combine(Application.StartupPath, "Jsons", "invoices.json");
+
+        private static string userPath = Path.Combine(Application.StartupPath, "Jsons", "user.json");
 
         public static void LoadData()
         {

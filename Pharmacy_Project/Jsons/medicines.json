@@ -1,56 +1,137 @@
 [
   {
     "Id": 1,
-    "TradeName": "dfgh",
-    "ScientificName": "dfgh",
-    "Manufacturer": "dfgh",
-    "Price": 456.0,
-    "Quantity": 65,
-    "ExpiryDate": "2024-10-11T00:00:00"
+    "TradeName": "Panadol",
+    "ScientificName": "Paracetamol",
+    "Manufacturer": "GSK",
+    "Price": 3.5,
+    "Quantity": 120,
+    "ExpiryDate": "2027-06-01T00:00:00"
+  },
+  {
+    "Id": 2,
+    "TradeName": "Brufen",
+    "ScientificName": "Ibuprofen",
+    "Manufacturer": "Abbott",
+    "Price": 4.75,
+    "Quantity": 85,
+    "ExpiryDate": "2026-11-15T00:00:00"
+  },
+  {
+    "Id": 3,
+    "TradeName": "Augmentin",
+    "ScientificName": "Amoxicillin/Clavulanate",
+    "Manufacturer": "GSK",
+    "Price": 12.0,
+    "Quantity": 60,
+    "ExpiryDate": "2026-09-30T00:00:00"
   },
   {
     "Id": 4,
-    "TradeName": "dsfgb",
-    "ScientificName": "sdfg",
-    "Manufacturer": "sdgf",
-    "Price": 4.0,
-    "Quantity": 25,
-    "ExpiryDate": "2029-10-10T00:00:00"
+    "TradeName": "Zithromax",
+    "ScientificName": "Azithromycin",
+    "Manufacturer": "Pfizer",
+    "Price": 15.5,
+    "Quantity": 40,
+    "ExpiryDate": "2027-03-20T00:00:00"
+  },
+  {
+    "Id": 5,
+    "TradeName": "Voltaren",
+    "ScientificName": "Diclofenac",
+    "Manufacturer": "Novartis",
+    "Price": 6.25,
+    "Quantity": 3,
+    "ExpiryDate": "2026-12-01T00:00:00"
+  },
+  {
+    "Id": 6,
+    "TradeName": "Nexium",
+    "ScientificName": "Esomeprazole",
+    "Manufacturer": "AstraZeneca",
+    "Price": 18.0,
+    "Quantity": 55,
+    "ExpiryDate": "2027-08-10T00:00:00"
+  },
+  {
+    "Id": 7,
+    "TradeName": "Lipitor",
+    "ScientificName": "Atorvastatin",
+    "Manufacturer": "Pfizer",
+    "Price": 22.0,
+    "Quantity": 4,
+    "ExpiryDate": "2027-01-25T00:00:00"
+  },
+  {
+    "Id": 8,
+    "TradeName": "Amoxil",
+    "ScientificName": "Amoxicillin",
+    "Manufacturer": "GSK",
+    "Price": 8.0,
+    "Quantity": 70,
+    "ExpiryDate": "2025-12-01T00:00:00"
   },
   {
     "Id": 9,
-    "TradeName": "ergdfw",
-    "ScientificName": "sdgf",
-    "Manufacturer": "dsfg",
-    "Price": 324.0,
-    "Quantity": 0,
-    "ExpiryDate": "2026-10-05T00:00:00"
+    "TradeName": "Zantac",
+    "ScientificName": "Ranitidine",
+    "Manufacturer": "Sanofi",
+    "Price": 5.5,
+    "Quantity": 90,
+    "ExpiryDate": "2025-05-01T00:00:00"
+  },
+  {
+    "Id": 10,
+    "TradeName": "Claritine",
+    "ScientificName": "Loratadine",
+    "Manufacturer": "Bayer",
+    "Price": 7.0,
+    "Quantity": 65,
+    "ExpiryDate": "2027-04-15T00:00:00"
   },
   {
     "Id": 11,
-    "TradeName": "gfhdfghd",
-    "ScientificName": "dfgh",
-    "Manufacturer": "ftgyd",
-    "Price": 35.0,
-    "Quantity": 46,
-    "ExpiryDate": "2026-06-05T00:00:00"
+    "TradeName": "Glucophage",
+    "ScientificName": "Metformin",
+    "Manufacturer": "Merck",
+    "Price": 9.5,
+    "Quantity": 110,
+    "ExpiryDate": "2027-07-20T00:00:00"
   },
   {
     "Id": 12,
-    "TradeName": "gfhdfghd",
-    "ScientificName": "dfgh",
-    "Manufacturer": "ftgyd",
-    "Price": 35.0,
-    "Quantity": 0,
-    "ExpiryDate": "2026-06-05T00:00:00"
+    "TradeName": "Concor",
+    "ScientificName": "Bisoprolol",
+    "Manufacturer": "Merck",
+    "Price": 11.0,
+    "Quantity": 2,
+    "ExpiryDate": "2026-10-05T00:00:00"
+  },
+  {
+    "Id": 13,
+    "TradeName": "Aspirin",
+    "ScientificName": "Acetylsalicylic Acid",
+    "Manufacturer": "Bayer",
+    "Price": 2.0,
+    "Quantity": 200,
+    "ExpiryDate": "2028-01-01T00:00:00"
   },
   {
     "Id": 14,
-    "TradeName": "qqqqq",
-    "ScientificName": "qqqq",
-    "Manufacturer": "qqq",
-    "Price": 2.0,
-    "Quantity": 0,
-    "ExpiryDate": "1000-10-10T00:00:00"
+    "TradeName": "Xanax",
+    "ScientificName": "Alprazolam",
+    "Manufacturer": "Pfizer",
+    "Price": 14.0,
+    "Quantity": 30,
+    "ExpiryDate": "2026-08-15T00:00:00"
+  },
+  {
+    "Id": 15,
+    "TradeName": "Ventolin",
+    "ScientificName": "Salbutamol",
+    "Manufacturer": "GSK",
+    "Price": 10.0,
+    "Quantity": 45,
+    "ExpiryDate": "2027-05-30T00:00:00"
   }
 ]
