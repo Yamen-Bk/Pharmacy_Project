@@ -3,12 +3,15 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Jsons\invoices.json" />
+    <None Remove="Jsons\medicines.json" />
+    <None Remove="Jsons\user.json" />
     <None Remove="login_pics\debut.JPG" />
     <None Remove="login_pics\Eye.png" />
     <None Remove="login_pics\EyeClosed.png" />
@@ -42,6 +45,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Jsons\invoices.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Jsons\medicines.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Jsons\user.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="login_pics\debut.JPG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -130,7 +142,7 @@
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
-    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.8" />
     <PackageReference Include="LiveChartsCore.SkiaSharpView" Version="2.0.4" />
     <PackageReference Include="LiveChartsCore.SkiaSharpView.WinForms" Version="2.0.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
@@ -155,18 +167,6 @@
     <Folder Include="Images\BackGrounds\" />
     <Folder Include="Images\Logos\" />
     <Folder Include="Images\Icons\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Jsons\invoices.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Jsons\medicines.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Jsons\user.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
