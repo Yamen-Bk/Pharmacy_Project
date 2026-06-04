@@ -588,5 +588,16 @@ namespace Pharmacy_Project.Forms
 
             LabelWelcome.Text = $"Welcome Back, {Pharmacy.User.Username}";
         }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout",
+                                                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+            if (result != DialogResult.Yes) return;
+
+            Pharmacy.SaveData();
+            Application.Restart();
+        }
     }
 }
