@@ -112,10 +112,8 @@ namespace Pharmacy_Project.Forms
 
         private void LoadHomeData()
         {
-            // Welcome
             HomWelcomeLabel.Text = $"Welcome Back, {Pharmacy.User.Username}";
 
-            // Stats
             int soldCount = 0;
             double totalSales = 0;
 
@@ -129,7 +127,6 @@ namespace Pharmacy_Project.Forms
             HomSoldCountLabel.Text = soldCount.ToString();
             HomTotalSalesLabel.Text = totalSales.ToString("F2");
 
-            // Cartesian Chart — أكتر 5 أدوية بالستوك
             List<Medicine> sorted = new List<Medicine>(Pharmacy.Medicines);
             for (int i = 0; i < sorted.Count - 1; i++)
             {
