@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
 	<OutputType>WinExe</OutputType>
 	<TargetFramework>net8.0-windows</TargetFramework>
-	<NoWarn>NU1701</NoWarn>
+	<NoWarn>NU1701;CS0618</NoWarn>
 	<ApplicationIcon>Images\Logos\Main_logo.ico</ApplicationIcon>
   </PropertyGroup>
 
