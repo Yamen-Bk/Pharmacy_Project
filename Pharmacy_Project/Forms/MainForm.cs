@@ -109,7 +109,6 @@ namespace Pharmacy_Project.Forms
         /// <summary>
         //!? Home Tab
         /// </summary>
-
         private void LoadHomeData()
         {
             HomWelcomeLabel.Text = $"Welcome Back, {Pharmacy.User.Username}";
@@ -120,7 +119,7 @@ namespace Pharmacy_Project.Forms
             foreach (Invoice inv in Pharmacy.Invoices)
             {
                 totalSales += inv.TotalPrice;
-                foreach (InvoiveItem item in inv.Items)
+                foreach (InvoiceItem item in inv.Items)
                     soldCount += item.Quantity;
             }
 
@@ -580,12 +579,12 @@ namespace Pharmacy_Project.Forms
         //!? POS Tab
         /// </summary>
 
-        List<InvoiveItem> cart = new List<InvoiveItem>();
+        List<InvoiceItem> cart = new List<InvoiceItem>();
         int editingCartIndex = -1;
         private void UpdateCartTotal()
         {
             double total = 0;
-            foreach (InvoiveItem item in cart)
+            foreach (InvoiceItem item in cart)
             {
                 total += item.SubTotal;
             }
@@ -659,7 +658,7 @@ namespace Pharmacy_Project.Forms
                 }
             }
 
-            foreach (InvoiveItem existing in cart)
+            foreach (InvoiceItem existing in cart)
             {
                 if (existing.Medicine.Id == selectedMedicine.Id)
                 {
@@ -675,7 +674,7 @@ namespace Pharmacy_Project.Forms
                 return;
             }
 
-            InvoiveItem item = new InvoiveItem();
+            InvoiceItem item = new InvoiceItem();
             item.Medicine = selectedMedicine;
             item.Quantity = quantity;
             item.UnitPrice = selectedMedicine.Price;
@@ -697,7 +696,7 @@ namespace Pharmacy_Project.Forms
             }
 
             editingCartIndex = POSDataGridView.SelectedRows[0].Index;
-            InvoiveItem item = cart[editingCartIndex];
+            InvoiceItem item = cart[editingCartIndex];
 
             POSNameComboBox.SelectedItem = item.Medicine.TradeName;
             QuantityNumeric.Value = item.Quantity;
@@ -738,7 +737,7 @@ namespace Pharmacy_Project.Forms
         private void POSSavebtn_Click(object sender, EventArgs e)
         {
             int newQuantity = (int)QuantityNumeric.Value;
-            InvoiveItem item = cart[editingCartIndex];
+            InvoiceItem item = cart[editingCartIndex];
 
             if (newQuantity > item.Medicine.Quantity)
             {
@@ -798,7 +797,7 @@ namespace Pharmacy_Project.Forms
             if (selected == null) return;
 
             InvoiceItemsDataGridView.Rows.Clear();
-            foreach (InvoiveItem item in selected.Items)
+            foreach (InvoiceItem item in selected.Items)
             {
                 int i = InvoiceItemsDataGridView.Rows.Add();
                 InvoiceItemsDataGridView.Rows[i].Cells["ItemTradeName"].Value = item.Medicine.TradeName;

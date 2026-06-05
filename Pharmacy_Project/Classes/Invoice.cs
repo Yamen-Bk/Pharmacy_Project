@@ -9,14 +9,14 @@ namespace Pharmacy_Project.Classes
     public class Invoice
     {
         public int Id { get; set; }
-        public List<InvoiveItem> Items { get; set; }
+        public List<InvoiceItem> Items { get; set; }
         public DateTime Date { get; set; }
         public double TotalPrice { get; set; }
          
         public void CalculateTotal()
         {
             TotalPrice = 0;
-            foreach (InvoiveItem item in Items)
+            foreach (InvoiceItem item in Items)
             {
                 TotalPrice += item.SubTotal;
             }

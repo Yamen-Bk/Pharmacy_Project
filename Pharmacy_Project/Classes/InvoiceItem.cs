@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pharmacy_Project.Classes
 {
-    public class InvoiveItem
+    public class InvoiceItem
     {
         public Medicine Medicine { get; set; }
         public int Quantity { get; set; }
