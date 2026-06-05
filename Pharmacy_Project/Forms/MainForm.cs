@@ -167,7 +167,6 @@ namespace Pharmacy_Project.Forms
         new Axis { Labels = barLabels }
             };
 
-            // Pie Chart — Total / LowStock / Expired
             int total = Pharmacy.Medicines.Count;
             int expired = 0;
             int lowStock = 0;
@@ -211,6 +210,94 @@ namespace Pharmacy_Project.Forms
         //!? Medicine Tab
         /// </summary>
 
+        private void ShowFilterControls(string type)
+        {
+            MinPricelbl.Visible = false;
+            MaxPriceNumeric.Visible = false;
+            ApplyPriceFilterBtn.Visible = false;
+            ManufacturerFilterComboBox.Visible = false;
+            StatusFilterComboBox.Visible = false;
+            MaxPricelbl.Visible = false;
+            MinPricelbl.Visible = false;
+            StatusFilterlibl.Visible = false;
+            ManufacturerFilterlbl.Visible = false;
+
+            if (type == "Price")
+            {
+                MaxPricelbl.Visible = true;
+                MinPricelbl.Visible = true;
+                MinPricelbl.Visible = true;
+                MaxPriceNumeric.Visible = true;
+                MinPriceNumeric.Visible = true;
+                ApplyPriceFilterBtn.Visible = true;
+            }
+            else if (type == "Manufacturer")
+            {
+                ManufacturerFilterComboBox.Items.Clear();
+                ManufacturerFilterComboBox.Items.Add("All");
+                foreach (Medicine m in Pharmacy.Medicines)
+                {
+                    bool found = false;
+                    foreach (string item in ManufacturerFilterComboBox.Items)
+                    {
+                        if (item == m.Manufacturer) { found = true; break; }
+                    }
+                    if (!found)
+                        ManufacturerFilterComboBox.Items.Add(m.Manufacturer);
+                }
+                ManufacturerFilterComboBox.SelectedIndex = 0;
+                ManufacturerFilterlbl.Visible = true;
+                ManufacturerFilterComboBox.Visible = true;
+            }
+            else if (type == "Status")
+            {
+                StatusFilterlibl.Visible = true;
+                StatusFilterComboBox.Visible = true;
+            }
+        }
+        private void FillMedicineRow(int i, Medicine m)
+        {
+            MedicinesDataGridView.Rows[i].Cells["Id"].Value = m.Id;
+            MedicinesDataGridView.Rows[i].Cells["TradeName"].Value = m.TradeName;
+            MedicinesDataGridView.Rows[i].Cells["ScientificName"].Value = m.ScientificName;
+            MedicinesDataGridView.Rows[i].Cells["Manufacturer"].Value = m.Manufacturer;
+            MedicinesDataGridView.Rows[i].Cells["Price"].Value = m.Price;
+            MedicinesDataGridView.Rows[i].Cells["Quantity"].Value = m.Quantity;
+            MedicinesDataGridView.Rows[i].Cells["ExpiryDate"].Value = m.ExpiryDate.ToShortDateString();
+
+            if (m.IsExpired())
+            {
+                MedicinesDataGridView.Rows[i].Cells["status"].Value = "Expired";
+                MedicinesDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 200, 200);
+                MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 100, 100);
+            }
+            else if (m.IsExpiringSoon())
+            {
+                MedicinesDataGridView.Rows[i].Cells["status"].Value = "ExpiringSoon";
+                MedicinesDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 240, 180);
+                MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 180, 80);
+            }
+            else if (m.IsLowStock())
+            {
+                MedicinesDataGridView.Rows[i].Cells["status"].Value = "LowStock";
+                MedicinesDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 220, 150);
+                MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 160, 60);
+            }
+            else
+            {
+                MedicinesDataGridView.Rows[i].Cells["status"].Value = "Good";
+                MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(180, 220, 255);
+            }
+        }
+        private void LoadMedicines()
+        {
+            MedicinesDataGridView.Rows.Clear();
+            foreach (Medicine m in Pharmacy.Medicines)
+            {
+                int i = MedicinesDataGridView.Rows.Add();
+                FillMedicineRow(i, m);
+            }
+        }
         private void ClearFields()
         {
             TradeNameTextBox.Text = "";
@@ -219,52 +306,6 @@ namespace Pharmacy_Project.Forms
             PriceTextBox.Text = "";
             QuantityTextBox.Text = "";
             ExpiryDateTextBox.Text = "";
-        }
-        private void LoadMedicines()
-        {
-            string type = "";
-            if (FilterComboBox.SelectedIndex == 1) type = "Price";
-            else if (FilterComboBox.SelectedIndex == 2) type = "Manufacturer";
-            else if (FilterComboBox.SelectedIndex == 3) type = "Expiry";
-
-            var list = Pharmacy.FilterBy(type);
-
-            MedicinesDataGridView.Rows.Clear();
-            foreach (Medicine m in list)
-            {
-                int i = MedicinesDataGridView.Rows.Add();
-                MedicinesDataGridView.Rows[i].Cells["Id"].Value = m.Id;
-                MedicinesDataGridView.Rows[i].Cells["TradeName"].Value = m.TradeName;
-                MedicinesDataGridView.Rows[i].Cells["ScientificName"].Value = m.ScientificName;
-                MedicinesDataGridView.Rows[i].Cells["Manufacturer"].Value = m.Manufacturer;
-                MedicinesDataGridView.Rows[i].Cells["Price"].Value = m.Price;
-                MedicinesDataGridView.Rows[i].Cells["Quantity"].Value = m.Quantity;
-                MedicinesDataGridView.Rows[i].Cells["ExpiryDate"].Value = m.ExpiryDate.ToShortDateString();
-
-                if (m.IsExpired())
-                {
-                    MedicinesDataGridView.Rows[i].Cells["status"].Value = "Expired";
-                    MedicinesDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 200, 200);
-                    MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 100, 100);
-                }
-                else if (m.IsExpiringSoon())
-                {
-                    MedicinesDataGridView.Rows[i].Cells["status"].Value = "ExpiringSoon";
-                    MedicinesDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 240, 180);
-                    MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 180, 80);
-                }
-                else if (m.IsLowStock())
-                {
-                    MedicinesDataGridView.Rows[i].Cells["status"].Value = "LowStock";
-                    MedicinesDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 220, 150);
-                    MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 160, 60);
-                }
-                else
-                {
-                    MedicinesDataGridView.Rows[i].Cells["status"].Value = "Good";
-                    MedicinesDataGridView.Rows[i].DefaultCellStyle.SelectionBackColor = Color.FromArgb(180, 220, 255);
-                }
-            }
         }
         private void AddMedicinebtn_Click(object sender, EventArgs e)
         {
@@ -275,25 +316,87 @@ namespace Pharmacy_Project.Forms
         private void Cancelbtn_Click(object sender, EventArgs e)
         {
             ClearFields();
+            EditingId = -1;
             AddMedicinePanel.Visible = false;
         }
-
         private void SaveMedbtn_Click(object sender, EventArgs e)
         {
+            if (TradeNameTextBox.Text.Trim() == "")
+            {
+                MessageBox.Show("Trade Name cannot be empty.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (ScientificNameTextBox.Text.Trim() == "")
+            {
+                MessageBox.Show("Scientific Name cannot be empty.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (ManufacturerTextBox.Text.Trim() == "")
+            {
+                MessageBox.Show("Manufacturer cannot be empty.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (PriceTextBox.Text.Trim() == "")
+            {
+                MessageBox.Show("Price cannot be empty.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (QuantityTextBox.Text.Trim() == "")
+            {
+                MessageBox.Show("Quantity cannot be empty.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (ExpiryDateTextBox.Text.Trim() == "")
+            {
+                MessageBox.Show("Expiry Date cannot be empty.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            double price;
+            if (!double.TryParse(PriceTextBox.Text, out price) || price < 0)
+            {
+                MessageBox.Show("Price must be a valid positive number.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int quantity;
+            if (!int.TryParse(QuantityTextBox.Text, out quantity) || quantity < 0)
+            {
+                MessageBox.Show("Quantity must be a valid positive number.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            DateTime expiryDate;
+            if (!DateTime.TryParse(ExpiryDateTextBox.Text, out expiryDate))
+            {
+                MessageBox.Show("Expiry Date format is invalid.\nPlease enter date as: DD/MM/YYYY\nExample: 25/12/2027",
+                                "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (expiryDate < DateTime.Today)
+            {
+                MessageBox.Show("Expiry Date cannot be in the past.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             Medicine m = new Medicine
             {
-                TradeName = TradeNameTextBox.Text,
-                ScientificName = ScientificNameTextBox.Text,
-                Manufacturer = ManufacturerTextBox.Text,
-                Price = Double.Parse(PriceTextBox.Text),
-                Quantity = int.Parse(QuantityTextBox.Text),
-                ExpiryDate = DateTime.Parse(ExpiryDateTextBox.Text)
+                TradeName = TradeNameTextBox.Text.Trim(),
+                ScientificName = ScientificNameTextBox.Text.Trim(),
+                Manufacturer = ManufacturerTextBox.Text.Trim(),
+                Price = price,
+                Quantity = quantity,
+                ExpiryDate = expiryDate
             };
 
             if (EditingId == -1)
-            {
                 Pharmacy.AddMedicine(m);
-            }
             else
             {
                 m.Id = EditingId;
@@ -302,9 +405,9 @@ namespace Pharmacy_Project.Forms
 
             EditingId = -1;
             AddMedicinePanel.Visible = false;
+            ClearFields();
             LoadMedicines();
         }
-
         private void Editbtn_Click(object sender, EventArgs e)
         {
             if (MedicinesDataGridView.SelectedRows.Count == 0)
@@ -312,12 +415,12 @@ namespace Pharmacy_Project.Forms
                 MessageBox.Show("Select Medicine First");
                 return;
             }
+
             int id = (int)MedicinesDataGridView.SelectedRows[0].Cells["Id"].Value;
             Medicine m = null;
             foreach (Medicine med in Pharmacy.Medicines)
             {
-                if (med.Id == id)
-                    m = med;
+                if (med.Id == id) { m = med; break; }
             }
 
             TradeNameTextBox.Text = m.TradeName;
@@ -329,9 +432,7 @@ namespace Pharmacy_Project.Forms
 
             EditingId = id;
             AddMedicinePanel.Visible = true;
-
         }
-
         private void Deletebtn_Click(object sender, EventArgs e)
         {
             if (MedicinesDataGridView.SelectedRows.Count == 0)
@@ -339,8 +440,9 @@ namespace Pharmacy_Project.Forms
                 MessageBox.Show("Select Medicine First");
                 return;
             }
+
             int id = (int)MedicinesDataGridView.SelectedRows[0].Cells["Id"].Value;
-            DialogResult result = MessageBox.Show("Do You Want To Delete This Medicine", "Are you Sure",
+            DialogResult result = MessageBox.Show("Do You Want To Delete This Medicine?", "Are you Sure",
                                                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
@@ -348,10 +450,74 @@ namespace Pharmacy_Project.Forms
                 LoadMedicines();
             }
         }
-
-        private void FilterComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void ApplyPriceFilterBtn_Click(object sender, EventArgs e)
         {
-            LoadMedicines();
+            double min = (double)MinPriceNumeric.Value;
+            double max = (double)MaxPriceNumeric.Value;
+
+            if (min > max)
+            {
+                MessageBox.Show("Min price cannot be greater than Max price.");
+                return;
+            }
+
+            MedicinesDataGridView.Rows.Clear();
+            foreach (Medicine m in Pharmacy.Medicines)
+            {
+                if (m.Price >= min && m.Price <= max)
+                {
+                    int i = MedicinesDataGridView.Rows.Add();
+                    FillMedicineRow(i, m);
+                }
+            }
+        }
+        private void FilterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (FilterTypeComboBox.SelectedIndex == 0) ShowFilterControls("");
+            else if (FilterTypeComboBox.SelectedIndex == 1) ShowFilterControls("Price");
+            else if (FilterTypeComboBox.SelectedIndex == 2) ShowFilterControls("Manufacturer");
+            else if (FilterTypeComboBox.SelectedIndex == 3) ShowFilterControls("Status");
+
+            if (FilterTypeComboBox.SelectedIndex == 0)
+                LoadMedicines();
+        }
+        private void ManufacturerFilterComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ManufacturerFilterComboBox.SelectedIndex == -1) return;
+
+            string selected = ManufacturerFilterComboBox.SelectedItem.ToString();
+
+            MedicinesDataGridView.Rows.Clear();
+            foreach (Medicine m in Pharmacy.Medicines)
+            {
+                if (selected == "All" || m.Manufacturer == selected)
+                {
+                    int i = MedicinesDataGridView.Rows.Add();
+                    FillMedicineRow(i, m);
+                }
+            }
+        }
+        private void StatusFilterComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (StatusFilterComboBox.SelectedIndex == -1) return;
+
+            string selected = StatusFilterComboBox.SelectedItem.ToString();
+
+            MedicinesDataGridView.Rows.Clear();
+            foreach (Medicine m in Pharmacy.Medicines)
+            {
+                bool show = false;
+                if (selected == "All") show = true;
+                else if (selected == "Expired" && m.IsExpired()) show = true;
+                else if (selected == "ExpiringSoon" && m.IsExpiringSoon()) show = true;
+                else if (selected == "LowStock" && m.IsLowStock()) show = true;
+                else if (selected == "Good" && !m.IsExpired() && !m.IsExpiringSoon() && !m.IsLowStock()) show = true;
+                if (show)
+                {
+                    int i = MedicinesDataGridView.Rows.Add();
+                    FillMedicineRow(i, m);
+                }
+            }
         }
 
         /// <summary>
@@ -696,5 +862,6 @@ namespace Pharmacy_Project.Forms
             Pharmacy.SaveData();
             Application.Restart();
         }
+
     }
 }

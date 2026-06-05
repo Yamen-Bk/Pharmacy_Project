@@ -92,43 +92,43 @@ namespace Pharmacy_Project.Classes
             }
             SaveData();
         }
-        public static List<Medicine> FilterBy(string type)
-        {
-            List<Medicine> result = new List<Medicine>();
-            foreach (Medicine me in Medicines)
-                result.Add(me);
-            if (type == "")
-                return result;
-            for (int i = 0; i < result.Count; i++)
-            {
-                for (int j = i + 1; j < result.Count; j++)
-                {
-                    bool shouldswap = false;
-                    if (type == "Price")
-                    {
-                        if (result[i].Price > result[j].Price)
-                            shouldswap = true;
-                    }
-                    else if (type == "Manufacturer")
-                    {
-                        if (result[i].Manufacturer[0] > result[j].Manufacturer[0])
-                            shouldswap = true;
-                    }
-                    else if (type == "Expiry")
-                    {
-                        if (result[i].ExpiryDate > result[j].ExpiryDate)
-                            shouldswap = true;
-                    }
-                    if (shouldswap)
-                    {
-                        Medicine temp = result[i];
-                        result[i] = result[j];
-                        result[j] = temp;
-                    }
-                }
-            }
-            return result;
-        }
+        //public static List<Medicine> FilterBy(string type)
+        //{
+        //    List<Medicine> result = new List<Medicine>();
+        //    foreach (Medicine me in Medicines)
+        //        result.Add(me);
+        //    if (type == "")
+        //        return result;
+        //    for (int i = 0; i < result.Count; i++)
+        //    {
+        //        for (int j = i + 1; j < result.Count; j++)
+        //        {
+        //            bool shouldswap = false;
+        //            if (type == "Price")
+        //            {
+        //                if (result[i].Price > result[j].Price)
+        //                    shouldswap = true;
+        //            }
+        //            else if (type == "Manufacturer")
+        //            {
+        //                if (result[i].Manufacturer[0] > result[j].Manufacturer[0])
+        //                    shouldswap = true;
+        //            }
+        //            else if (type == "Expiry")
+        //            {
+        //                if (result[i].ExpiryDate > result[j].ExpiryDate)
+        //                    shouldswap = true;
+        //            }
+        //            if (shouldswap)
+        //            {
+        //                Medicine temp = result[i];
+        //                result[i] = result[j];
+        //                result[j] = temp;
+        //            }
+        //        }
+        //    }
+        //    return result;
+        //}
         public static List<Medicine> GetExpiredMedicines()
         {
             List<Medicine> result = new List<Medicine>();
