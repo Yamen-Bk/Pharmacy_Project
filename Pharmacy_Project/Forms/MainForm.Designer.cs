@@ -1977,6 +1977,7 @@
             // 
             // guna2HtmlLabel12
             // 
+            guna2HtmlLabel12.Anchor = AnchorStyles.Top;
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel12.ForeColor = Color.FromArgb(9, 105, 137);
@@ -2005,6 +2006,7 @@
             InvoiceItemsDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle11.BackColor = Color.White;
             InvoiceItemsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            InvoiceItemsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             InvoiceItemsDataGridView.BackgroundColor = SystemColors.Control;
             InvoiceItemsDataGridView.BorderStyle = BorderStyle.FixedSingle;
             InvoiceItemsDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
@@ -2086,6 +2088,7 @@
             InvoicesDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle15.BackColor = Color.White;
             InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            InvoicesDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             InvoicesDataGridView.BackgroundColor = SystemColors.Control;
             InvoicesDataGridView.BorderStyle = BorderStyle.FixedSingle;
             InvoicesDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
