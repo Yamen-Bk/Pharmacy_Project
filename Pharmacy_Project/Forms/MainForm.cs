@@ -106,9 +106,11 @@ namespace Pharmacy_Project.Forms
                 e.Cancel = true;
             }
         }
+
         /// <summary>
         //!? Home Tab
         /// </summary>
+
         private void LoadHomeData()
         {
             HomWelcomeLabel.Text = $"Welcome Back, {Pharmacy.User.Username}";
@@ -357,7 +359,9 @@ namespace Pharmacy_Project.Forms
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             double price;
+
             if (!double.TryParse(PriceTextBox.Text, out price) || price < 0)
             {
                 MessageBox.Show("Price must be a valid positive number.", "Error",
@@ -366,6 +370,7 @@ namespace Pharmacy_Project.Forms
             }
 
             int quantity;
+
             if (!int.TryParse(QuantityTextBox.Text, out quantity) || quantity < 0)
             {
                 MessageBox.Show("Quantity must be a valid positive number.", "Error",
@@ -762,6 +767,7 @@ namespace Pharmacy_Project.Forms
         /// <summary>
         //!? Invoice Tab
         /// </summary>
+        
         private void LoadInvoices()
         {
             InvoicesDataGridView.Rows.Clear();
@@ -818,6 +824,7 @@ namespace Pharmacy_Project.Forms
                 InvoiceItemsDataGridView.Rows[i].Cells["ItemSubtotal"].Value = item.SubTotal.ToString();
             }
         }
+
         /// <summary>
         //!? Settings Tab
         /// </summary>

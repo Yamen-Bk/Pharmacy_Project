@@ -70,11 +70,6 @@ namespace Pharmacy_Project
         }
         private async void SignButton_Click(object sender, EventArgs e)
         {
-            //string pass = "123456";
-            //string hash = BCrypt.Net.BCrypt.HashPassword(pass);
-            //MessageBox.Show(hash);
-            //Clipboard.SetText(hash);
-
             labelErrorUser.Visible = false;
             labelErrorPass.Visible = false;
 
