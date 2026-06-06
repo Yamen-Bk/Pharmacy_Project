@@ -758,6 +758,7 @@
             // 
             // guna2GradientPanel1
             // 
+            guna2GradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2GradientPanel1.BackColor = Color.Transparent;
             guna2GradientPanel1.BorderColor = Color.DarkSlateGray;
             guna2GradientPanel1.BorderRadius = 25;
@@ -784,6 +785,7 @@
             // 
             // ManufacturerFilterlbl
             // 
+            ManufacturerFilterlbl.Anchor = AnchorStyles.Top;
             ManufacturerFilterlbl.BackColor = Color.Transparent;
             ManufacturerFilterlbl.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ManufacturerFilterlbl.ForeColor = Color.FromArgb(9, 105, 137);
@@ -796,6 +798,7 @@
             // 
             // StatusFilterlibl
             // 
+            StatusFilterlibl.Anchor = AnchorStyles.Top;
             StatusFilterlibl.BackColor = Color.Transparent;
             StatusFilterlibl.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             StatusFilterlibl.ForeColor = Color.FromArgb(9, 105, 137);
@@ -808,6 +811,7 @@
             // 
             // ManufacturerFilterComboBox
             // 
+            ManufacturerFilterComboBox.Anchor = AnchorStyles.Top;
             ManufacturerFilterComboBox.BackColor = Color.Transparent;
             ManufacturerFilterComboBox.CustomizableEdges = customizableEdges15;
             ManufacturerFilterComboBox.DrawMode = DrawMode.OwnerDrawFixed;
@@ -827,6 +831,7 @@
             // 
             // StatusFilterComboBox
             // 
+            StatusFilterComboBox.Anchor = AnchorStyles.Top;
             StatusFilterComboBox.BackColor = Color.Transparent;
             StatusFilterComboBox.CustomizableEdges = customizableEdges17;
             StatusFilterComboBox.DrawMode = DrawMode.OwnerDrawFixed;
@@ -847,6 +852,7 @@
             // 
             // MaxPricelbl
             // 
+            MaxPricelbl.Anchor = AnchorStyles.Top;
             MaxPricelbl.BackColor = Color.Transparent;
             MaxPricelbl.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             MaxPricelbl.ForeColor = Color.FromArgb(9, 105, 137);
@@ -859,6 +865,7 @@
             // 
             // MinPricelbl
             // 
+            MinPricelbl.Anchor = AnchorStyles.Top;
             MinPricelbl.BackColor = Color.Transparent;
             MinPricelbl.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             MinPricelbl.ForeColor = Color.FromArgb(9, 105, 137);
@@ -871,6 +878,7 @@
             // 
             // ApplyPriceFilterBtn
             // 
+            ApplyPriceFilterBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             ApplyPriceFilterBtn.BackColor = Color.Transparent;
             ApplyPriceFilterBtn.CheckedState.ImageSize = new Size(242, 117);
             ApplyPriceFilterBtn.HoverState.ImageSize = new Size(245, 120);
@@ -889,6 +897,7 @@
             // 
             // FilterLabel
             // 
+            FilterLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             FilterLabel.BackColor = Color.Transparent;
             FilterLabel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             FilterLabel.ForeColor = Color.FromArgb(9, 105, 137);
@@ -900,6 +909,7 @@
             // 
             // MinPriceNumeric
             // 
+            MinPriceNumeric.Anchor = AnchorStyles.Top;
             MinPriceNumeric.BackColor = Color.Transparent;
             MinPriceNumeric.CustomizableEdges = customizableEdges20;
             MinPriceNumeric.Font = new Font("Segoe UI", 9F);
@@ -913,6 +923,7 @@
             // 
             // MaxPriceNumeric
             // 
+            MaxPriceNumeric.Anchor = AnchorStyles.Top;
             MaxPriceNumeric.BackColor = Color.Transparent;
             MaxPriceNumeric.CustomizableEdges = customizableEdges22;
             MaxPriceNumeric.Font = new Font("Segoe UI", 9F);
@@ -926,6 +937,7 @@
             // 
             // FilterTypeComboBox
             // 
+            FilterTypeComboBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             FilterTypeComboBox.BackColor = Color.Transparent;
             FilterTypeComboBox.CustomizableEdges = customizableEdges24;
             FilterTypeComboBox.DrawMode = DrawMode.OwnerDrawFixed;
@@ -945,6 +957,7 @@
             // 
             // AddMedicinePanel
             // 
+            AddMedicinePanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             AddMedicinePanel.BackColor = SystemColors.Control;
             AddMedicinePanel.BorderColor = Color.DarkSlateGray;
             AddMedicinePanel.BorderRadius = 35;
@@ -975,6 +988,7 @@
             // 
             // ManufacturerTextBox
             // 
+            ManufacturerTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             ManufacturerTextBox.BackColor = Color.Transparent;
             ManufacturerTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             ManufacturerTextBox.BorderRadius = 15;
@@ -999,6 +1013,7 @@
             // 
             // ExpiryDateTextBox
             // 
+            ExpiryDateTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             ExpiryDateTextBox.BackColor = Color.Transparent;
             ExpiryDateTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             ExpiryDateTextBox.BorderRadius = 15;
@@ -1023,6 +1038,7 @@
             // 
             // QuantityTextBox
             // 
+            QuantityTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             QuantityTextBox.BackColor = Color.Transparent;
             QuantityTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             QuantityTextBox.BorderRadius = 15;
@@ -1047,6 +1063,7 @@
             // 
             // PriceTextBox
             // 
+            PriceTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             PriceTextBox.BackColor = Color.Transparent;
             PriceTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             PriceTextBox.BorderRadius = 15;
@@ -1071,6 +1088,7 @@
             // 
             // ScientificNameTextBox
             // 
+            ScientificNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             ScientificNameTextBox.BackColor = Color.Transparent;
             ScientificNameTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             ScientificNameTextBox.BorderRadius = 15;
@@ -1095,6 +1113,7 @@
             // 
             // Cancelbtn
             // 
+            Cancelbtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             Cancelbtn.BackColor = Color.Transparent;
             Cancelbtn.CheckedState.ImageSize = new Size(292, 167);
             Cancelbtn.HoverState.ImageSize = new Size(295, 170);
@@ -1112,6 +1131,7 @@
             // 
             // SaveMedbtn
             // 
+            SaveMedbtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             SaveMedbtn.BackColor = Color.Transparent;
             SaveMedbtn.CheckedState.ImageSize = new Size(292, 167);
             SaveMedbtn.HoverState.ImageSize = new Size(295, 170);
@@ -1129,6 +1149,7 @@
             // 
             // TradeNameTextBox
             // 
+            TradeNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TradeNameTextBox.BackColor = Color.Transparent;
             TradeNameTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             TradeNameTextBox.BorderRadius = 15;
@@ -1225,6 +1246,7 @@
             MedicinesDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             MedicinesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            MedicinesDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             MedicinesDataGridView.BackgroundColor = SystemColors.Control;
             MedicinesDataGridView.BorderStyle = BorderStyle.FixedSingle;
             MedicinesDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
@@ -1326,6 +1348,7 @@
             // 
             // Deletebtn
             // 
+            Deletebtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             Deletebtn.BackColor = Color.Transparent;
             Deletebtn.CheckedState.ImageSize = new Size(292, 167);
             Deletebtn.HoverState.ImageSize = new Size(295, 170);
@@ -1343,6 +1366,7 @@
             // 
             // Editbtn
             // 
+            Editbtn.Anchor = AnchorStyles.Bottom;
             Editbtn.BackColor = Color.Transparent;
             Editbtn.CheckedState.ImageSize = new Size(292, 167);
             Editbtn.HoverState.ImageSize = new Size(295, 170);
@@ -1360,6 +1384,7 @@
             // 
             // AddMedicinebtn
             // 
+            AddMedicinebtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             AddMedicinebtn.BackColor = Color.Transparent;
             AddMedicinebtn.CheckedState.ImageSize = new Size(292, 167);
             AddMedicinebtn.HoverState.ImageSize = new Size(295, 170);
