@@ -689,6 +689,8 @@ namespace Pharmacy_Project.Forms
         }
         private void POSEditbtn_Click(object sender, EventArgs e)
         {
+            POSSelectMedicineLabel.Visible = false;
+            POSNewSaleLabel.Text = "Edit Sale";
             if (POSDataGridView.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Select a medicine from the cart first.");
@@ -755,6 +757,8 @@ namespace Pharmacy_Project.Forms
             editingCartIndex = -1;
             POSSavebtn.Visible = false;
             POSAddbtn.Visible = true;
+            POSSelectMedicineLabel.Visible = true;
+            POSNewSaleLabel.Text = "New Sale";
 
             POSNameComboBox.SelectedIndex = -1;
             QuantityNumeric.Value = 1;
@@ -770,9 +774,9 @@ namespace Pharmacy_Project.Forms
             foreach (Invoice inv in Pharmacy.Invoices)
             {
                 int i = InvoicesDataGridView.Rows.Add();
-                InvoicesDataGridView.Rows[i].Cells["InvId"].Value = inv.Id;
-                InvoicesDataGridView.Rows[i].Cells["InvDate"].Value = inv.Date.ToString("yyyy-MM-dd HH:mm");
-                InvoicesDataGridView.Rows[i].Cells["InvTotal"].Value = inv.TotalPrice.ToString("F2");
+                InvoicesDataGridView.Rows[i].Cells["InvoiceId"].Value = inv.Id;
+                InvoicesDataGridView.Rows[i].Cells["InvoiceDate"].Value = inv.Date.ToString("yyyy-MM-dd HH:mm");
+                InvoicesDataGridView.Rows[i].Cells["InvoiceTotal"].Value = inv.TotalPrice.ToString("F2");
             }
 
             InvoiceItemsDataGridView.Rows.Clear();
@@ -782,7 +786,7 @@ namespace Pharmacy_Project.Forms
         {
             if (InvoicesDataGridView.SelectedRows.Count == 0) return;
 
-            int invId = (int)InvoicesDataGridView.SelectedRows[0].Cells["InvId"].Value;
+            int invId = (int)InvoicesDataGridView.SelectedRows[0].Cells["InvoiceId"].Value;
 
             Invoice selected = null;
             foreach (Invoice inv in Pharmacy.Invoices)

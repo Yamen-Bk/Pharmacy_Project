@@ -115,7 +115,6 @@ namespace Pharmacy_Project
             UsernameTextBox.Enabled = false;
             PasswordTextBox.Enabled = false;
 
-
             Forms.MainForm main = new Forms.MainForm();
             main.StartPosition = FormStartPosition.Manual;
             main.Location = this.Location;
@@ -133,7 +132,6 @@ namespace Pharmacy_Project
             main.Opacity = 1;
             this.Hide();
         }
-
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!this.Visible) return;
