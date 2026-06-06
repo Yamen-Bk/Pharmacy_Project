@@ -4,134 +4,224 @@
     "TradeName": "Panadol",
     "ScientificName": "Paracetamol",
     "Manufacturer": "GSK",
-    "Price": 3.5,
-    "Quantity": 120,
-    "ExpiryDate": "2027-06-01T00:00:00"
+    "Price": 2.5,
+    "Quantity": 50,
+    "ExpiryDate": "2027-03-15T00:00:00"
   },
   {
     "Id": 2,
-    "TradeName": "Brufen",
-    "ScientificName": "Ibuprofen",
-    "Manufacturer": "Abbott",
-    "Price": 4.75,
-    "Quantity": 85,
-    "ExpiryDate": "2026-11-15T00:00:00"
+    "TradeName": "Augmentin",
+    "ScientificName": "Amoxicillin + Clavulanic Acid",
+    "Manufacturer": "GSK",
+    "Price": 8.75,
+    "Quantity": 8,
+    "ExpiryDate": "2026-12-10T00:00:00"
   },
   {
     "Id": 3,
-    "TradeName": "Augmentin",
-    "ScientificName": "Amoxicillin/Clavulanate",
-    "Manufacturer": "GSK",
-    "Price": 12.0,
-    "Quantity": 60,
-    "ExpiryDate": "2026-09-30T00:00:00"
+    "TradeName": "Brufen",
+    "ScientificName": "Ibuprofen",
+    "Manufacturer": "Abbott",
+    "Price": 4.25,
+    "Quantity": 30,
+    "ExpiryDate": "2025-05-20T00:00:00"
   },
   {
     "Id": 4,
-    "TradeName": "Zithromax",
-    "ScientificName": "Azithromycin",
-    "Manufacturer": "Pfizer",
-    "Price": 15.5,
-    "Quantity": 40,
-    "ExpiryDate": "2027-03-20T00:00:00"
+    "TradeName": "Cataflam",
+    "ScientificName": "Diclofenac Potassium",
+    "Manufacturer": "Novartis",
+    "Price": 6.5,
+    "Quantity": 12,
+    "ExpiryDate": "2026-07-01T00:00:00"
   },
   {
     "Id": 5,
-    "TradeName": "Voltaren",
-    "ScientificName": "Diclofenac",
-    "Manufacturer": "Novartis",
-    "Price": 6.25,
-    "Quantity": 3,
-    "ExpiryDate": "2026-12-01T00:00:00"
+    "TradeName": "Zyrtec",
+    "ScientificName": "Cetirizine",
+    "Manufacturer": "UCB",
+    "Price": 5.0,
+    "Quantity": 6,
+    "ExpiryDate": "2026-06-20T00:00:00"
   },
   {
     "Id": 6,
-    "TradeName": "Nexium",
-    "ScientificName": "Esomeprazole",
-    "Manufacturer": "AstraZeneca",
-    "Price": 18.0,
-    "Quantity": 55,
-    "ExpiryDate": "2027-08-10T00:00:00"
+    "TradeName": "Amoxil",
+    "ScientificName": "Amoxicillin",
+    "Manufacturer": "GSK",
+    "Price": 7.25,
+    "Quantity": 25,
+    "ExpiryDate": "2025-11-30T00:00:00"
   },
   {
     "Id": 7,
-    "TradeName": "Lipitor",
-    "ScientificName": "Atorvastatin",
-    "Manufacturer": "Pfizer",
-    "Price": 22.0,
-    "Quantity": 0,
+    "TradeName": "Losec",
+    "ScientificName": "Omeprazole",
+    "Manufacturer": "AstraZeneca",
+    "Price": 9.5,
+    "Quantity": 40,
     "ExpiryDate": "2027-01-25T00:00:00"
   },
   {
     "Id": 8,
-    "TradeName": "Amoxil",
-    "ScientificName": "Amoxicillin",
+    "TradeName": "Ventolin",
+    "ScientificName": "Salbutamol",
     "Manufacturer": "GSK",
-    "Price": 8.0,
-    "Quantity": 70,
-    "ExpiryDate": "2025-12-01T00:00:00"
+    "Price": 11.0,
+    "Quantity": 9,
+    "ExpiryDate": "2026-06-15T00:00:00"
   },
   {
     "Id": 9,
-    "TradeName": "Zantac",
-    "ScientificName": "Ranitidine",
+    "TradeName": "Flagyl",
+    "ScientificName": "Metronidazole",
     "Manufacturer": "Sanofi",
-    "Price": 5.5,
-    "Quantity": 5,
-    "ExpiryDate": "2025-05-01T00:00:00"
+    "Price": 3.75,
+    "Quantity": 18,
+    "ExpiryDate": "2024-12-01T00:00:00"
   },
   {
     "Id": 10,
-    "TradeName": "Claritine",
-    "ScientificName": "Loratadine",
-    "Manufacturer": "Bayer",
-    "Price": 7.0,
-    "Quantity": 65,
-    "ExpiryDate": "2027-04-15T00:00:00"
-  },
-  {
-    "Id": 11,
-    "TradeName": "Glucophage",
-    "ScientificName": "Metformin",
-    "Manufacturer": "Merck",
-    "Price": 9.5,
-    "Quantity": 110,
-    "ExpiryDate": "2027-07-20T00:00:00"
-  },
-  {
-    "Id": 12,
-    "TradeName": "Concor",
-    "ScientificName": "Bisoprolol",
-    "Manufacturer": "Merck",
-    "Price": 11.0,
-    "Quantity": 2,
-    "ExpiryDate": "2026-10-05T00:00:00"
-  },
-  {
-    "Id": 13,
     "TradeName": "Aspirin",
     "ScientificName": "Acetylsalicylic Acid",
     "Manufacturer": "Bayer",
     "Price": 2.0,
-    "Quantity": 200,
-    "ExpiryDate": "2028-01-01T00:00:00"
+    "Quantity": 100,
+    "ExpiryDate": "2028-02-10T00:00:00"
+  },
+  {
+    "Id": 11,
+    "TradeName": "Concor",
+    "ScientificName": "Bisoprolol",
+    "Manufacturer": "Merck",
+    "Price": 10.25,
+    "Quantity": 5,
+    "ExpiryDate": "2027-08-18T00:00:00"
+  },
+  {
+    "Id": 12,
+    "TradeName": "Glucophage",
+    "ScientificName": "Metformin",
+    "Manufacturer": "Merck",
+    "Price": 6.0,
+    "Quantity": 35,
+    "ExpiryDate": "2026-11-05T00:00:00"
+  },
+  {
+    "Id": 13,
+    "TradeName": "Lipitor",
+    "ScientificName": "Atorvastatin",
+    "Manufacturer": "Pfizer",
+    "Price": 14.5,
+    "Quantity": 20,
+    "ExpiryDate": "2027-06-30T00:00:00"
   },
   {
     "Id": 14,
-    "TradeName": "Xanax",
-    "ScientificName": "Alprazolam",
+    "TradeName": "Norvasc",
+    "ScientificName": "Amlodipine",
     "Manufacturer": "Pfizer",
-    "Price": 14.0,
-    "Quantity": 30,
-    "ExpiryDate": "2024-08-15T00:00:00"
+    "Price": 9.0,
+    "Quantity": 7,
+    "ExpiryDate": "2026-06-25T00:00:00"
   },
   {
     "Id": 15,
-    "TradeName": "Ventolin",
-    "ScientificName": "Salbutamol",
-    "Manufacturer": "GSK",
-    "Price": 10.0,
+    "TradeName": "Voltaren",
+    "ScientificName": "Diclofenac Sodium",
+    "Manufacturer": "Novartis",
+    "Price": 5.75,
+    "Quantity": 60,
+    "ExpiryDate": "2025-10-10T00:00:00"
+  },
+  {
+    "Id": 16,
+    "TradeName": "Motilium",
+    "ScientificName": "Domperidone",
+    "Manufacturer": "Janssen",
+    "Price": 4.8,
+    "Quantity": 15,
+    "ExpiryDate": "2026-09-09T00:00:00"
+  },
+  {
+    "Id": 17,
+    "TradeName": "Claritin",
+    "ScientificName": "Loratadine",
+    "Manufacturer": "Bayer",
+    "Price": 5.6,
+    "Quantity": 3,
+    "ExpiryDate": "2028-04-12T00:00:00"
+  },
+  {
+    "Id": 18,
+    "TradeName": "Daflon",
+    "ScientificName": "Diosmin + Hesperidin",
+    "Manufacturer": "Servier",
+    "Price": 12.0,
+    "Quantity": 22,
+    "ExpiryDate": "2026-06-22T00:00:00"
+  },
+  {
+    "Id": 19,
+    "TradeName": "Ciproxin",
+    "ScientificName": "Ciprofloxacin",
+    "Manufacturer": "Bayer",
+    "Price": 8.2,
+    "Quantity": 14,
+    "ExpiryDate": "2025-01-15T00:00:00"
+  },
+  {
+    "Id": 20,
+    "TradeName": "Nexium",
+    "ScientificName": "Esomeprazole",
+    "Manufacturer": "AstraZeneca",
+    "Price": 13.75,
     "Quantity": 45,
-    "ExpiryDate": "2027-05-30T00:00:00"
+    "ExpiryDate": "2027-12-01T00:00:00"
+  },
+  {
+    "Id": 21,
+    "TradeName": "Lasix",
+    "ScientificName": "Furosemide",
+    "Manufacturer": "Sanofi",
+    "Price": 4.1,
+    "Quantity": 4,
+    "ExpiryDate": "2026-10-30T00:00:00"
+  },
+  {
+    "Id": 22,
+    "TradeName": "Plavix",
+    "ScientificName": "Clopidogrel",
+    "Manufacturer": "Sanofi",
+    "Price": 16.5,
+    "Quantity": 16,
+    "ExpiryDate": "2026-06-28T00:00:00"
+  },
+  {
+    "Id": 23,
+    "TradeName": "Euthyrox",
+    "ScientificName": "Levothyroxine",
+    "Manufacturer": "Merck",
+    "Price": 7.9,
+    "Quantity": 28,
+    "ExpiryDate": "2027-09-14T00:00:00"
+  },
+  {
+    "Id": 24,
+    "TradeName": "Rocephin",
+    "ScientificName": "Ceftriaxone",
+    "Manufacturer": "Roche",
+    "Price": 18.0,
+    "Quantity": 2,
+    "ExpiryDate": "2026-08-05T00:00:00"
+  },
+  {
+    "Id": 25,
+    "TradeName": "Fucidin",
+    "ScientificName": "Fusidic Acid",
+    "Manufacturer": "LEO Pharma",
+    "Price": 6.9,
+    "Quantity": 11,
+    "ExpiryDate": "2025-03-10T00:00:00"
   }
 ]

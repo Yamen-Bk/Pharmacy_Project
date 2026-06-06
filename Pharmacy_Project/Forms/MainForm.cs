@@ -124,7 +124,7 @@ namespace Pharmacy_Project.Forms
             }
 
             HomSoldCountLabel.Text = soldCount.ToString();
-            HomTotalSalesLabel.Text = totalSales.ToString("F2");
+            HomTotalSalesLabel.Text = totalSales.ToString();
 
             List<Medicine> sorted = new List<Medicine>(Pharmacy.Medicines);
             for (int i = 0; i < sorted.Count - 1; i++)
@@ -213,6 +213,7 @@ namespace Pharmacy_Project.Forms
         {
             MinPricelbl.Visible = false;
             MaxPriceNumeric.Visible = false;
+            MinPriceNumeric.Visible = false;
             ApplyPriceFilterBtn.Visible = false;
             ManufacturerFilterComboBox.Visible = false;
             StatusFilterComboBox.Visible = false;
@@ -376,12 +377,6 @@ namespace Pharmacy_Project.Forms
             {
                 MessageBox.Show("Expiry Date format is invalid.\nPlease enter date as: DD/MM/YYYY\nExample: 25/12/2027",
                                 "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (expiryDate < DateTime.Today)
-            {
-                MessageBox.Show("Expiry Date cannot be in the past.", "Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             Medicine m = new Medicine
@@ -776,15 +771,28 @@ namespace Pharmacy_Project.Forms
                 int i = InvoicesDataGridView.Rows.Add();
                 InvoicesDataGridView.Rows[i].Cells["InvoiceId"].Value = inv.Id;
                 InvoicesDataGridView.Rows[i].Cells["InvoiceDate"].Value = inv.Date.ToString("yyyy-MM-dd HH:mm");
-                InvoicesDataGridView.Rows[i].Cells["InvoiceTotal"].Value = inv.TotalPrice.ToString("F2");
+                InvoicesDataGridView.Rows[i].Cells["InvoiceTotal"].Value = inv.TotalPrice.ToString();
             }
 
             InvoiceItemsDataGridView.Rows.Clear();
-        }
 
+            if (Pharmacy.Invoices.Count > 0)
+            {
+                foreach (InvoiceItem item in Pharmacy.Invoices[0].Items)
+                {
+                    int i = InvoiceItemsDataGridView.Rows.Add();
+                    InvoiceItemsDataGridView.Rows[i].Cells["ItemTradeName"].Value = item.Medicine.TradeName;
+                    InvoiceItemsDataGridView.Rows[i].Cells["ItemUnitPrice"].Value = item.UnitPrice.ToString();
+                    InvoiceItemsDataGridView.Rows[i].Cells["ItemQuantity"].Value = item.Quantity;
+                    InvoiceItemsDataGridView.Rows[i].Cells["ItemSubtotal"].Value = item.SubTotal.ToString();
+                }
+            }
+        }
         private void InvoicesDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             if (InvoicesDataGridView.SelectedRows.Count == 0) return;
+
+            if (InvoicesDataGridView.SelectedRows[0].Cells["InvoiceId"].Value == null) return;
 
             int invId = (int)InvoicesDataGridView.SelectedRows[0].Cells["InvoiceId"].Value;
 
@@ -805,13 +813,11 @@ namespace Pharmacy_Project.Forms
             {
                 int i = InvoiceItemsDataGridView.Rows.Add();
                 InvoiceItemsDataGridView.Rows[i].Cells["ItemTradeName"].Value = item.Medicine.TradeName;
-                InvoiceItemsDataGridView.Rows[i].Cells["ItemUnitPrice"].Value = item.UnitPrice.ToString("F2");
+                InvoiceItemsDataGridView.Rows[i].Cells["ItemUnitPrice"].Value = item.UnitPrice.ToString();
                 InvoiceItemsDataGridView.Rows[i].Cells["ItemQuantity"].Value = item.Quantity;
-                InvoiceItemsDataGridView.Rows[i].Cells["ItemSubtotal"].Value = item.SubTotal.ToString("F2");
+                InvoiceItemsDataGridView.Rows[i].Cells["ItemSubtotal"].Value = item.SubTotal.ToString();
             }
         }
-
-
         /// <summary>
         //!? Settings Tab
         /// </summary>

@@ -50,15 +50,9 @@
 
   <ItemGroup>
     <Content Include="Images\Logos\Main_logo.ico" />
-    <Content Include="Jsons\invoices.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Jsons\medicines.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Jsons\user.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Jsons\invoices.json" />
+    <Content Include="Jsons\medicines.json" />
+    <Content Include="Jsons\user.json" />
     <Content Include="login_pics\debut.JPG">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

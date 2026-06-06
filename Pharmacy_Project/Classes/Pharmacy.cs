@@ -14,27 +14,45 @@ namespace Pharmacy_Project.Classes
         public static List<Invoice> Invoices = new List<Invoice>();
         public static User User;
 
-        private static string medicinesPath = Path.Combine(Application.StartupPath, "Jsons", "medicines.json");
+        private static string projectPath = Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
 
-        private static string invoicesPath = Path.Combine(Application.StartupPath, "Jsons", "invoices.json");
-
-        private static string userPath = Path.Combine(Application.StartupPath, "Jsons", "user.json");
+        private static string jsonFolder = Path.Combine(projectPath, "Jsons");
+        private static string medicinesPath = Path.Combine(jsonFolder, "medicines.json");
+        private static string invoicesPath = Path.Combine(jsonFolder, "invoices.json");
+        private static string userPath = Path.Combine(jsonFolder, "user.json");
 
         public static void LoadData()
         {
-            if (File.Exists(medicinesPath))
-                Medicines = JsonConvert.DeserializeObject<List<Medicine>>(File.ReadAllText(medicinesPath));
+            if (!Directory.Exists(jsonFolder))
+                Directory.CreateDirectory(jsonFolder);
 
-            if (File.Exists(invoicesPath))
-                Invoices = JsonConvert.DeserializeObject<List<Invoice>>(File.ReadAllText(invoicesPath));
+            if (!File.Exists(medicinesPath))
+                File.WriteAllText(medicinesPath, "[]");
 
-            if (File.Exists(userPath))
-                User = JsonConvert.DeserializeObject<User>(File.ReadAllText(userPath));
+            if (!File.Exists(invoicesPath))
+                File.WriteAllText(invoicesPath, "[]");
+
+            if (!File.Exists(userPath))
+                File.WriteAllText(userPath, "{}");
+
+            Medicines = JsonConvert.DeserializeObject<List<Medicine>>(File.ReadAllText(medicinesPath));
+            Invoices = JsonConvert.DeserializeObject<List<Invoice>>(File.ReadAllText(invoicesPath));
+            User = JsonConvert.DeserializeObject<User>(File.ReadAllText(userPath));
+
+            if (Medicines == null)
+                Medicines = new List<Medicine>();
+
+            if (Invoices == null)
+                Invoices = new List<Invoice>();
         }
         public static void SaveData()
         {
+            if (!Directory.Exists(jsonFolder))
+                Directory.CreateDirectory(jsonFolder);
+
             File.WriteAllText(medicinesPath, JsonConvert.SerializeObject(Medicines, Formatting.Indented));
             File.WriteAllText(invoicesPath, JsonConvert.SerializeObject(Invoices, Formatting.Indented));
+            File.WriteAllText(userPath, JsonConvert.SerializeObject(User, Formatting.Indented));
         }
 
         public static void AddMedicine(Medicine m)
