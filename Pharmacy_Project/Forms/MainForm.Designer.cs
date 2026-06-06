@@ -1416,6 +1416,7 @@
             // 
             // guna2HtmlLabel13
             // 
+            guna2HtmlLabel13.Anchor = AnchorStyles.Top;
             guna2HtmlLabel13.BackColor = Color.Transparent;
             guna2HtmlLabel13.Font = new Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel13.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1427,6 +1428,7 @@
             // 
             // DisposeSelectedbtn
             // 
+            DisposeSelectedbtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             DisposeSelectedbtn.BackColor = Color.Transparent;
             DisposeSelectedbtn.CheckedState.ImageSize = new Size(292, 167);
             DisposeSelectedbtn.HoverState.ImageSize = new Size(295, 170);
@@ -1444,6 +1446,7 @@
             // 
             // DisposeAllbtn
             // 
+            DisposeAllbtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             DisposeAllbtn.BackColor = Color.Transparent;
             DisposeAllbtn.CheckedState.ImageSize = new Size(292, 167);
             DisposeAllbtn.HoverState.ImageSize = new Size(295, 170);
@@ -1467,6 +1470,7 @@
             ExpiredDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.BackColor = Color.White;
             ExpiredDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            ExpiredDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ExpiredDataGridView.BackgroundColor = SystemColors.Control;
             ExpiredDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -1579,6 +1583,7 @@
             // 
             // guna2HtmlLabel14
             // 
+            guna2HtmlLabel14.Anchor = AnchorStyles.Top;
             guna2HtmlLabel14.BackColor = Color.Transparent;
             guna2HtmlLabel14.Font = new Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel14.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1590,6 +1595,7 @@
             // 
             // POSEditbtn
             // 
+            POSEditbtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             POSEditbtn.BackColor = Color.Transparent;
             POSEditbtn.CheckedState.ImageSize = new Size(292, 167);
             POSEditbtn.HoverState.ImageSize = new Size(295, 170);
@@ -1607,6 +1613,7 @@
             // 
             // POSClearAllbtn
             // 
+            POSClearAllbtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             POSClearAllbtn.BackColor = Color.Transparent;
             POSClearAllbtn.CheckedState.ImageSize = new Size(292, 167);
             POSClearAllbtn.HoverState.ImageSize = new Size(295, 170);
@@ -1624,6 +1631,7 @@
             // 
             // guna2GradientPanel10
             // 
+            guna2GradientPanel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             guna2GradientPanel10.BorderColor = Color.DarkSlateGray;
             guna2GradientPanel10.BorderRadius = 25;
             guna2GradientPanel10.BorderThickness = 3;
@@ -1650,6 +1658,7 @@
             // 
             // POSAddbtn
             // 
+            POSAddbtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             POSAddbtn.BackColor = Color.Transparent;
             POSAddbtn.CheckedState.ImageSize = new Size(292, 167);
             POSAddbtn.HoverState.ImageSize = new Size(295, 170);
@@ -1667,6 +1676,7 @@
             // 
             // POSSelectMedicineLabel
             // 
+            POSSelectMedicineLabel.Anchor = AnchorStyles.Top;
             POSSelectMedicineLabel.BackColor = Color.Transparent;
             POSSelectMedicineLabel.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             POSSelectMedicineLabel.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1678,6 +1688,7 @@
             // 
             // POSNewSaleLabel
             // 
+            POSNewSaleLabel.Anchor = AnchorStyles.Top;
             POSNewSaleLabel.BackColor = Color.Transparent;
             POSNewSaleLabel.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             POSNewSaleLabel.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1689,6 +1700,7 @@
             // 
             // POSPriceLabel
             // 
+            POSPriceLabel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             POSPriceLabel.BackColor = Color.Transparent;
             POSPriceLabel.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
             POSPriceLabel.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1700,6 +1712,7 @@
             // 
             // QuantityNumeric
             // 
+            QuantityNumeric.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             QuantityNumeric.BackColor = Color.Transparent;
             QuantityNumeric.CustomizableEdges = customizableEdges52;
             QuantityNumeric.Font = new Font("Segoe UI", 9F);
@@ -1712,6 +1725,7 @@
             // 
             // POSAvailableLabel
             // 
+            POSAvailableLabel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             POSAvailableLabel.BackColor = Color.Transparent;
             POSAvailableLabel.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
             POSAvailableLabel.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1723,6 +1737,7 @@
             // 
             // guna2HtmlLabel8
             // 
+            guna2HtmlLabel8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             guna2HtmlLabel8.BackColor = Color.Transparent;
             guna2HtmlLabel8.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel8.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1734,6 +1749,7 @@
             // 
             // guna2HtmlLabel7
             // 
+            guna2HtmlLabel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
             guna2HtmlLabel7.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1745,6 +1761,7 @@
             // 
             // guna2HtmlLabel3
             // 
+            guna2HtmlLabel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
             guna2HtmlLabel3.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1756,6 +1773,7 @@
             // 
             // guna2HtmlLabel5
             // 
+            guna2HtmlLabel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel5.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1767,6 +1785,7 @@
             // 
             // POSNameComboBox
             // 
+            POSNameComboBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             POSNameComboBox.BackColor = Color.Transparent;
             POSNameComboBox.CustomizableEdges = customizableEdges54;
             POSNameComboBox.DrawMode = DrawMode.OwnerDrawFixed;
@@ -1803,6 +1822,7 @@
             // 
             // POSTotalPriceLabel
             // 
+            POSTotalPriceLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             POSTotalPriceLabel.BackColor = Color.Transparent;
             POSTotalPriceLabel.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             POSTotalPriceLabel.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1814,6 +1834,7 @@
             // 
             // POSBuybtn
             // 
+            POSBuybtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             POSBuybtn.BackColor = Color.Transparent;
             POSBuybtn.CheckedState.ImageSize = new Size(292, 167);
             POSBuybtn.HoverState.ImageSize = new Size(295, 170);
@@ -1831,6 +1852,7 @@
             // 
             // POSClearbtn
             // 
+            POSClearbtn.Anchor = AnchorStyles.Bottom;
             POSClearbtn.BackColor = Color.Transparent;
             POSClearbtn.CheckedState.ImageSize = new Size(292, 167);
             POSClearbtn.HoverState.ImageSize = new Size(295, 170);
@@ -1848,6 +1870,7 @@
             // 
             // guna2HtmlLabel4
             // 
+            guna2HtmlLabel4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel4.ForeColor = Color.FromArgb(9, 105, 137);
@@ -1865,6 +1888,7 @@
             POSDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle7.BackColor = Color.White;
             POSDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            POSDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             POSDataGridView.BackgroundColor = SystemColors.Control;
             POSDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
