@@ -608,6 +608,7 @@
             // 
             // guna2HtmlLabel10
             // 
+            guna2HtmlLabel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             guna2HtmlLabel10.BackColor = Color.Transparent;
             guna2HtmlLabel10.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel10.ForeColor = Color.FromArgb(9, 105, 137);
@@ -630,6 +631,7 @@
             // 
             // HomSoldCountLabel
             // 
+            HomSoldCountLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             HomSoldCountLabel.BackColor = Color.Transparent;
             HomSoldCountLabel.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             HomSoldCountLabel.ForeColor = Color.FromArgb(9, 105, 137);
@@ -668,6 +670,7 @@
             // 
             // HomWelcomeLabel
             // 
+            HomWelcomeLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             HomWelcomeLabel.BackColor = Color.Transparent;
             HomWelcomeLabel.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             HomWelcomeLabel.ForeColor = Color.FromArgb(9, 105, 137);
@@ -679,7 +682,7 @@
             // 
             // guna2GradientPanel3
             // 
-            guna2GradientPanel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            guna2GradientPanel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2GradientPanel3.BorderColor = Color.DarkSlateGray;
             guna2GradientPanel3.BorderRadius = 25;
             guna2GradientPanel3.BorderThickness = 3;
