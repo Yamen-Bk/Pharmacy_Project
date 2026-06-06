@@ -5,7 +5,7 @@
     "ScientificName": "Paracetamol",
     "Manufacturer": "GSK",
     "Price": 2.5,
-    "Quantity": 50,
+    "Quantity": 25,
     "ExpiryDate": "2027-03-15T00:00:00"
   },
   {
@@ -41,7 +41,7 @@
     "ScientificName": "Cetirizine",
     "Manufacturer": "UCB",
     "Price": 5.0,
-    "Quantity": 6,
+    "Quantity": 0,
     "ExpiryDate": "2026-06-20T00:00:00"
   },
   {
@@ -140,7 +140,7 @@
     "ScientificName": "Domperidone",
     "Manufacturer": "Janssen",
     "Price": 4.8,
-    "Quantity": 15,
+    "Quantity": 11,
     "ExpiryDate": "2026-09-09T00:00:00"
   },
   {

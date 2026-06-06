@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "Id": 1,
+    "Items": [
+      {
+        "Medicine": {
+          "Id": 5,
+          "TradeName": "Zyrtec",
+          "ScientificName": "Cetirizine",
+          "Manufacturer": "UCB",
+          "Price": 5.0,
+          "Quantity": 0,
+          "ExpiryDate": "2026-06-20T00:00:00"
+        },
+        "Quantity": 6,
+        "UnitPrice": 5.0,
+        "SubTotal": 30.0
+      },
+      {
+        "Medicine": {
+          "Id": 16,
+          "TradeName": "Motilium",
+          "ScientificName": "Domperidone",
+          "Manufacturer": "Janssen",
+          "Price": 4.8,
+          "Quantity": 11,
+          "ExpiryDate": "2026-09-09T00:00:00"
+        },
+        "Quantity": 4,
+        "UnitPrice": 4.8,
+        "SubTotal": 19.2
+      }
+    ],
+    "Date": "2026-06-06T20:21:19.2509038+03:00",
+    "TotalPrice": 49.2
+  },
+  {
+    "Id": 2,
+    "Items": [
+      {
+        "Medicine": {
+          "Id": 1,
+          "TradeName": "Panadol",
+          "ScientificName": "Paracetamol",
+          "Manufacturer": "GSK",
+          "Price": 2.5,
+          "Quantity": 25,
+          "ExpiryDate": "2027-03-15T00:00:00"
+        },
+        "Quantity": 25,
+        "UnitPrice": 2.5,
+        "SubTotal": 62.5
+      }
+    ],
+    "Date": "2026-06-06T20:21:28.0220245+03:00",
+    "TotalPrice": 62.5
+  }
+]

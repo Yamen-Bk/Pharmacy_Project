@@ -2169,6 +2169,7 @@
             // 
             // guna2GradientPanel9
             // 
+            guna2GradientPanel9.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2GradientPanel9.BorderColor = Color.DarkSlateGray;
             guna2GradientPanel9.BorderRadius = 25;
             guna2GradientPanel9.BorderThickness = 3;
@@ -2185,6 +2186,7 @@
             // 
             // guna2HtmlLabel2
             // 
+            guna2HtmlLabel2.Anchor = AnchorStyles.Top;
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = Color.FromArgb(9, 105, 137);
@@ -2196,6 +2198,7 @@
             // 
             // guna2HtmlLabel1
             // 
+            guna2HtmlLabel1.Anchor = AnchorStyles.Top;
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(9, 105, 137);
@@ -2207,6 +2210,7 @@
             // 
             // guna2GradientPanel8
             // 
+            guna2GradientPanel8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2GradientPanel8.BorderColor = Color.DarkSlateGray;
             guna2GradientPanel8.BorderRadius = 25;
             guna2GradientPanel8.BorderThickness = 3;
@@ -2231,6 +2235,7 @@
             // 
             // LogoutButton
             // 
+            LogoutButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             LogoutButton.BackColor = Color.Transparent;
             LogoutButton.CheckedState.ImageSize = new Size(292, 167);
             LogoutButton.HoverState.ImageSize = new Size(295, 170);
@@ -2248,6 +2253,7 @@
             // 
             // NewUsernameTextBox
             // 
+            NewUsernameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             NewUsernameTextBox.BackColor = Color.Transparent;
             NewUsernameTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             NewUsernameTextBox.BorderRadius = 15;
@@ -2283,6 +2289,7 @@
             // 
             // ConfirmPasswordTextBox
             // 
+            ConfirmPasswordTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             ConfirmPasswordTextBox.BackColor = Color.Transparent;
             ConfirmPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             ConfirmPasswordTextBox.BorderRadius = 15;
@@ -2318,6 +2325,7 @@
             // 
             // NewPasswordTextBox
             // 
+            NewPasswordTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             NewPasswordTextBox.BackColor = Color.Transparent;
             NewPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             NewPasswordTextBox.BorderRadius = 15;
@@ -2353,6 +2361,7 @@
             // 
             // SaveSettingsbtn
             // 
+            SaveSettingsbtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             SaveSettingsbtn.BackColor = Color.Transparent;
             SaveSettingsbtn.CheckedState.ImageSize = new Size(292, 167);
             SaveSettingsbtn.HoverState.ImageSize = new Size(295, 170);
@@ -2370,6 +2379,7 @@
             // 
             // OldPasswordTextBox
             // 
+            OldPasswordTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             OldPasswordTextBox.BackColor = Color.Transparent;
             OldPasswordTextBox.BorderColor = Color.FromArgb(9, 105, 137);
             OldPasswordTextBox.BorderRadius = 15;
