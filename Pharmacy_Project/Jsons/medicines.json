@@ -86,7 +86,7 @@
     "ScientificName": "Acetylsalicylic Acid",
     "Manufacturer": "Bayer",
     "Price": 2.0,
-    "Quantity": 100,
+    "Quantity": 60,
     "ExpiryDate": "2028-02-10T00:00:00"
   },
   {
@@ -131,7 +131,7 @@
     "ScientificName": "Diclofenac Sodium",
     "Manufacturer": "Novartis",
     "Price": 5.75,
-    "Quantity": 60,
+    "Quantity": 50,
     "ExpiryDate": "2025-10-10T00:00:00"
   },
   {
