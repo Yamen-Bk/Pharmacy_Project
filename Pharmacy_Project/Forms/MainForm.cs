@@ -171,40 +171,55 @@ namespace Pharmacy_Project.Forms
             int total = Pharmacy.Medicines.Count;
             int expired = 0;
             int lowStock = 0;
+            int expiringSoon = 0;
 
             foreach (Medicine m in Pharmacy.Medicines)
             {
-                if (m.IsExpired()) expired++;
-                if (m.IsLowStock()) lowStock++;
+                if (m.IsExpired())
+                    expired++;
+
+                if (m.IsLowStock())
+                    lowStock++;
+
+                if (m.IsExpiringSoon())
+                    expiringSoon++;
             }
 
             pieChart1.Series = new ISeries[]
+        {
+            new PieSeries<double>
             {
-        new PieSeries<double>
-        {
-            Values = new double[] { total },
-            Name = "Total",
-            InnerRadius = 60,
-            MaxRadialColumnWidth = 40,
-            Fill = new SolidColorPaint(SKColor.Parse("#2196F3"))
-        },
-        new PieSeries<double>
-        {
-            Values = new double[] { lowStock },
-            Name = "LowStock",
-            InnerRadius = 60,
-            MaxRadialColumnWidth = 40,
-            Fill = new SolidColorPaint(SKColor.Parse("#FF9800"))
-        },
-        new PieSeries<double>
-        {
-            Values = new double[] { expired },
-            Name = "Expired",
-            InnerRadius = 60,
-            MaxRadialColumnWidth = 40,
-            Fill = new SolidColorPaint(SKColor.Parse("#F44336"))
-        }
-            };
+                Values = new double[] { total },
+                Name = "Total",
+                InnerRadius = 60,
+                MaxRadialColumnWidth = 40,
+                Fill = new SolidColorPaint(SKColor.Parse("#2196F3"))
+            },
+            new PieSeries<double>
+            {
+             Values = new double[] { lowStock },
+             Name = "Low Stock",
+             InnerRadius = 60,
+             MaxRadialColumnWidth = 40,
+             Fill = new SolidColorPaint(SKColor.Parse("#FF9800"))
+            },
+            new PieSeries<double>
+            {
+             Values = new double[] { expired },
+             Name = "Expired",
+             InnerRadius = 60,
+             MaxRadialColumnWidth = 40,
+             Fill = new SolidColorPaint(SKColor.Parse("#F44336"))
+            },
+            new PieSeries<double>
+            {
+                Values = new double[] { expiringSoon },
+                Name = "Expiring Soon",
+                InnerRadius = 60,
+                MaxRadialColumnWidth = 40,
+             Fill = new SolidColorPaint(SKColor.Parse("#9C27B0"))
+            }
+        };
         }
 
         /// <summary>
@@ -767,7 +782,7 @@ namespace Pharmacy_Project.Forms
         /// <summary>
         //!? Invoice Tab
         /// </summary>
-        
+
         private void LoadInvoices()
         {
             InvoicesDataGridView.Rows.Clear();

@@ -54,7 +54,6 @@ namespace Pharmacy_Project.Classes
             File.WriteAllText(invoicesPath, JsonConvert.SerializeObject(Invoices, Formatting.Indented));
             File.WriteAllText(userPath, JsonConvert.SerializeObject(User, Formatting.Indented));
         }
-
         public static void AddMedicine(Medicine m)
         {
             int maxid = 0;
