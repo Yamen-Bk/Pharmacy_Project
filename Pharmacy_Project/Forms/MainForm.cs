@@ -243,7 +243,6 @@ namespace Pharmacy_Project.Forms
             {
                 MaxPricelbl.Visible = true;
                 MinPricelbl.Visible = true;
-                MinPricelbl.Visible = true;
                 MaxPriceNumeric.Visible = true;
                 MinPriceNumeric.Visible = true;
                 ApplyPriceFilterBtn.Visible = true;
@@ -399,6 +398,17 @@ namespace Pharmacy_Project.Forms
                                 "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            foreach (Medicine med in Pharmacy.Medicines)
+            {
+                if (med.TradeName.Trim().ToLower() == TradeNameTextBox.Text.Trim().ToLower()
+                    && med.Id != EditingId)
+                {
+                    MessageBox.Show("This medicine name already exists.");
+                    return;
+                }
+            }
+
             Medicine m = new Medicine
             {
                 TradeName = TradeNameTextBox.Text.Trim(),
@@ -639,7 +649,6 @@ namespace Pharmacy_Project.Forms
             POSDataGridView.Rows.Clear();
             POSTotalPriceLabel.Text = "0";
         }
-
         private void POSClearbtn_Click(object sender, EventArgs e)
         {
             if (POSDataGridView.SelectedRows.Count == 0)
@@ -652,8 +661,6 @@ namespace Pharmacy_Project.Forms
             POSDataGridView.Rows.RemoveAt(index);
             UpdateCartTotal();
         }
-
-
         private void POSAddbtn_Click(object sender, EventArgs e)
         {
             if (POSNameComboBox.SelectedIndex == -1)
@@ -721,7 +728,6 @@ namespace Pharmacy_Project.Forms
             POSAddbtn.Visible = false;
             POSSavebtn.Visible = true;
         }
-
         private void POSBuybtn_Click(object sender, EventArgs e)
         {
             if (cart.Count == 0)
@@ -869,8 +875,7 @@ namespace Pharmacy_Project.Forms
 
             Pharmacy.User.Password = BCrypt.Net.BCrypt.HashPassword(NewPasswordTextBox.Text);
 
-            File.WriteAllText("user.json", JsonConvert.SerializeObject(Pharmacy.User, Formatting.Indented));
-
+            Pharmacy.SaveData();
 
             MessageBox.Show("Settings saved successfully!", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
