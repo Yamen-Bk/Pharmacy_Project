@@ -409,6 +409,40 @@ namespace Pharmacy_Project.Forms
                 }
             }
 
+            bool tradeOnlyNumbers = true;
+
+            foreach (char c in TradeNameTextBox.Text.Trim())
+            {
+                if (!char.IsDigit(c))
+                {
+                    tradeOnlyNumbers = false;
+                    break;
+                }
+            }
+
+            if (tradeOnlyNumbers)
+            {
+                MessageBox.Show("Trade Name cannot contain only numbers.");
+                return;
+            }
+
+            bool scientificOnlyNumbers = true;
+
+            foreach (char c in ScientificNameTextBox.Text.Trim())
+            {
+                if (!char.IsDigit(c))
+                {
+                    scientificOnlyNumbers = false;
+                    break;
+                }
+            }
+
+            if (scientificOnlyNumbers)
+            {
+                MessageBox.Show("Scientific Name cannot contain only numbers.");
+                return;
+            }
+
             Medicine m = new Medicine
             {
                 TradeName = TradeNameTextBox.Text.Trim(),
