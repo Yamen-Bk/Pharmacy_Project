@@ -5,7 +5,7 @@
     "ScientificName": "Paracetamol",
     "Manufacturer": "GSK",
     "Price": 2.5,
-    "Quantity": 25,
+    "Quantity": 0,
     "ExpiryDate": "2027-03-15T00:00:00"
   },
   {
@@ -14,7 +14,7 @@
     "ScientificName": "Amoxicillin + Clavulanic Acid",
     "Manufacturer": "GSK",
     "Price": 8.75,
-    "Quantity": 8,
+    "Quantity": 0,
     "ExpiryDate": "2026-12-10T00:00:00"
   },
   {
@@ -72,21 +72,12 @@
     "ExpiryDate": "2026-06-15T00:00:00"
   },
   {
-    "Id": 9,
-    "TradeName": "Flagyl",
-    "ScientificName": "Metronidazole",
-    "Manufacturer": "Sanofi",
-    "Price": 3.75,
-    "Quantity": 18,
-    "ExpiryDate": "2024-12-01T00:00:00"
-  },
-  {
     "Id": 10,
     "TradeName": "Aspirin",
     "ScientificName": "Acetylsalicylic Acid",
     "Manufacturer": "Bayer",
     "Price": 2.0,
-    "Quantity": 60,
+    "Quantity": 0,
     "ExpiryDate": "2028-02-10T00:00:00"
   },
   {
@@ -113,7 +104,7 @@
     "ScientificName": "Atorvastatin",
     "Manufacturer": "Pfizer",
     "Price": 14.5,
-    "Quantity": 20,
+    "Quantity": 0,
     "ExpiryDate": "2027-06-30T00:00:00"
   },
   {

@@ -54,5 +54,145 @@
     ],
     "Date": "2026-06-06T20:21:28.0220245+03:00",
     "TotalPrice": 62.5
+  },
+  {
+    "Id": 3,
+    "Items": [
+      {
+        "Medicine": {
+          "Id": 1,
+          "TradeName": "Panadol",
+          "ScientificName": "Paracetamol",
+          "Manufacturer": "GSK",
+          "Price": 2.5,
+          "Quantity": 0,
+          "ExpiryDate": "2027-03-15T00:00:00"
+        },
+        "Quantity": 25,
+        "UnitPrice": 2.5,
+        "SubTotal": 62.5
+      }
+    ],
+    "Date": "2026-06-08T10:49:17.0262918+03:00",
+    "TotalPrice": 62.5
+  },
+  {
+    "Id": 4,
+    "Items": [
+      {
+        "Medicine": {
+          "Id": 13,
+          "TradeName": "Lipitor",
+          "ScientificName": "Atorvastatin",
+          "Manufacturer": "Pfizer",
+          "Price": 14.5,
+          "Quantity": 0,
+          "ExpiryDate": "2027-06-30T00:00:00"
+        },
+        "Quantity": 10,
+        "UnitPrice": 14.5,
+        "SubTotal": 145.0
+      }
+    ],
+    "Date": "2026-06-08T10:51:01.3980327+03:00",
+    "TotalPrice": 145.0
+  },
+  {
+    "Id": 5,
+    "Items": [
+      {
+        "Medicine": {
+          "Id": 13,
+          "TradeName": "Lipitor",
+          "ScientificName": "Atorvastatin",
+          "Manufacturer": "Pfizer",
+          "Price": 14.5,
+          "Quantity": 0,
+          "ExpiryDate": "2027-06-30T00:00:00"
+        },
+        "Quantity": 9,
+        "UnitPrice": 14.5,
+        "SubTotal": 130.5
+      },
+      {
+        "Medicine": {
+          "Id": 2,
+          "TradeName": "Augmentin",
+          "ScientificName": "Amoxicillin + Clavulanic Acid",
+          "Manufacturer": "GSK",
+          "Price": 8.75,
+          "Quantity": 0,
+          "ExpiryDate": "2026-12-10T00:00:00"
+        },
+        "Quantity": 1,
+        "UnitPrice": 8.75,
+        "SubTotal": 8.75
+      }
+    ],
+    "Date": "2026-06-08T10:52:44.9818199+03:00",
+    "TotalPrice": 139.25
+  },
+  {
+    "Id": 6,
+    "Items": [
+      {
+        "Medicine": {
+          "Id": 10,
+          "TradeName": "Aspirin",
+          "ScientificName": "Acetylsalicylic Acid",
+          "Manufacturer": "Bayer",
+          "Price": 2.0,
+          "Quantity": 0,
+          "ExpiryDate": "2028-02-10T00:00:00"
+        },
+        "Quantity": 60,
+        "UnitPrice": 2.0,
+        "SubTotal": 120.0
+      }
+    ],
+    "Date": "2026-06-08T10:53:29.9037536+03:00",
+    "TotalPrice": 120.0
+  },
+  {
+    "Id": 7,
+    "Items": [
+      {
+        "Medicine": {
+          "Id": 2,
+          "TradeName": "Augmentin",
+          "ScientificName": "Amoxicillin + Clavulanic Acid",
+          "Manufacturer": "GSK",
+          "Price": 8.75,
+          "Quantity": 0,
+          "ExpiryDate": "2026-12-10T00:00:00"
+        },
+        "Quantity": 7,
+        "UnitPrice": 8.75,
+        "SubTotal": 61.25
+      }
+    ],
+    "Date": "2026-06-08T10:53:57.0593895+03:00",
+    "TotalPrice": 61.25
+  },
+  {
+    "Id": 8,
+    "Items": [
+      {
+        "Medicine": {
+          "Id": 13,
+          "TradeName": "Lipitor",
+          "ScientificName": "Atorvastatin",
+          "Manufacturer": "Pfizer",
+          "Price": 14.5,
+          "Quantity": 0,
+          "ExpiryDate": "2027-06-30T00:00:00"
+        },
+        "Quantity": 1,
+        "UnitPrice": 14.5,
+        "SubTotal": 14.5
+      }
+    ],
+    "Date": "2026-06-08T10:54:57.638829+03:00",
+    "TotalPrice": 14.5
   }
 ]
