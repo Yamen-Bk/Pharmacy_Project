@@ -194,5 +194,26 @@
     ],
     "Date": "2026-06-08T10:54:57.638829+03:00",
     "TotalPrice": 14.5
+  },
+  {
+    "Id": 9,
+    "Items": [
+      {
+        "Medicine": {
+          "Id": 18,
+          "TradeName": "Daflon",
+          "ScientificName": "Diosmin + Hesperidin",
+          "Manufacturer": "Servier",
+          "Price": 12.0,
+          "Quantity": 9,
+          "ExpiryDate": "2026-06-22T00:00:00"
+        },
+        "Quantity": 13,
+        "UnitPrice": 12.0,
+        "SubTotal": 156.0
+      }
+    ],
+    "Date": "2026-06-09T20:55:25.2122741+03:00",
+    "TotalPrice": 156.0
   }
 ]
